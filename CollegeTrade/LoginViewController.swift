@@ -20,9 +20,9 @@ class LoginViewController: UIViewController {
             performSegueWithIdentifier("LoginSuccessful", sender: self)
         }
         else {
-            let myAlert = UIAlertView(title: "Invalid Login",
-                message: "Please enter valid username",
-                delegate: nil, cancelButtonTitle: "Try Again")
+            let myAlert = UIAlertView(title: "非法登陆",
+                message: "请输入正确的用户名和密码",
+                delegate: nil, cancelButtonTitle: "重新输入")
             myAlert.show()
         }
     }

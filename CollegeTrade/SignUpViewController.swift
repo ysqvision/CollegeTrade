@@ -13,30 +13,41 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var repeatPasswordTextField: UITextField!
     
-    @IBAction func validateLoginCredentials(sender: AnyObject) {
+    @IBAction func signup(sender: AnyObject) {
         var username = usernameTextField.text
         var password = passwordTextField.text
         var rpassword = repeatPasswordTextField.text
         var samepass = (password == rpassword)
         var pass = true
-
-        print(samepass);
+        
+        //print(samepass);
         if (!samepass)
         {
             let myAlert = UIAlertView(title: "错误",
                 message: "两次输入的密码不一致",
                 delegate: nil, cancelButtonTitle: "重新输入")
             myAlert.show()
+            
+            usernameTextField.text = "";
+            passwordTextField.text = "";
+            repeatPasswordTextField.text = "";
         }
         else if pass {
+            
             performSegueWithIdentifier("SignupSuccessful", sender: self)
+            
         }
         else {
             let myAlert = UIAlertView(title: "错误",
                 message: "用户名已经注册",
                 delegate: nil, cancelButtonTitle: "重新输入")
             myAlert.show()
+            
+            usernameTextField.text = "";
+            passwordTextField.text = "";
+            repeatPasswordTextField.text = "";
         }
+
     }
     
     override func viewDidLoad() {
