@@ -19,6 +19,12 @@ class LoginViewController: UIViewController {
         if pass {
             performSegueWithIdentifier("LoginSuccessful", sender: self)
         }
+        else {
+            let myAlert = UIAlertView(title: "Invalid Login",
+                message: "Please enter valid username",
+                delegate: nil, cancelButtonTitle: "Try Again")
+            myAlert.show()
+        }
     }
     
     func checkLoginCredential(username: String, password: String) -> Bool {
