@@ -13,6 +13,9 @@
 		5742033119C8CF2100A84191 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5742032F19C8CF2100A84191 /* LaunchScreen.xib */; };
 		5742033D19C8CF2100A84191 /* CollegeTradeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742033C19C8CF2100A84191 /* CollegeTradeTests.swift */; };
 		574614FF19E37138008323E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 574614FE19E37138008323E0 /* Images.xcassets */; };
+		5746150119E375D7008323E0 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5746150019E375D7008323E0 /* Store.swift */; };
+		5746150319E37884008323E0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5746150219E37884008323E0 /* User.swift */; };
+		5746150519E37DD8008323E0 /* StoresNearByViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5746150419E37DD8008323E0 /* StoresNearByViewController.swift */; };
 		5784C28519C9112B00DDA365 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784C28419C9112B00DDA365 /* SignUpViewController.swift */; };
 		5784C28719C916EE00DDA365 /* UserHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784C28619C916EE00DDA365 /* UserHomePageViewController.swift */; };
 		5784C28919C9245100DDA365 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784C28819C9245100DDA365 /* ItemDetailViewController.swift */; };
@@ -41,6 +44,9 @@
 		5742033B19C8CF2100A84191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5742033C19C8CF2100A84191 /* CollegeTradeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeTradeTests.swift; sourceTree = "<group>"; };
 		574614FE19E37138008323E0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5746150019E375D7008323E0 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		5746150219E37884008323E0 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5746150419E37DD8008323E0 /* StoresNearByViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoresNearByViewController.swift; sourceTree = "<group>"; };
 		5784C28419C9112B00DDA365 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5784C28619C916EE00DDA365 /* UserHomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHomePageViewController.swift; sourceTree = "<group>"; };
 		5784C28819C9245100DDA365 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
@@ -89,7 +95,10 @@
 			isa = PBXGroup;
 			children = (
 				5742032619C8CF2000A84191 /* AppDelegate.swift */,
+				5746150419E37DD8008323E0 /* StoresNearByViewController.swift */,
+				5746150219E37884008323E0 /* User.swift */,
 				5742032819C8CF2000A84191 /* LoginViewController.swift */,
+				5746150019E375D7008323E0 /* Store.swift */,
 				57FA4B6919E35DAC00BBC5FD /* ItemForSell.swift */,
 				70D7785719E36C6400437988 /* UserProfileViewController.swift */,
 				5784C28819C9245100DDA365 /* ItemDetailViewController.swift */,
@@ -227,10 +236,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5746150519E37DD8008323E0 /* StoresNearByViewController.swift in Sources */,
 				57FA4B6A19E35DAC00BBC5FD /* ItemForSell.swift in Sources */,
 				5784C28919C9245100DDA365 /* ItemDetailViewController.swift in Sources */,
 				70D7785819E36C6400437988 /* UserProfileViewController.swift in Sources */,
+				5746150119E375D7008323E0 /* Store.swift in Sources */,
 				5784C28519C9112B00DDA365 /* SignUpViewController.swift in Sources */,
+				5746150319E37884008323E0 /* User.swift in Sources */,
 				5742032919C8CF2000A84191 /* LoginViewController.swift in Sources */,
 				5784C28719C916EE00DDA365 /* UserHomePageViewController.swift in Sources */,
 				5742032719C8CF2000A84191 /* AppDelegate.swift in Sources */,

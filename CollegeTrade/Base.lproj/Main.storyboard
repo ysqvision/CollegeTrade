@@ -161,27 +161,39 @@
                                     <outlet property="delegate" destination="a0T-ah-qPp" id="9Kp-RW-YaU"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k61-bV-hZo">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="店铺">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="493" width="30" height="30"/>
+                                </variation>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="AZv-d1-hvQ"/>
+                                <exclude reference="k61-bV-hZo"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="AZv-d1-hvQ"/>
+                                <include reference="k61-bV-hZo"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="ONQ-OJ-N5C"/>
                     <connections>
                         <outlet property="itemsTable" destination="AZv-d1-hvQ" id="gNE-Yj-nfr"/>
+                        <outlet property="transition" destination="k61-bV-hZo" id="YiH-7g-LC0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="01p-lF-SS2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2904" y="865"/>
+            <point key="canvasLocation" x="2988" y="791"/>
         </scene>
         <!--Item Detail View Controller-->
         <scene sceneID="GXm-IW-kUn">
@@ -326,6 +338,7 @@
                         <viewControllerLayoutGuide type="bottom" id="qg6-Zy-Ouj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="PQM-w2-lXI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fourth" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glK-GW-L08">
@@ -365,6 +378,7 @@
                         <viewControllerLayoutGuide type="bottom" id="z4S-cv-E03"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5tg-Gw-GW0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zaE-fX-r9i">
@@ -505,7 +519,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y0l-Ob-mGf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1773" y="136"/>
+            <point key="canvasLocation" x="1909.5" y="136"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QUA-Re-w1c">
@@ -551,7 +565,7 @@
         <scene sceneID="JzX-O6-YDt">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="g5z-r9-iZ2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="主页按钮灰色" selectedImage="主页按钮橙色" id="Blb-lC-MsO"/>
+                    <tabBarItem key="tabBarItem" title="" selectedImage="主页按钮橙色" systemItem="favorites" id="Blb-lC-MsO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="81J-ps-bbw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -569,9 +583,8 @@
     </scenes>
     <resources>
         <image name="主页按钮橙色" width="157" height="158"/>
-        <image name="主页按钮灰色" width="157" height="158"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YaP-3V-c0o"/>
+        <segue reference="xVZ-Xn-UVO"/>
     </inferredMetricsTieBreakers>
 </document>
