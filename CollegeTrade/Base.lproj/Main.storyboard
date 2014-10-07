@@ -350,7 +350,9 @@
                                 </variation>
                                 <connections>
                                     <action selector="signup:" destination="yCC-UV-umS" eventType="touchUpInside" id="4k3-aa-VCy"/>
-                                    <segue destination="vXZ-lx-hvc" kind="show" identifier="SignupSuccessful" id="xVZ-Xn-UVO"/>
+                                    <segue destination="vXZ-lx-hvc" kind="popoverPresentation" identifier="SignupSuccessful" popoverAnchorView="3Xe-cl-B0D" id="xVZ-Xn-UVO">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                         </subviews>
