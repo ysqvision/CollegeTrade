@@ -326,6 +326,7 @@
                         <viewControllerLayoutGuide type="bottom" id="qg6-Zy-Ouj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="PQM-w2-lXI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fourth" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glK-GW-L08">
@@ -359,12 +360,13 @@
         <!--User Profile View Controller-->
         <scene sceneID="Ze8-3l-2WD">
             <objects>
-                <viewController title="User Profile View Controller" id="U5L-UF-7wj" customClass="UserProfileViewController" customModule="CollegeTrade" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="User Profile View Controller" id="U5L-UF-7wj" customClass="UserProfileViewController" customModule="CollegeTrade" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rOy-Ok-oSL"/>
                         <viewControllerLayoutGuide type="bottom" id="z4S-cv-E03"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5tg-Gw-GW0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zaE-fX-r9i">
@@ -374,24 +376,139 @@
                                     <rect key="frame" x="157" y="184" width="87" height="45"/>
                                 </variation>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsT-po-Jyt">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="10" y="50" width="380" height="100"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKm-7p-BFV">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="店铺名">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="10" y="300" width="380" height="30"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ia-75-oc6">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="我购买的商品">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="10" y="380" width="380" height="30"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spF-Mi-uD1">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="我的商品">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="10" y="340" width="380" height="30"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVA-w3-Rs5">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="设置">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="10" y="418" width="380" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="zQ3-5R-Bgz" kind="show" id="Igd-7L-7eq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="zaE-fX-r9i"/>
+                                <exclude reference="rsT-po-Jyt"/>
+                                <exclude reference="eKm-7p-BFV"/>
+                                <exclude reference="5ia-75-oc6"/>
+                                <exclude reference="spF-Mi-uD1"/>
+                                <exclude reference="LVA-w3-Rs5"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="zaE-fX-r9i"/>
+                                <include reference="rsT-po-Jyt"/>
+                                <include reference="eKm-7p-BFV"/>
+                                <include reference="5ia-75-oc6"/>
+                                <include reference="spF-Mi-uD1"/>
+                                <include reference="LVA-w3-Rs5"/>
                             </mask>
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="LwC-7t-huk"/>
+                    <connections>
+                        <outlet property="boughtItemButton" destination="5ia-75-oc6" id="60M-ni-hZ6"/>
+                        <outlet property="myItemButton" destination="spF-Mi-uD1" id="aIh-vH-zHF"/>
+                        <outlet property="settingButton" destination="LVA-w3-Rs5" id="Lsr-yc-paY"/>
+                        <outlet property="shopNameButton" destination="eKm-7p-BFV" id="Gtc-ne-Orw"/>
+                        <outlet property="userProfileButton" destination="rsT-po-Jyt" id="p8e-6O-pw1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K72-He-gYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3054" y="1699"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Gyd-eH-2we">
+            <objects>
+                <viewController id="zQ3-5R-Bgz" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ruF-jJ-efa"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZAq-x8-yKG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5yP-80-lFq">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXf-E1-yMp">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="55" y="47" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="U5L-UF-7wj" kind="show" id="8NB-Hv-4ep"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="OpY-nM-UFQ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="89" width="400" height="421"/>
+                                </variation>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="FXf-E1-yMp"/>
+                                <exclude reference="OpY-nM-UFQ"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="FXf-E1-yMp"/>
+                                <include reference="OpY-nM-UFQ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ju0-uc-DMl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3820.5" y="1700"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="uaV-zJ-Awy">
@@ -568,10 +685,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
-=======
         <segue reference="8NB-Hv-4ep"/>
->>>>>>> FETCH_HEAD
         <segue reference="YaP-3V-c0o"/>
     </inferredMetricsTieBreakers>
 </document>
