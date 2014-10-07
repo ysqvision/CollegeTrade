@@ -175,6 +175,9 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="ONQ-OJ-N5C"/>
+                    <connections>
+                        <outlet property="itemsTable" destination="AZv-d1-hvQ" id="gNE-Yj-nfr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="01p-lF-SS2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -191,8 +194,44 @@
                     <view key="view" contentMode="scaleToFill" id="OpK-3A-NQV">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31v-tw-iPO">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="62" y="150" width="210" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1A6-u1-Oyu">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="62" y="215" width="200" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="31v-tw-iPO"/>
+                                <exclude reference="1A6-u1-Oyu"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="31v-tw-iPO"/>
+                                <include reference="1A6-u1-Oyu"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="itemName" destination="31v-tw-iPO" id="dDs-Dy-R04"/>
+                        <outlet property="itemPrice" destination="1A6-u1-Oyu" id="DNu-11-5Mi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h5e-bn-J6n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

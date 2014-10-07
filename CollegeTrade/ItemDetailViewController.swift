@@ -11,8 +11,18 @@ import UIKit
 
 class ItemDetailViewController: UIViewController {
     
-    override func viewDidLoad() {
+    var item: ItemForSell!
+    
+    @IBOutlet weak var itemName: UILabel!
+    
+    
+    @IBOutlet weak var itemPrice: UILabel!
+    
+        override func viewDidLoad() {
         super.viewDidLoad()
+            itemName.text = "名称： \(self.item.title)"
+            itemPrice.text = "价格： \(self.item.price)"
+    
         // Do any additional setup after loading the view, typically from a nib.
     }
     
