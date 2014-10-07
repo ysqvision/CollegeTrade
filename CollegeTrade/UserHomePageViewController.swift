@@ -12,7 +12,6 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
     let kCellIdentifier: String = "ItemForSellCell"
     var itemsForSell = [ItemForSell]()
     
-    @IBOutlet weak var transition: UIButton!
     @IBOutlet weak var itemsTable: UITableView?
     override func viewDidLoad() {
         super.viewDidLoad()
