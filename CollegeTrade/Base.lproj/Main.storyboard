@@ -275,7 +275,124 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rc1-4Y-EBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1986" y="1541"/>
+            <point key="canvasLocation" x="1120.5" y="1707"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="tBQ-2I-imF">
+            <objects>
+                <viewController id="BLu-F0-HNQ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7wI-PS-AaO"/>
+                        <viewControllerLayoutGuide type="bottom" id="ELh-Tf-s1p"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aCo-ra-kbO">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Third" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ayh-jQ-5CB">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="172" y="203" width="39" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Ayh-jQ-5CB"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Ayh-jQ-5CB"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="9jD-qw-2gV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nvc-aB-eBw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1753.5" y="1707"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Ot6-le-j3E">
+            <objects>
+                <viewController id="vwa-pE-vZG" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="R3o-zM-AV0"/>
+                        <viewControllerLayoutGuide type="bottom" id="qg6-Zy-Ouj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PQM-w2-lXI">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fourth" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glK-GW-L08">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="125" y="205" width="50" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="glK-GW-L08"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="glK-GW-L08"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="tkP-hq-Old"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BiB-ZS-TMc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2403" y="1699"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Ze8-3l-2WD">
+            <objects>
+                <viewController id="U5L-UF-7wj" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rOy-Ok-oSL"/>
+                        <viewControllerLayoutGuide type="bottom" id="z4S-cv-E03"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5tg-Gw-GW0">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fifth" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Oa-9R-zts">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="95" y="230" width="34" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="3Oa-9R-zts"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="3Oa-9R-zts"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="LwC-7t-huk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K72-He-gYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3054" y="1699"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="uaV-zJ-Awy">
@@ -422,6 +539,9 @@
                     <connections>
                         <segue destination="g5z-r9-iZ2" kind="relationship" relationship="viewControllers" id="xw1-eN-fxR"/>
                         <segue destination="hR2-eL-RHv" kind="relationship" relationship="viewControllers" id="x2F-W5-JZ1"/>
+                        <segue destination="BLu-F0-HNQ" kind="relationship" relationship="viewControllers" id="doA-8P-9yS"/>
+                        <segue destination="vwa-pE-vZG" kind="relationship" relationship="viewControllers" id="0MC-46-rd6"/>
+                        <segue destination="U5L-UF-7wj" kind="relationship" relationship="viewControllers" id="rWC-vv-2E6"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dEd-z7-yBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
