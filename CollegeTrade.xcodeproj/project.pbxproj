@@ -10,7 +10,6 @@
 		5742032719C8CF2000A84191 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742032619C8CF2000A84191 /* AppDelegate.swift */; };
 		5742032919C8CF2000A84191 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742032819C8CF2000A84191 /* LoginViewController.swift */; };
 		5742032C19C8CF2000A84191 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5742032A19C8CF2000A84191 /* Main.storyboard */; };
-		5742032E19C8CF2100A84191 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5742032D19C8CF2100A84191 /* Images.xcassets */; };
 		5742033119C8CF2100A84191 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5742032F19C8CF2100A84191 /* LaunchScreen.xib */; };
 		5742033D19C8CF2100A84191 /* CollegeTradeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742033C19C8CF2100A84191 /* CollegeTradeTests.swift */; };
 		5784C28519C9112B00DDA365 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784C28419C9112B00DDA365 /* SignUpViewController.swift */; };
@@ -36,7 +35,6 @@
 		5742032619C8CF2000A84191 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5742032819C8CF2000A84191 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5742032B19C8CF2000A84191 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5742032D19C8CF2100A84191 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5742033019C8CF2100A84191 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		5742033619C8CF2100A84191 /* CollegeTradeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollegeTradeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5742033B19C8CF2100A84191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,7 +93,6 @@
 				5784C28419C9112B00DDA365 /* SignUpViewController.swift */,
 				5784C28619C916EE00DDA365 /* UserHomePageViewController.swift */,
 				5742032A19C8CF2000A84191 /* Main.storyboard */,
-				5742032D19C8CF2100A84191 /* Images.xcassets */,
 				5742032F19C8CF2100A84191 /* LaunchScreen.xib */,
 				5742032419C8CF2000A84191 /* Supporting Files */,
 			);
@@ -209,7 +206,6 @@
 			files = (
 				5742032C19C8CF2000A84191 /* Main.storyboard in Resources */,
 				5742033119C8CF2100A84191 /* LaunchScreen.xib in Resources */,
-				5742032E19C8CF2100A84191 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

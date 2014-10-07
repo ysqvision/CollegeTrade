@@ -547,11 +547,11 @@
             </objects>
             <point key="canvasLocation" x="1068" y="865"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="JzX-O6-YDt">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="g5z-r9-iZ2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Blb-lC-MsO"/>
+                    <tabBarItem key="tabBarItem" title="" image="主页按钮灰色" selectedImage="主页按钮橙色" id="Blb-lC-MsO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="81J-ps-bbw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -567,6 +567,10 @@
             <point key="canvasLocation" x="1986" y="865"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="主页按钮橙色" width="157" height="158"/>
+        <image name="主页按钮灰色" width="157" height="158"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="YaP-3V-c0o"/>
     </inferredMetricsTieBreakers>
