@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hRZ-Bv-yry">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
@@ -286,6 +286,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ELh-Tf-s1p"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aCo-ra-kbO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Third" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ayh-jQ-5CB">
@@ -355,10 +356,10 @@
             </objects>
             <point key="canvasLocation" x="2403" y="1699"/>
         </scene>
-        <!--Item-->
+        <!--User Profile View Controller-->
         <scene sceneID="Ze8-3l-2WD">
             <objects>
-                <viewController id="U5L-UF-7wj" sceneMemberID="viewController">
+                <viewController title="User Profile View Controller" id="U5L-UF-7wj" customClass="UserProfileViewController" customModule="CollegeTrade" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rOy-Ok-oSL"/>
                         <viewControllerLayoutGuide type="bottom" id="z4S-cv-E03"/>
@@ -366,25 +367,23 @@
                     <view key="view" contentMode="scaleToFill" id="5tg-Gw-GW0">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fifth" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Oa-9R-zts">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zaE-fX-r9i">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="签到"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="95" y="230" width="34" height="21"/>
+                                    <rect key="frame" x="157" y="184" width="87" height="45"/>
                                 </variation>
-                            </label>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="3Oa-9R-zts"/>
+                                <exclude reference="zaE-fX-r9i"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="3Oa-9R-zts"/>
+                                <include reference="zaE-fX-r9i"/>
                             </mask>
                         </variation>
                     </view>
@@ -569,6 +568,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xVZ-Xn-UVO"/>
+        <segue reference="YaP-3V-c0o"/>
     </inferredMetricsTieBreakers>
 </document>
