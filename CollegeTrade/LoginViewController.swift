@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
         var password = passwordTextField.text
         var pass = checkLoginCredential(username, password: password)
         if pass {
-            performSegueWithIdentifier("LoginSuccessful", sender: self)
+            dismissViewControllerAnimated(true, completion: nil)
         }
         else {
             let myAlert = UIAlertView(title: "非法登陆",
@@ -28,8 +28,10 @@ class LoginViewController: UIViewController {
     }
     
     func checkLoginCredential(username: String, password: String) -> Bool {
+        
         // Check if username and password pass
         if username == "victor" && password == "pass" {
+            KeychainService.saveToken(username, token: password)
             return true;
         } else {
             return false;

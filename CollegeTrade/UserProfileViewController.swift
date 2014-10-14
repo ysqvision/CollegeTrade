@@ -16,6 +16,11 @@ class UserProfileViewController: UIViewController {
     @IBOutlet weak var boughtItemButton: UIButton!
     @IBOutlet weak var settingButton: UIButton!
     
+    @IBAction func userLogout(sender: AnyObject) {
+        var storedPass = KeychainService.loadToken("victor")
+        KeychainService.removeToken("victor", token: storedPass!)
+        self.tabBarController?.selectedIndex = 0
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,6 +36,21 @@ class UserProfileViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        var storedPass = KeychainService.loadToken("victor")
+        if storedPass == "pass" {
+            
+        } else {
+            performSegueWithIdentifier("ShowLoginScreen", sender: self)
+        }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
     }
     
     

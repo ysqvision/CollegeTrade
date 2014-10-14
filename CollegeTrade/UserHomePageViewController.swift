@@ -20,7 +20,7 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
         var item2 = ItemForSell(title: "阿迪王", price: 300.0)
         itemsForSell.append(item1)
         itemsForSell.append(item2)
-        print("here")
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
