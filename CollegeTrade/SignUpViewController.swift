@@ -34,7 +34,7 @@ class SignUpViewController: UIViewController {
         }
         else if pass {
             
-            performSegueWithIdentifier("SignupSuccessful", sender: self)
+            dismissViewControllerAnimated(true, completion: nil)
             
         }
         else {

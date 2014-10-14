@@ -100,7 +100,6 @@
                     <connections>
                         <outlet property="passwordTextField" destination="SoO-QG-Zls" id="Ni1-pH-1g5"/>
                         <outlet property="usernameTextField" destination="GMa-ey-oJy" id="A2p-lv-hFr"/>
-                        <segue destination="YmQ-qZ-k8F" kind="showDetail" identifier="LoginSuccessful" id="Uaz-6W-nCJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -584,12 +583,12 @@
                         <outlet property="settingButton" destination="LVA-w3-Rs5" id="Lsr-yc-paY"/>
                         <outlet property="shopNameButton" destination="eKm-7p-BFV" id="Gtc-ne-Orw"/>
                         <outlet property="userProfileButton" destination="rsT-po-Jyt" id="p8e-6O-pw1"/>
-                        <segue destination="vXZ-lx-hvc" kind="presentation" identifier="ShowLoginScreen" id="io9-U2-nrT"/>
+                        <segue destination="hRZ-Bv-yry" kind="presentation" identifier="ShowLoginScreen" id="zd9-Lw-DF0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K72-He-gYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3057" y="1634"/>
+            <point key="canvasLocation" x="3108" y="1744"/>
         </scene>
         <!--User Setting View Controller-->
         <scene sceneID="Gyd-eH-2we">
@@ -718,9 +717,6 @@
                                 </variation>
                                 <connections>
                                     <action selector="signup:" destination="yCC-UV-umS" eventType="touchUpInside" id="4k3-aa-VCy"/>
-                                    <segue destination="vXZ-lx-hvc" kind="popoverPresentation" identifier="SignupSuccessful" popoverAnchorView="3Xe-cl-B0D" id="xVZ-Xn-UVO">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
                                 </connections>
                             </button>
                         </subviews>
@@ -757,7 +753,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y0l-Ob-mGf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1773" y="136"/>
+            <point key="canvasLocation" x="1917" y="78"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QUA-Re-w1c">
@@ -775,7 +771,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bka-3v-S1Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="136"/>
+            <point key="canvasLocation" x="147" y="198"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="J4F-oG-uiO">
@@ -797,7 +793,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dEd-z7-yBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1068" y="865"/>
+            <point key="canvasLocation" x="564" y="869"/>
         </scene>
         <!--Item-->
         <scene sceneID="JzX-O6-YDt">
@@ -819,7 +815,4 @@
             <point key="canvasLocation" x="1986" y="865"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="io9-U2-nrT"/>
-    </inferredMetricsTieBreakers>
 </document>
