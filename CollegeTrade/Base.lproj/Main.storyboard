@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YmQ-qZ-k8F">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
@@ -540,6 +540,18 @@
                                     <segue destination="zQ3-5R-Bgz" kind="show" id="Igd-7L-7eq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJc-ZP-ARC">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="退出登录">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="177" y="483" width="60" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="userLogout:" destination="U5L-UF-7wj" eventType="touchUpInside" id="isM-g6-izY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -550,6 +562,7 @@
                                 <exclude reference="5ia-75-oc6"/>
                                 <exclude reference="spF-Mi-uD1"/>
                                 <exclude reference="LVA-w3-Rs5"/>
+                                <exclude reference="nJc-ZP-ARC"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -560,6 +573,7 @@
                                 <include reference="5ia-75-oc6"/>
                                 <include reference="spF-Mi-uD1"/>
                                 <include reference="LVA-w3-Rs5"/>
+                                <include reference="nJc-ZP-ARC"/>
                             </mask>
                         </variation>
                     </view>
@@ -570,11 +584,12 @@
                         <outlet property="settingButton" destination="LVA-w3-Rs5" id="Lsr-yc-paY"/>
                         <outlet property="shopNameButton" destination="eKm-7p-BFV" id="Gtc-ne-Orw"/>
                         <outlet property="userProfileButton" destination="rsT-po-Jyt" id="p8e-6O-pw1"/>
+                        <segue destination="vXZ-lx-hvc" kind="presentation" identifier="ShowLoginScreen" id="io9-U2-nrT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K72-He-gYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3054" y="1699"/>
+            <point key="canvasLocation" x="3057" y="1634"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Gyd-eH-2we">
@@ -802,7 +817,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8NB-Hv-4ep"/>
-        <segue reference="YaP-3V-c0o"/>
+        <segue reference="io9-U2-nrT"/>
+        <segue reference="rWC-vv-2E6"/>
     </inferredMetricsTieBreakers>
 </document>
