@@ -619,7 +619,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="q7R-Jm-p6z" style="IBUITableViewCellStyleDefault" id="giS-Uk-oB3">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SettingCell1" textLabel="q7R-Jm-p6z" style="IBUITableViewCellStyleDefault" id="giS-Uk-oB3">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="giS-Uk-oB3" id="JFj-T9-x7d">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -636,7 +636,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell1" textLabel="kWe-wF-DNP" detailTextLabel="Iuw-Qf-zQ7" style="IBUITableViewCellStyleValue1" id="drh-Vq-HFa">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SettingCell2" textLabel="kWe-wF-DNP" detailTextLabel="Iuw-Qf-zQ7" style="IBUITableViewCellStyleValue1" id="drh-Vq-HFa">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="drh-Vq-HFa" id="tXw-v0-ju1">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -662,7 +662,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell2" textLabel="1U6-sa-0QN" detailTextLabel="12D-xD-qrc" style="IBUITableViewCellStyleSubtitle" id="idU-0C-YKE">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SettingCell3" textLabel="1U6-sa-0QN" detailTextLabel="12D-xD-qrc" style="IBUITableViewCellStyleSubtitle" id="idU-0C-YKE">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="idU-0C-YKE" id="UQM-Cx-dlL">
                                             <autoresizingMask key="autoresizingMask"/>

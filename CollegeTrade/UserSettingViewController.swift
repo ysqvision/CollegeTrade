@@ -24,13 +24,37 @@ class UserSettingViewController : UIViewController {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("Cell") as UITableViewCell
         
-        cell.textLabel?.text = "杨手指"
-        cell.detailTextLabel?.text = "杨少卿"
+        var cell: UITableViewCell
+        print(indexPath.row)
+        
+        switch indexPath.row{
+        case 0:
+            cell = tableView.dequeueReusableCellWithIdentifier("SettingCell1") as UITableViewCell
+        
+            cell.textLabel?.text = "杨手指"
+            cell.detailTextLabel?.text = "杨少卿"
+        case 1:
+            cell = tableView.dequeueReusableCellWithIdentifier("SettingCell2") as UITableViewCell
+            
+            cell.textLabel?.text = "杨手指"
+            cell.detailTextLabel?.text = "杨少卿"
+        case 2:
+            cell = tableView.dequeueReusableCellWithIdentifier("SettingCell3") as UITableViewCell
+            
+            cell.textLabel?.text = "杨手指"
+            cell.detailTextLabel?.text = "杨少卿"
+            
+        default:
+            cell = tableView.dequeueReusableCellWithIdentifier("SettingCell1") as UITableViewCell
+            
+            cell.textLabel?.text = "杨手指"
+            cell.detailTextLabel?.text = "杨少卿"
+        }
         
         return cell
     }
+
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
