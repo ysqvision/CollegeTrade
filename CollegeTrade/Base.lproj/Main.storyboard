@@ -467,7 +467,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rc1-4Y-EBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1126.5" y="1704"/>
+            <point key="canvasLocation" x="1126.5" y="1750"/>
         </scene>
         <!--Item-->
         <scene sceneID="tBQ-2I-imF">
@@ -566,15 +566,6 @@
                                     <rect key="frame" x="157" y="184" width="87" height="45"/>
                                 </variation>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsT-po-Jyt">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="10" y="50" width="380" height="100"/>
-                                </variation>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKm-7p-BFV">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="店铺名">
@@ -626,28 +617,40 @@
                                     <action selector="userLogout:" destination="U5L-UF-7wj" eventType="touchUpInside" id="isM-g6-izY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsT-po-Jyt">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="个人头像">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="10" y="50" width="380" height="100"/>
+                                </variation>
+                                <connections>
+                                    <action selector="takePhoto:" destination="U5L-UF-7wj" eventType="touchUpInside" id="jK9-zY-Uib"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="zaE-fX-r9i"/>
-                                <exclude reference="rsT-po-Jyt"/>
                                 <exclude reference="eKm-7p-BFV"/>
                                 <exclude reference="5ia-75-oc6"/>
                                 <exclude reference="spF-Mi-uD1"/>
                                 <exclude reference="LVA-w3-Rs5"/>
                                 <exclude reference="nJc-ZP-ARC"/>
+                                <exclude reference="rsT-po-Jyt"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="zaE-fX-r9i"/>
-                                <include reference="rsT-po-Jyt"/>
                                 <include reference="eKm-7p-BFV"/>
                                 <include reference="5ia-75-oc6"/>
                                 <include reference="spF-Mi-uD1"/>
                                 <include reference="LVA-w3-Rs5"/>
                                 <include reference="nJc-ZP-ARC"/>
+                                <include reference="rsT-po-Jyt"/>
                             </mask>
                         </variation>
                     </view>
@@ -657,13 +660,29 @@
                         <outlet property="myItemButton" destination="spF-Mi-uD1" id="aIh-vH-zHF"/>
                         <outlet property="settingButton" destination="LVA-w3-Rs5" id="Lsr-yc-paY"/>
                         <outlet property="shopNameButton" destination="eKm-7p-BFV" id="Gtc-ne-Orw"/>
-                        <outlet property="userProfileButton" destination="rsT-po-Jyt" id="p8e-6O-pw1"/>
                         <segue destination="hRZ-Bv-yry" kind="presentation" identifier="ShowLoginScreen" id="zd9-Lw-DF0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K72-He-gYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3108" y="1744"/>
+        </scene>
+        <!--TakePhotoViewController-->
+        <scene sceneID="nfs-gC-h4n">
+            <objects>
+                <viewController storyboardIdentifier="TakePhotoViewController" title="TakePhotoViewController" id="C0d-he-jfj" customClass="TakePhotoViewController" customModule="CollegeTrade" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lf6-VR-aTg"/>
+                        <viewControllerLayoutGuide type="bottom" id="8RN-QX-WC6"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" alpha="0.59999999999999998" contentMode="bottom" id="j1T-ce-BZr">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yJT-za-h2N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3108" y="2461"/>
         </scene>
         <!--User Setting View Controller-->
         <scene sceneID="Gyd-eH-2we">

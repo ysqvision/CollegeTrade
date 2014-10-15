@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserProfileViewController: UIViewController {
+class UserProfileViewController: UIViewController, UIPopoverPresentationControllerDelegate {
     
     @IBOutlet weak var userProfileButton: UIButton!
     @IBOutlet weak var shopNameButton: UIButton!
@@ -16,6 +16,19 @@ class UserProfileViewController: UIViewController {
     @IBOutlet weak var boughtItemButton: UIButton!
     @IBOutlet weak var settingButton: UIButton!
     
+   
+    @IBAction func takePhoto(sender: AnyObject) {
+        let popoverVC = self.storyboard?.instantiateViewControllerWithIdentifier("TakePhotoViewController") as UIViewController
+        popoverVC.modalPresentationStyle = .OverFullScreen
+        let popoverController = popoverVC.popoverPresentationController
+   //     popoverController?.sourceView = sender as UIView
+     //   popoverController?.sourceRect = sender.bounds
+        presentViewController(popoverVC, animated: true, completion: nil)
+
+        
+    }
+    
+  
     @IBAction func userLogout(sender: AnyObject) {
         var storedPass = KeychainService.loadToken("victor")
         KeychainService.removeToken("victor", token: storedPass!)
@@ -24,11 +37,7 @@ class UserProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        userProfileButton.layer.borderWidth = 1
-        shopNameButton.layer.borderWidth = 1
-        myItemButton.layer.borderWidth = 1
-        boughtItemButton.layer.borderWidth = 1
-        settingButton.layer.borderWidth = 1
+       
         
         // Do any additional setup after loading the view, typically from a nib.
     }
