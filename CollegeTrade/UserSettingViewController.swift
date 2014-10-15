@@ -26,7 +26,7 @@ class UserSettingViewController : UIViewController {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var cell: UITableViewCell
-        print(indexPath.row)
+
         
         switch indexPath.row{
         case 0:
