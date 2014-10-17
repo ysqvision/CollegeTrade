@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserProfileViewController: UIViewController, UIPopoverPresentationControllerDelegate {
+class UserProfileViewController: UIViewController, UIPopoverPresentationControllerDelegate, writeValueBackDelegate {
     
     @IBOutlet weak var userProfileButton: UIButton!
     @IBOutlet weak var shopNameButton: UIButton!
@@ -16,17 +16,18 @@ class UserProfileViewController: UIViewController, UIPopoverPresentationControll
     @IBOutlet weak var boughtItemButton: UIButton!
     @IBOutlet weak var settingButton: UIButton!
     
-   
+    
     @IBAction func takePhoto(sender: AnyObject) {
-        let popoverVC = self.storyboard?.instantiateViewControllerWithIdentifier("TakePhotoViewController") as UIViewController
+        let popoverVC = self.storyboard?.instantiateViewControllerWithIdentifier("TakePhotoViewController") as TakePhotoViewController
+        popoverVC.delegate = self
         popoverVC.modalPresentationStyle = .OverFullScreen
         let popoverController = popoverVC.popoverPresentationController
-   //     popoverController?.sourceView = sender as UIView
-     //   popoverController?.sourceRect = sender.bounds
+        //     popoverController?.sourceView = sender as UIView
+        //   popoverController?.sourceRect = sender.bounds
         presentViewController(popoverVC, animated: true, completion: nil)
-
-        
     }
+
+
     
   
     @IBAction func userLogout(sender: AnyObject) {
@@ -60,6 +61,10 @@ class UserProfileViewController: UIViewController, UIPopoverPresentationControll
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
+    }
+    
+    func writeValueBack(value: String) {
+        println(value)
     }
     
     
