@@ -42,7 +42,7 @@ class ItemDetailViewController: UIViewController {
     //  Comment Table
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return commentNum + 1
+        return commentNum
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -67,7 +67,7 @@ class ItemDetailViewController: UIViewController {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print(indexPath.row)
-        if (indexPath.row == tableView.numberOfRowsInSection(0) - 1)
+        /*if (indexPath.row == tableView.numberOfRowsInSection(0) - 1)
         {
             print(commentNum)
             let indexPathh = NSIndexPath(forRow: commentNum, inSection: 0)
@@ -75,7 +75,7 @@ class ItemDetailViewController: UIViewController {
             commentNum = commentNum + 1
            // tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
            // tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        }
+        }*/
     }
     
 
