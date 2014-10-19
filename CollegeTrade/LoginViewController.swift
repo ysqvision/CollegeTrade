@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
         var password = passwordTextField.text
         var pass = checkLoginCredential(username, password: password)
         if pass {
-            dismissViewControllerAnimated(true, completion: nil)
+            
         }
         else {
             let myAlert = UIAlertView(title: "非法登陆",
@@ -34,11 +34,12 @@ class LoginViewController: UIViewController {
         var session = NSURLSession.sharedSession()
         request.HTTPMethod = "POST"
         
-        var params = ["username":"鹏程", "password":"asdadadas"] as Dictionary<String, String>
-        
-        var err: NSError?
-        request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        var params = ["username":"b", "password":"2"] as Dictionary<String, String>
+        var requestBody = "username=b&password=2"
+        let data = requestBody.dataUsingEncoding(NSUTF8StringEncoding)
+        request.HTTPBody = data
+       // request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)
+        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         print(NSString(data:request.HTTPBody!, encoding: NSUTF8StringEncoding))
       
