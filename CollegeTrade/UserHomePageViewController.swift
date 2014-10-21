@@ -8,19 +8,20 @@
 
 import UIKit
 
-class UserHomePageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class UserHomePageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, didReceiveItemsProtocol {
+
+
     let kCellIdentifier: String = "ItemForSellCell"
-    var itemsForSell = [ItemForSell]()
+    var itemsForSell = []
+    var searchItemAPI = SearchItemAPIController()
+    
     
     @IBOutlet weak var transition: UIButton!
     @IBOutlet weak var itemsTable: UITableView?
     override func viewDidLoad() {
         super.viewDidLoad()
-        var item1 = ItemForSell(title: "Nike", price: 500.0)
-        var item2 = ItemForSell(title: "阿迪王", price: 300.0)
-        itemsForSell.append(item1)
-        itemsForSell.append(item2)
-        
+        searchItemAPI.delegate = self
+        searchItemAPI.getAllItems()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -34,10 +35,24 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    //    let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "ItemForSellCell")
         let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("ItemForSellCell") as UITableViewCell
+        let rowData: NSDictionary = self.itemsForSell[indexPath.row] as NSDictionary
         
-        cell.textLabel?.text = self.itemsForSell[indexPath.row].title
-        cell.detailTextLabel?.text = "价格： \(self.itemsForSell[indexPath.row].price)"
+        cell.textLabel?.text = rowData["goodsName"] as NSString
+        
+        // Grab the artworkUrl60 key to get an image URL for the app's thumbnail
+       // let urlString: NSString = rowData["goodsName"] as NSString
+        //let imgURL: NSURL = NSURL(string: urlString)
+        
+        // Download an NSData representation of the image at the URL
+        //let imgData: NSData = NSData(contentsOfURL: imgURL)
+        //cell.imageView?.image = UIImage(data: imgData)
+        
+        // Get the formatted price string for display in the subtitle
+        //let formattedPrice: NSString = rowData["price"] as NSString
+        let formattedPrice: Double = rowData["price"] as Double
+        cell.detailTextLabel?.text = "价格: \(formattedPrice)";
         
         return cell
     }
@@ -47,11 +62,24 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+         println("here")
         var itemDetailViewController: ItemDetailViewController = segue.destinationViewController as ItemDetailViewController
         var itemIndex = itemsTable!.indexPathForSelectedRow()!.row;
-        var selectedItem = self.itemsForSell[itemIndex]
-        itemDetailViewController.item = selectedItem
+        var selectedItem = self.itemsForSell[itemIndex] as NSDictionary
+        var title = selectedItem["goodsName"] as NSString
+        var price = selectedItem["price"] as Double
+        var item = ItemForSell(title: title, price: price)
+        itemDetailViewController.item = item
+       
         
     }
+    func didReceiveItems(results: NSDictionary) {
+        var resultsArr: NSArray = results["data"] as NSArray
+        dispatch_async(dispatch_get_main_queue(), {
+            self.itemsForSell = resultsArr
+            self.itemsTable!.reloadData()
+        })
+    }
+    
     
 }

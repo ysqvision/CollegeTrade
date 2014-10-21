@@ -12,3 +12,4 @@ import UIKit
 protocol selectedPictureDelegate {
     func selectedPicture(value: UIImage)
 }
+
