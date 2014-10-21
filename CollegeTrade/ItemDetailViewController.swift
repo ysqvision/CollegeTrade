@@ -11,6 +11,7 @@ import UIKit
 
 class ItemDetailViewController: UIViewController {
     
+    @IBOutlet weak var moreButton: UIButton!
     var item: ItemForSell!
     var commentNum: Int!
     
@@ -20,7 +21,11 @@ class ItemDetailViewController: UIViewController {
         
         let indexPathh = NSIndexPath(forRow: commentNum + 1, inSection: 0)
         commentNum = commentNum + 1
-        commentTable.insertRowsAtIndexPaths([indexPathh], withRowAnimation: .Automatic)
+        //commentTable.insertRowsAtIndexPaths([indexPathh], withRowAnimation: .Automatic)
+        commentTable.reloadData()
+        //commentTable.frame = CGRectMake(CGFloat(8),CGFloat(8),CGFloat(100),CGFloat(50*commentNum))
+        //moreButton.frame = CGRectMake(CGFloat(8),CGFloat(8 + 50*commentNum),CGFloat(300), CGFloat(50))
+        
     }
     
     @IBOutlet weak var itemName: UILabel!
@@ -33,7 +38,7 @@ class ItemDetailViewController: UIViewController {
             itemName.text = "名称： \(self.item.title)"
             itemPrice.text = "价格： \(self.item.price)"
             
-            commentNum = 3
+            commentNum = 4
     
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -48,7 +53,6 @@ class ItemDetailViewController: UIViewController {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var cell:UITableViewCell
-        
         if (indexPath.row < tableView.numberOfRowsInSection(0) - 1)
         {
             cell = tableView.dequeueReusableCellWithIdentifier("CommentCell") as UITableViewCell
@@ -57,7 +61,8 @@ class ItemDetailViewController: UIViewController {
             cell.detailTextLabel?.text = "杨少卿的手指非常的好用"
         }
         else{
-            cell = tableView.dequeueReusableCellWithIdentifier("AdditionCell") as UITableViewCell
+            cell = tableView.dequeueReusableCellWithIdentifier("MoreCell") as UITableViewCell
+            
             cell.textLabel?.text = "更多评论"
         }
         
@@ -66,16 +71,14 @@ class ItemDetailViewController: UIViewController {
     
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print(indexPath.row)
-        /*if (indexPath.row == tableView.numberOfRowsInSection(0) - 1)
+
+        if (indexPath.row == tableView.numberOfRowsInSection(0) - 1)
         {
-            print(commentNum)
-            let indexPathh = NSIndexPath(forRow: commentNum, inSection: 0)
-            tableView.insertRowsAtIndexPaths([indexPathh], withRowAnimation: .Automatic)
             commentNum = commentNum + 1
+            tableView.reloadData()
            // tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
            // tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        }*/
+        }
     }
     
 

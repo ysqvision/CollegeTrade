@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YmQ-qZ-k8F">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YmQ-qZ-k8F">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
@@ -212,90 +212,92 @@
                                     <rect key="frame" x="34" y="154" width="200" height="21"/>
                                 </variation>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rwa-y8-Pkv">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="121" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="GCU-SU-jT4">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <prototypes>
-                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" textLabel="Vge-D4-ADu" detailTextLabel="Flo-A2-6Gv" rowHeight="121" style="IBUITableViewCellStyleSubtitle" id="ypt-rm-AhC">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ypt-rm-AhC" id="dH2-1p-XOW">
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vge-D4-ADu">
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                            <variation key="widthClass=compact">
-                                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                            </variation>
-                                                        </label>
-                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Flo-A2-6Gv">
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                            <variation key="widthClass=compact">
-                                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                            </variation>
-                                                        </label>
-                                                    </subviews>
-                                                </tableViewCellContentView>
-                                            </tableViewCell>
-                                        </prototypes>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="8" y="8" width="284" height="112"/>
-                                        </variation>
-                                        <connections>
-                                            <outlet property="dataSource" destination="wEm-Ir-R98" id="ccO-0o-6uK"/>
-                                            <outlet property="delegate" destination="wEm-Ir-R98" id="6Hh-zE-4bm"/>
-                                        </connections>
-                                    </tableView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6A-fB-DDg">
-                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <state key="normal" title="更多评论">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="39" y="128" width="224" height="30"/>
-                                        </variation>
-                                        <connections>
-                                            <action selector="add:" destination="wEm-Ir-R98" eventType="touchUpInside" id="oh4-6n-Vlq"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="GCU-SU-jT4"/>
-                                        <exclude reference="C6A-fB-DDg"/>
-                                    </mask>
-                                </variation>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6A-fB-DDg">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="更多评论">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="29" y="312" width="303" height="193"/>
-                                    <mask key="subviews">
-                                        <include reference="GCU-SU-jT4"/>
-                                        <include reference="C6A-fB-DDg"/>
-                                    </mask>
+                                    <rect key="frame" x="146" y="115" width="224" height="30"/>
                                 </variation>
-                            </scrollView>
+                                <connections>
+                                    <action selector="add:" destination="wEm-Ir-R98" eventType="touchUpInside" id="oh4-6n-Vlq"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="121" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="GCU-SU-jT4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" textLabel="Vge-D4-ADu" detailTextLabel="Flo-A2-6Gv" rowHeight="121" style="IBUITableViewCellStyleSubtitle" id="ypt-rm-AhC">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ypt-rm-AhC" id="dH2-1p-XOW">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vge-D4-ADu">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Flo-A2-6Gv">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MoreCell" textLabel="xqH-XY-ypb" style="IBUITableViewCellStyleDefault" id="JXE-oo-QQD">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JXE-oo-QQD" id="JBk-EZ-2l9">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xqH-XY-ypb">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="46" y="238" width="315" height="287"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="wEm-Ir-R98" id="ccO-0o-6uK"/>
+                                    <outlet property="delegate" destination="wEm-Ir-R98" id="6Hh-zE-4bm"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="31v-tw-iPO"/>
                                 <exclude reference="1A6-u1-Oyu"/>
-                                <exclude reference="rwa-y8-Pkv"/>
+                                <exclude reference="C6A-fB-DDg"/>
+                                <exclude reference="GCU-SU-jT4"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="31v-tw-iPO"/>
                                 <include reference="1A6-u1-Oyu"/>
-                                <include reference="rwa-y8-Pkv"/>
+                                <include reference="C6A-fB-DDg"/>
+                                <include reference="GCU-SU-jT4"/>
                             </mask>
                         </variation>
                     </view>
@@ -303,6 +305,7 @@
                         <outlet property="commentTable" destination="GCU-SU-jT4" id="UdG-f3-oEV"/>
                         <outlet property="itemName" destination="31v-tw-iPO" id="dDs-Dy-R04"/>
                         <outlet property="itemPrice" destination="1A6-u1-Oyu" id="DNu-11-5Mi"/>
+                        <outlet property="moreButton" destination="C6A-fB-DDg" id="XCs-H7-3TY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h5e-bn-J6n" userLabel="First Responder" sceneMemberID="firstResponder"/>
