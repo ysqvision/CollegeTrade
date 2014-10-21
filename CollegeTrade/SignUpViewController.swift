@@ -37,11 +37,11 @@ class SignUpViewController: UIViewController {
             var session = NSURLSession.sharedSession()
             request.HTTPMethod = "POST"
             
-            var params = ["username":"username", "password":"password", "UserImage": "imageFile", "SchoolId": "s", "NickName": "nickname"] as Dictionary<String, String>
+            var params = ["username":"username321", "password":"password321", "UserImage": "imageFile", "SchoolId": "s", "NickName": "nickname"] as Dictionary<String, String>
             
             var err: NSError?
             request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)
-            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
             request.addValue("application/json", forHTTPHeaderField: "Accept")
             
             var task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in

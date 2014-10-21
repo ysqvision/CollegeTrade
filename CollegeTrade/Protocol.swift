@@ -7,8 +7,8 @@
 //
 
 import Foundation
+import UIKit
 
-
-protocol writeValueBackDelegate {
-    func writeValueBack(value: String)
+protocol selectedPictureDelegate {
+    func selectedPicture(value: UIImage)
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YmQ-qZ-k8F">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YmQ-qZ-k8F">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
@@ -621,11 +621,26 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="10" y="50" width="380" height="100"/>
+                                    <rect key="frame" x="31" y="52" width="148" height="100"/>
                                 </variation>
                                 <connections>
                                     <action selector="takePhoto:" destination="U5L-UF-7wj" eventType="touchUpInside" id="Ba8-PM-RQP"/>
                                 </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MZC-jW-TD4">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="218" y="52" width="143" height="104"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wjz-C8-Jt1">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="218" y="52" width="138" height="104"/>
+                                </variation>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -638,6 +653,8 @@
                                 <exclude reference="LVA-w3-Rs5"/>
                                 <exclude reference="nJc-ZP-ARC"/>
                                 <exclude reference="rsT-po-Jyt"/>
+                                <exclude reference="MZC-jW-TD4"/>
+                                <exclude reference="Wjz-C8-Jt1"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -649,6 +666,8 @@
                                 <include reference="LVA-w3-Rs5"/>
                                 <include reference="nJc-ZP-ARC"/>
                                 <include reference="rsT-po-Jyt"/>
+                                <include reference="MZC-jW-TD4"/>
+                                <include reference="Wjz-C8-Jt1"/>
                             </mask>
                         </variation>
                     </view>
@@ -656,6 +675,7 @@
                     <connections>
                         <outlet property="boughtItemButton" destination="5ia-75-oc6" id="60M-ni-hZ6"/>
                         <outlet property="myItemButton" destination="spF-Mi-uD1" id="aIh-vH-zHF"/>
+                        <outlet property="profilePicture" destination="MZC-jW-TD4" id="7Qt-fp-GFB"/>
                         <outlet property="settingButton" destination="LVA-w3-Rs5" id="Lsr-yc-paY"/>
                         <outlet property="shopNameButton" destination="eKm-7p-BFV" id="Gtc-ne-Orw"/>
                         <segue destination="hRZ-Bv-yry" kind="presentation" identifier="ShowLoginScreen" id="zd9-Lw-DF0"/>

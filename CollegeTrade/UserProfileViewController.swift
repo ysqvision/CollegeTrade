@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserProfileViewController: UIViewController, UIPopoverPresentationControllerDelegate, writeValueBackDelegate {
+class UserProfileViewController: UIViewController, UIPopoverPresentationControllerDelegate, selectedPictureDelegate {
     
     @IBOutlet weak var userProfileButton: UIButton!
     @IBOutlet weak var shopNameButton: UIButton!
@@ -16,6 +16,7 @@ class UserProfileViewController: UIViewController, UIPopoverPresentationControll
     @IBOutlet weak var boughtItemButton: UIButton!
     @IBOutlet weak var settingButton: UIButton!
     
+    @IBOutlet weak var profilePicture: UIImageView!
     
     @IBAction func takePhoto(sender: AnyObject) {
         let popoverVC = self.storyboard?.instantiateViewControllerWithIdentifier("TakePhotoViewController") as TakePhotoViewController
@@ -63,8 +64,9 @@ class UserProfileViewController: UIViewController, UIPopoverPresentationControll
         
     }
     
-    func writeValueBack(value: String) {
-        println(value)
+    func selectedPicture(value: UIImage) {
+        dismissViewControllerAnimated(true, completion: nil)
+        self.profilePicture.image = value
     }
     
     

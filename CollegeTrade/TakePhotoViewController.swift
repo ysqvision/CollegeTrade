@@ -9,7 +9,7 @@ import UIKit
 
 class TakePhotoViewController : UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
-    var delegate: writeValueBackDelegate?
+    var delegate: selectedPictureDelegate?
     
     @IBAction func pickPhoto(sender: AnyObject) {
         let picker = UIImagePickerController()
@@ -34,7 +34,8 @@ class TakePhotoViewController : UIViewController, UINavigationControllerDelegate
     }
     
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!){
-        delegate?.writeValueBack(image.description)
+        delegate?.selectedPicture(image)
+        dismissViewControllerAnimated(true, completion: nil)
         println("i've got an image");
     }
     

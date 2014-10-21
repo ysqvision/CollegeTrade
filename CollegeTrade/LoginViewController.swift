@@ -73,9 +73,12 @@ class LoginViewController: UIViewController {
             }
         })
         
+        println("herherhe")
+        
         task.resume()
 
         if username == "victor" && password == "pass" {
+              println("herherhe2")
             KeychainService.saveToken(username, token: password)
             return true;
         } else {
