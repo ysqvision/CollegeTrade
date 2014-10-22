@@ -39,6 +39,7 @@ class DataBaseAPIHelper {
                 let jsonStr = NSString(data: data, encoding: NSUTF8StringEncoding)
                 println("Error could not parse JSON: '\(jsonStr)'")
                 loginSuccess(success: false)
+                return
             }
             else {
                 // The JSONObjectWithData constructor didn't return an error. But, we should still
@@ -52,8 +53,9 @@ class DataBaseAPIHelper {
                         loginSuccess(success: true)
                         return
                     }
-                    if code == 102 {
+                    else {
                         loginSuccess(success: false)
+                        return
                     }
                 }
                 else {
@@ -61,6 +63,7 @@ class DataBaseAPIHelper {
                     let jsonStr = NSString(data: data, encoding: NSUTF8StringEncoding)
                     println("Error could not parse JSON: \(jsonStr)")
                     loginSuccess(success: false)
+                    return
                 }
             }
         })

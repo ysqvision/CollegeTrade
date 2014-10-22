@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CollegeTrade/DataBaseAPIHelper.swift"
-            timestampString = "435637238.770559"
+            timestampString = "435639398.529483"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "checkLoginCredential(_:password:loginSuccess:)"
             landmarkType = "5">
          </BreakpointContent>

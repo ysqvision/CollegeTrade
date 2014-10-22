@@ -19,12 +19,14 @@ class LoginViewController: UIViewController {
         DataBaseAPIHelper.checkLoginCredential(username, password: password) { (success: Bool) -> () in
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 if success {
+
                     USER_IS_LOGGED_IN = true
                     KeychainService.saveToken("SPIRIIITCOLLEGETRADEUSERNAME", token: username)
                     KeychainService.saveToken("SPIRIIITCOLLEGETRADEPASSWORD", token: password)
                     self.dismissViewControllerAnimated(true, completion: nil)
 
                 } else {
+                    
                     var myAlert = UIAlertView(title: "非法登陆",
                         message: "请输入正确的用户名和密码",
                         delegate: nil, cancelButtonTitle: "重新输入")
