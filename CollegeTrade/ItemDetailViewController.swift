@@ -11,7 +11,8 @@ import UIKit
 
 class ItemDetailViewController: UIViewController {
     
-    @IBOutlet weak var moreButton: UIButton!
+    //@IBOutlet weak var moreButton: UIButton!
+    @IBOutlet weak var itemPic: UIImageView!
     var item: ItemForSell!
     var commentNum: Int!
     
@@ -39,6 +40,8 @@ class ItemDetailViewController: UIViewController {
             itemPrice.text = "价格： \(self.item.price)"
             
             commentNum = 4
+            
+            itemPic.image = UIImage(named:"randomcat1.png")
     
         // Do any additional setup after loading the view, typically from a nib.
     }

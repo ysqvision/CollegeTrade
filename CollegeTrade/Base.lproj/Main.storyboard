@@ -219,19 +219,7 @@
                                     <rect key="frame" x="34" y="154" width="200" height="21"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6A-fB-DDg">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="更多评论">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="146" y="115" width="224" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="add:" destination="wEm-Ir-R98" eventType="touchUpInside" id="oh4-6n-Vlq"/>
-                                </connections>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="121" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="GCU-SU-jT4">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="GCU-SU-jT4">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -289,35 +277,41 @@
                                     <outlet property="delegate" destination="wEm-Ir-R98" id="6Hh-zE-4bm"/>
                                 </connections>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hi5-WS-KuK">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="190" y="82" width="157" height="133"/>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="31v-tw-iPO"/>
                                 <exclude reference="1A6-u1-Oyu"/>
-                                <exclude reference="C6A-fB-DDg"/>
                                 <exclude reference="GCU-SU-jT4"/>
+                                <exclude reference="hi5-WS-KuK"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="31v-tw-iPO"/>
                                 <include reference="1A6-u1-Oyu"/>
-                                <include reference="C6A-fB-DDg"/>
                                 <include reference="GCU-SU-jT4"/>
+                                <include reference="hi5-WS-KuK"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="commentTable" destination="GCU-SU-jT4" id="UdG-f3-oEV"/>
                         <outlet property="itemName" destination="31v-tw-iPO" id="dDs-Dy-R04"/>
+                        <outlet property="itemPic" destination="hi5-WS-KuK" id="ZDU-R6-wmU"/>
                         <outlet property="itemPrice" destination="1A6-u1-Oyu" id="DNu-11-5Mi"/>
-                        <outlet property="moreButton" destination="C6A-fB-DDg" id="XCs-H7-3TY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h5e-bn-J6n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3892.5" y="869"/>
+            <point key="canvasLocation" x="3982.5" y="869"/>
         </scene>
         <!--Item-->
         <scene sceneID="CF1-wC-kbD">
