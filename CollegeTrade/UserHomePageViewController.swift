@@ -22,6 +22,20 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
         super.viewDidLoad()
         searchItemAPI.delegate = self
         searchItemAPI.getAllItems()
+        if USER_IS_LOGGED_IN == false {
+            println("is false")
+            var storedUsername = KeychainService.loadToken("SPIRIIITCOLLEGETRADEUSERNAME")
+            if (storedUsername != nil && storedUsername! != "") {
+                var storedPassword = KeychainService.loadToken("SPIRIIITCOLLEGETRADEPASSWORD")
+                DataBaseAPIHelper.checkLoginCredential(storedUsername!, password: storedPassword!) { (success: Bool) -> () in
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        if success {
+                            USER_IS_LOGGED_IN = true
+                        }
+                    })
+                }
+            }
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
     

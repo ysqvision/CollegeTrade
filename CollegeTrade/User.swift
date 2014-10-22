@@ -8,14 +8,6 @@
 
 import Foundation
 
-class User {
-    var name: String
-    var id: Int
-    var stores = [Store]()
-    
-    init(name: String, id: Int, stores: [Store]) {
-        self.name = name
-        self.id = id
-        self.stores = stores
-    }
-}
+var USER_IS_LOGGED_IN: Bool = false
+var LOGGED_IN_USER_INFORMATION: NSDictionary? = nil
+

@@ -20,6 +20,7 @@
 		5784C28719C916EE00DDA365 /* UserHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784C28619C916EE00DDA365 /* UserHomePageViewController.swift */; };
 		5784C28919C9245100DDA365 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784C28819C9245100DDA365 /* ItemDetailViewController.swift */; };
 		57908E0719F5F4B900179925 /* SearchItemAPIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57908E0619F5F4B900179925 /* SearchItemAPIController.swift */; };
+		57908E0919F741D900179925 /* DataBaseAPIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57908E0819F741D900179925 /* DataBaseAPIHelper.swift */; };
 		57E52D7C19EC7BEB00D33DE3 /* KeyChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E52D7B19EC7BEB00D33DE3 /* KeyChainService.swift */; };
 		57E52D7E19EE14AF00D33DE3 /* TakePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E52D7D19EE14AF00D33DE3 /* TakePhotoViewController.swift */; };
 		57E52D8019EEEC5500D33DE3 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E52D7F19EEEC5500D33DE3 /* Protocol.swift */; };
@@ -58,6 +59,7 @@
 		5784C28619C916EE00DDA365 /* UserHomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHomePageViewController.swift; sourceTree = "<group>"; };
 		5784C28819C9245100DDA365 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		57908E0619F5F4B900179925 /* SearchItemAPIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchItemAPIController.swift; sourceTree = "<group>"; };
+		57908E0819F741D900179925 /* DataBaseAPIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBaseAPIHelper.swift; sourceTree = "<group>"; };
 		57E52D7B19EC7BEB00D33DE3 /* KeyChainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainService.swift; sourceTree = "<group>"; };
 		57E52D7D19EE14AF00D33DE3 /* TakePhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakePhotoViewController.swift; sourceTree = "<group>"; };
 		57E52D7F19EEEC5500D33DE3 /* Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				5746150419E37DD8008323E0 /* StoresNearByViewController.swift */,
 				5746150219E37884008323E0 /* User.swift */,
 				5742032819C8CF2000A84191 /* LoginViewController.swift */,
+				57908E0819F741D900179925 /* DataBaseAPIHelper.swift */,
 				57E52D7B19EC7BEB00D33DE3 /* KeyChainService.swift */,
 				5746150019E375D7008323E0 /* Store.swift */,
 				70D819B519F7487C0092CBAF /* SwitchCell.swift */,
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5746150519E37DD8008323E0 /* StoresNearByViewController.swift in Sources */,
+				57908E0919F741D900179925 /* DataBaseAPIHelper.swift in Sources */,
 				57FA4B6A19E35DAC00BBC5FD /* ItemForSell.swift in Sources */,
 				5784C28919C9245100DDA365 /* ItemDetailViewController.swift in Sources */,
 				57908E0719F5F4B900179925 /* SearchItemAPIController.swift in Sources */,

@@ -32,8 +32,12 @@ class UserProfileViewController: UIViewController, UIPopoverPresentationControll
     
   
     @IBAction func userLogout(sender: AnyObject) {
-        var storedPass = KeychainService.loadToken("victor")
-        KeychainService.removeToken("victor", token: storedPass!)
+        var storedUsername = KeychainService.loadToken("SPIRIIITCOLLEGETRADEUSERNAME")
+        var storedPass = KeychainService.loadToken("SPIRIIITCOLLEGETRADEPASSWORD")
+        KeychainService.removeToken("SPIRIIITCOLLEGETRADEUSERNAME", token: storedUsername!)
+        KeychainService.removeToken("SPIRIIITCOLLEGETRADEPASSWORD", token: storedPass!)
+        USER_IS_LOGGED_IN = false
+        LOGGED_IN_USER_INFORMATION = nil
         self.tabBarController?.selectedIndex = 0
     }
     override func viewDidLoad() {
@@ -51,10 +55,7 @@ class UserProfileViewController: UIViewController, UIPopoverPresentationControll
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        var storedPass = KeychainService.loadToken("victor")
-        if storedPass == "pass" {
-            
-        } else {
+        if USER_IS_LOGGED_IN == false {
             performSegueWithIdentifier("ShowLoginScreen", sender: self)
         }
     }
