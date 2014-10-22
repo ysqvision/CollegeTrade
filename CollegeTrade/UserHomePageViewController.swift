@@ -52,7 +52,8 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
         // Get the formatted price string for display in the subtitle
         //let formattedPrice: NSString = rowData["price"] as NSString
         let formattedPrice: Double = rowData["price"] as Double
-        cell.detailTextLabel?.text = "价格: \(formattedPrice)";
+        cell.detailTextLabel?.text = "价格: \(formattedPrice)"
+        cell.imageView?.image = UIImage(named: "randomcat1.png")
         
         return cell
     }
@@ -62,7 +63,6 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-         println("here")
         var itemDetailViewController: ItemDetailViewController = segue.destinationViewController as ItemDetailViewController
         var itemIndex = itemsTable!.indexPathForSelectedRow()!.row;
         var selectedItem = self.itemsForSell[itemIndex] as NSDictionary

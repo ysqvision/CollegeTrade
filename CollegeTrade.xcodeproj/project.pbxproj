@@ -26,6 +26,8 @@
 		57FA4B6A19E35DAC00BBC5FD /* ItemForSell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FA4B6919E35DAC00BBC5FD /* ItemForSell.swift */; };
 		709D7D6619ECC2BD0037A03C /* UserSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D7D6519ECC2BD0037A03C /* UserSettingViewController.swift */; };
 		70D7785819E36C6400437988 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D7785719E36C6400437988 /* UserProfileViewController.swift */; };
+		70D819B619F7487C0092CBAF /* SwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D819B519F7487C0092CBAF /* SwitchCell.swift */; };
+		70D819BA19F74E970092CBAF /* randomcat1.png in Resources */ = {isa = PBXBuildFile; fileRef = 70D819B919F74E970092CBAF /* randomcat1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		57FA4B6919E35DAC00BBC5FD /* ItemForSell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemForSell.swift; sourceTree = "<group>"; };
 		709D7D6519ECC2BD0037A03C /* UserSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettingViewController.swift; sourceTree = "<group>"; };
 		70D7785719E36C6400437988 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		70D819B519F7487C0092CBAF /* SwitchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchCell.swift; sourceTree = "<group>"; };
+		70D819B919F74E970092CBAF /* randomcat1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = randomcat1.png; path = ../../../../Documents/randomcat1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,7 @@
 				5742032819C8CF2000A84191 /* LoginViewController.swift */,
 				57E52D7B19EC7BEB00D33DE3 /* KeyChainService.swift */,
 				5746150019E375D7008323E0 /* Store.swift */,
+				70D819B519F7487C0092CBAF /* SwitchCell.swift */,
 				57FA4B6919E35DAC00BBC5FD /* ItemForSell.swift */,
 				70D7785719E36C6400437988 /* UserProfileViewController.swift */,
 				5784C28819C9245100DDA365 /* ItemDetailViewController.swift */,
@@ -129,6 +134,7 @@
 		5742032419C8CF2000A84191 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				70D819B919F74E970092CBAF /* randomcat1.png */,
 				5742032519C8CF2000A84191 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -231,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70D819BA19F74E970092CBAF /* randomcat1.png in Resources */,
 				574614FF19E37138008323E0 /* Images.xcassets in Resources */,
 				5742032C19C8CF2000A84191 /* Main.storyboard in Resources */,
 				5742033119C8CF2100A84191 /* LaunchScreen.xib in Resources */,
@@ -264,6 +271,7 @@
 				5742032919C8CF2000A84191 /* LoginViewController.swift in Sources */,
 				57E52D7E19EE14AF00D33DE3 /* TakePhotoViewController.swift in Sources */,
 				5784C28719C916EE00DDA365 /* UserHomePageViewController.swift in Sources */,
+				70D819B619F7487C0092CBAF /* SwitchCell.swift in Sources */,
 				709D7D6619ECC2BD0037A03C /* UserSettingViewController.swift in Sources */,
 				5742032719C8CF2000A84191 /* AppDelegate.swift in Sources */,
 			);
@@ -388,9 +396,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CollegeTrade/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -399,6 +409,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CollegeTrade/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

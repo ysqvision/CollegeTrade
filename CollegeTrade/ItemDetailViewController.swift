@@ -59,6 +59,8 @@ class ItemDetailViewController: UIViewController {
             
             cell.textLabel?.text = "Comment No.\(indexPath.row + 1) :"
             cell.detailTextLabel?.text = "杨少卿的手指非常的好用"
+            cell.imageView?.image = UIImage(named: "randomcat1.png")
+        
         }
         else{
             cell = tableView.dequeueReusableCellWithIdentifier("MoreCell") as UITableViewCell
@@ -74,7 +76,7 @@ class ItemDetailViewController: UIViewController {
 
         if (indexPath.row == tableView.numberOfRowsInSection(0) - 1)
         {
-            commentNum = commentNum + 1
+            commentNum = commentNum + 3
             tableView.reloadData()
            // tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
            // tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
