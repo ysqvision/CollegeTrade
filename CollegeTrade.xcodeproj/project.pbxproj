@@ -28,7 +28,7 @@
 		709D7D6619ECC2BD0037A03C /* UserSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D7D6519ECC2BD0037A03C /* UserSettingViewController.swift */; };
 		70D7785819E36C6400437988 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D7785719E36C6400437988 /* UserProfileViewController.swift */; };
 		70D819B619F7487C0092CBAF /* SwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D819B519F7487C0092CBAF /* SwitchCell.swift */; };
-		70D819BA19F74E970092CBAF /* randomcat1.png in Resources */ = {isa = PBXBuildFile; fileRef = 70D819B919F74E970092CBAF /* randomcat1.png */; };
+		70D819BC19F752770092CBAF /* randomcat1.png in Resources */ = {isa = PBXBuildFile; fileRef = 70D819BB19F752770092CBAF /* randomcat1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +67,7 @@
 		709D7D6519ECC2BD0037A03C /* UserSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettingViewController.swift; sourceTree = "<group>"; };
 		70D7785719E36C6400437988 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		70D819B519F7487C0092CBAF /* SwitchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchCell.swift; sourceTree = "<group>"; };
-		70D819B919F74E970092CBAF /* randomcat1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = randomcat1.png; path = ../../../../Documents/randomcat1.png; sourceTree = "<group>"; };
+		70D819BB19F752770092CBAF /* randomcat1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = randomcat1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +137,7 @@
 		5742032419C8CF2000A84191 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				70D819B919F74E970092CBAF /* randomcat1.png */,
+				70D819BB19F752770092CBAF /* randomcat1.png */,
 				5742032519C8CF2000A84191 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -240,9 +240,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70D819BA19F74E970092CBAF /* randomcat1.png in Resources */,
 				574614FF19E37138008323E0 /* Images.xcassets in Resources */,
 				5742032C19C8CF2000A84191 /* Main.storyboard in Resources */,
+				70D819BC19F752770092CBAF /* randomcat1.png in Resources */,
 				5742033119C8CF2100A84191 /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

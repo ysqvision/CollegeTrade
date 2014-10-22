@@ -10,6 +10,7 @@ import UIKit
 
 class UserHomePageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, didReceiveItemsProtocol {
 
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     let kCellIdentifier: String = "ItemForSellCell"
     var itemsForSell = []

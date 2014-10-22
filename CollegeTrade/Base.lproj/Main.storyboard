@@ -121,6 +121,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="AZv-d1-hvQ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="Z5x-Z2-VbC">
+                                    <rect key="frame" x="-10" y="-10" width="20" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </activityIndicatorView>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ItemForSellCell" textLabel="w5Q-PF-H0P" detailTextLabel="gdo-FW-Nic" style="IBUITableViewCellStyleSubtitle" id="qFT-0g-QdU">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -175,6 +179,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ONQ-OJ-N5C"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="Z5x-Z2-VbC" id="eUR-ky-c5z"/>
                         <outlet property="itemsTable" destination="AZv-d1-hvQ" id="gNE-Yj-nfr"/>
                     </connections>
                 </viewController>
