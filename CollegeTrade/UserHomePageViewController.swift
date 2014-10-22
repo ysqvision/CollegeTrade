@@ -21,6 +21,7 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet weak var itemsTable: UITableView?
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicator.startAnimating();
         searchItemAPI.delegate = self
         searchItemAPI.getAllItems()
         if USER_IS_LOGGED_IN == false {
@@ -37,6 +38,8 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
                 }
             }
         }
+        
+       // activityIndicator.stopAnimating();
         // Do any additional setup after loading the view, typically from a nib.
     }
     
