@@ -61,6 +61,9 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // setting button and labels' position, color and size
+        
     }
     
     override func didReceiveMemoryWarning() {

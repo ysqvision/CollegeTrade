@@ -12,7 +12,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var usernameTextField: UITextField!
     
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
     
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var passwordLabel: UILabel!
     @IBAction func validateLoginCredentials(sender: AnyObject) {
         var username = usernameTextField.text
         var password = passwordTextField.text
@@ -41,6 +45,18 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         passwordTextField.secureTextEntry = true
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // setting button and labels' position, color and size
+        let maojmBlue = UIColor(red:0.5, green:0.8,blue:1.0,alpha:1.0)
+        let maojmSilver = UIColor(red:0.5, green:0.5,blue:0.5,alpha:1.0)
+        
+        loginButton.frame = CGRectMake(300,50,500,50)
+        loginButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal);
+        loginButton.setBackgroundImage(UIImage(named: "ButtonBlue.png"), forState: UIControlState.Normal)
+        
+        registerButton.backgroundColor = maojmBlue
+        registerButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        
     }
 
     override func didReceiveMemoryWarning() {

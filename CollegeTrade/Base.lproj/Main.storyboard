@@ -98,7 +98,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="xVM-eC-p4S"/>
                     <connections>
+                        <outlet property="loginButton" destination="xNY-bk-Peb" id="Sv4-Bx-khb"/>
+                        <outlet property="passwordLabel" destination="982-LN-mJH" id="U4b-1a-YvA"/>
                         <outlet property="passwordTextField" destination="SoO-QG-Zls" id="Ni1-pH-1g5"/>
+                        <outlet property="registerButton" destination="c9z-kI-jBH" id="Vqc-Qe-IUJ"/>
+                        <outlet property="usernameLabel" destination="nVV-NV-OHD" id="EcG-LE-tfS"/>
                         <outlet property="usernameTextField" destination="GMa-ey-oJy" id="A2p-lv-hFr"/>
                     </connections>
                 </viewController>
@@ -916,7 +920,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="89" width="400" height="421"/>
+                                    <rect key="frame" x="0.0" y="85" width="400" height="421"/>
                                 </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="zQ3-5R-Bgz" id="efB-8N-gwp"/>
