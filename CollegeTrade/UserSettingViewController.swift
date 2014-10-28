@@ -21,33 +21,33 @@ class UserSettingViewController : UIViewController {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 3
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var cell: UITableViewCell
+        var cell1: SwitchCell
 
         
         switch indexPath.row{
         case 0:
-            cell = tableView.dequeueReusableCellWithIdentifier("SettingCell1") as UITableViewCell
-        
-            cell.textLabel?.text = "杨手指1"
-            cell.detailTextLabel?.text = "杨少卿"
+            cell1 = tableView.dequeueReusableCellWithIdentifier("SettingCell4") as SwitchCell
+            cell1.titleLabel.text = "接受新消息通知"
+            return cell1
+            
         case 1:
-            cell = tableView.dequeueReusableCellWithIdentifier("SettingCell2") as UITableViewCell
+            cell1 = tableView.dequeueReusableCellWithIdentifier("SettingCell4") as SwitchCell
+            cell1.titleLabel.text = "声音"
+            return cell1
             
-            cell.textLabel?.text = "杨手指2"
-            cell.detailTextLabel?.text = "杨少卿"
         case 2:
-            cell = tableView.dequeueReusableCellWithIdentifier("SettingCell3") as UITableViewCell
-            
-            cell.textLabel?.text = "杨手指3"
-            cell.detailTextLabel?.text = "杨少卿"
+            cell1 = tableView.dequeueReusableCellWithIdentifier("SettingCell4") as SwitchCell
+            cell1.titleLabel.text = "声音"
+            return cell1
             
         case 3:
-            let cell1:SwitchCell = tableView.dequeueReusableCellWithIdentifier("SettingCell4") as SwitchCell
+            cell1 = tableView.dequeueReusableCellWithIdentifier("SettingCell4") as SwitchCell
             cell1.titleLabel.text = "新消息通知"
             return cell1
          

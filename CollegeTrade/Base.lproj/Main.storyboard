@@ -22,7 +22,7 @@
                             <label opaque="NO" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVV-NV-OHD">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SoO-QG-Zls">
@@ -45,7 +45,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密码" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="982-LN-mJH">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNY-bk-Peb">
@@ -66,7 +66,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="0.70000000000000007" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="nVV-NV-OHD" firstAttribute="width" secondItem="GMa-ey-oJy" secondAttribute="height" multiplier="84:55" id="32Y-pv-5Eq"/>
                             <constraint firstItem="SoO-QG-Zls" firstAttribute="leading" secondItem="982-LN-mJH" secondAttribute="trailing" constant="65" id="74C-Bo-e5q">
@@ -262,9 +262,6 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="40" y="114" width="320" height="360"/>
-                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="a0T-ah-qPp" id="CxL-QB-6mN"/>
                                     <outlet property="delegate" destination="a0T-ah-qPp" id="9Kp-RW-YaU"/>
@@ -829,7 +826,7 @@
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="5ia-75-oc6" firstAttribute="top" secondItem="spF-Mi-uD1" secondAttribute="bottom" constant="8" id="16H-9X-PsS">
                                 <variation key="widthClass=compact" constant="15"/>
@@ -1283,9 +1280,6 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="36" y="96" width="328" height="434"/>
-                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="zQ3-5R-Bgz" id="efB-8N-gwp"/>
                                     <outlet property="delegate" destination="zQ3-5R-Bgz" id="f25-U4-2MG"/>
@@ -1340,6 +1334,7 @@
                                 <exclude reference="FXf-E1-yMp"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="K7L-SS-AJY"/>
                                 <exclude reference="8v8-Jd-Aj7"/>
                                 <exclude reference="Dal-p4-gHz"/>
                                 <exclude reference="cAb-ec-p9D"/>
@@ -1350,7 +1345,6 @@
                                 <exclude reference="uI2-Z7-HlR"/>
                                 <exclude reference="vYL-5k-fs9"/>
                                 <exclude reference="xI0-Ny-Gas"/>
-                                <exclude reference="K7L-SS-AJY"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -1359,6 +1353,7 @@
                                 <include reference="FXf-E1-yMp"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="K7L-SS-AJY"/>
                                 <include reference="8v8-Jd-Aj7"/>
                                 <include reference="Dal-p4-gHz"/>
                                 <include reference="cAb-ec-p9D"/>
@@ -1369,7 +1364,6 @@
                                 <exclude reference="uI2-Z7-HlR"/>
                                 <exclude reference="vYL-5k-fs9"/>
                                 <exclude reference="xI0-Ny-Gas"/>
-                                <include reference="K7L-SS-AJY"/>
                             </mask>
                         </variation>
                     </view>
@@ -1396,13 +1390,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GO9-GL-ebd">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密码" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJA-nJ-JTd">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1UP-eM-PbF">
@@ -1435,11 +1429,11 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="重复密码" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gq-N1-Sf5">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="3Xe-cl-B0D" secondAttribute="centerY" constant="-87" id="0RI-RL-c7M">
                                 <variation key="widthClass=compact" constant="-80"/>
@@ -1646,8 +1640,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="zGh-vy-Oep"/>
         <segue reference="jCT-5p-l6r"/>
+        <segue reference="zd9-Lw-DF0"/>
         <segue reference="YaP-3V-c0o"/>
     </inferredMetricsTieBreakers>
 </document>
