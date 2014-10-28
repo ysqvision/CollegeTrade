@@ -6,17 +6,35 @@
 //  Copyright (c) 2014 Shaoqing Yang. All rights reserved.
 //
 import UIKit
+import MobileCoreServices
 
 class TakePhotoViewController : UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     var delegate: selectedPictureDelegate?
-    
+    var _newPhoto = false
     @IBAction func pickPhoto(sender: AnyObject) {
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.sourceType = UIImagePickerControllerSourceType.SavedPhotosAlbum
         picker.allowsEditing = false
         self.presentViewController(picker, animated: true, completion: nil)
+        _newPhoto = false
+    }
+    
+    @IBAction func takePhoto(sender: AnyObject) {
+        if (UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)){
+            let picker = UIImagePickerController()
+            picker.delegate = self
+            picker.sourceType = UIImagePickerControllerSourceType.Camera
+            picker.allowsEditing = false
+            self.presentViewController(picker, animated: true, completion: nil)
+            _newPhoto = true
+        } else {
+            var myAlert = UIAlertView(title: "没有检测到相机",
+                message: "在设备里没有检测到相机！",
+                delegate: nil, cancelButtonTitle: "取消")
+            myAlert.show()
+        }
     }
     
     @IBAction func cancelPopover(sender: AnyObject) {
@@ -33,10 +51,17 @@ class TakePhotoViewController : UIViewController, UINavigationControllerDelegate
         // Dispose of any resources that can be recreated.
     }
     
-    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!){
-        delegate?.selectedPicture(image)
-        dismissViewControllerAnimated(true, completion: nil)
-        println("i've got an image");
+    func imagePickerController(picker:UIImagePickerController!, didFinishPickingMediaWithInfo info:NSDictionary)
+    {
+        //var mediaType:NSString = info.objectForKey(UIImagePickerControllerEditedImage) as NSString
+        var imageToSave:UIImage
+        
+        imageToSave = info.objectForKey(UIImagePickerControllerOriginalImage) as UIImage
+        delegate?.selectedPicture(imageToSave)
+        if (_newPhoto) {
+            UIImageWriteToSavedPhotosAlbum(imageToSave, nil, nil, nil)
+        }
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
 }

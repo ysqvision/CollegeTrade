@@ -65,7 +65,9 @@ class SearchItemAPIController {
                 }
                 
             }
-            self.delegate?.didReceiveItems(json!)
+            if (json != nil) {
+                self.delegate?.didReceiveItems(json!)
+            }
         })
         
         println("herherhe")

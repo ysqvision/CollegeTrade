@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CollegeTrade/DataBaseAPIHelper.swift"
-            timestampString = "435638306.68127"
+            timestampString = "435641162.841594"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "checkLoginCredential(_:password:loginSuccess:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CollegeTrade/DataBaseAPIHelper.swift"
-            timestampString = "435638306.68127"
+            timestampString = "435641162.841594"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "checkLoginCredential(_:password:loginSuccess:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CollegeTrade/DataBaseAPIHelper.swift"
-            timestampString = "435638306.68127"
+            timestampString = "435641162.841594"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "checkLoginCredential(_:password:loginSuccess:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -90,12 +90,106 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CollegeTrade/DataBaseAPIHelper.swift"
-            timestampString = "435639398.529483"
+            timestampString = "435641162.841594"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
             landmarkName = "checkLoginCredential(_:password:loginSuccess:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CollegeTrade/SearchItemAPIController.swift"
+            timestampString = "436057707.82642"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "getAllItems()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CollegeTrade.SearchItemAPIController.(getAllItems (CollegeTrade.SearchItemAPIController) -&gt; () -&gt; ()).(closure #1)"
+                  moduleName = "CollegeTrade"
+                  urlString = "file:///Users/Victor/Documents/ios_dev/CollegeTrade/CollegeTrade/SearchItemAPIController.swift"
+                  timestampString = "436057707.833661"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "3764">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CollegeTrade.SearchItemAPIController.(getAllItems (CollegeTrade.SearchItemAPIController) -&gt; () -&gt; ()).(closure #1)"
+                  moduleName = "CollegeTrade"
+                  urlString = "file:///Users/Victor/Documents/ios_dev/CollegeTrade/CollegeTrade/SearchItemAPIController.swift"
+                  timestampString = "436057707.835136"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "4044">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CollegeTrade/TakePhotoViewController.swift"
+            timestampString = "436060038.520397"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CollegeTrade/UpYunHelper.swift"
+            timestampString = "436151623.036414"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "postPicture(_:fileName:uploadSuccess:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CollegeTrade/UpYunHelper.swift"
+            timestampString = "436155249.702608"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "postPicture(_:fileName:uploadSuccess:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

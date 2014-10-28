@@ -187,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="01p-lF-SS2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2904" y="865"/>
+            <point key="canvasLocation" x="3296" y="89"/>
         </scene>
         <!--Item Detail View Controller-->
         <scene sceneID="GXm-IW-kUn">
@@ -710,7 +710,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="185" y="136" width="30" height="30"/>
+                                            <rect key="frame" x="185" y="150" width="30" height="30"/>
                                         </variation>
                                         <connections>
                                             <action selector="cancelPopover:" destination="C0d-he-jfj" eventType="touchUpInside" id="j9y-Vs-R5F"/>
@@ -728,12 +728,25 @@
                                             <action selector="pickPhoto:" destination="C0d-he-jfj" eventType="touchUpInside" id="wlo-sr-mOi"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecs-4U-VjT">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" title="拍照">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="185" y="93" width="30" height="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="takePhoto:" destination="C0d-he-jfj" eventType="touchUpInside" id="31c-Fa-lfj"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="default">
                                     <mask key="subviews">
                                         <exclude reference="R1l-Oj-XEY"/>
                                         <exclude reference="9NU-na-49d"/>
+                                        <exclude reference="ecs-4U-VjT"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -741,6 +754,7 @@
                                     <mask key="subviews">
                                         <include reference="R1l-Oj-XEY"/>
                                         <include reference="9NU-na-49d"/>
+                                        <include reference="ecs-4U-VjT"/>
                                     </mask>
                                 </variation>
                             </view>
