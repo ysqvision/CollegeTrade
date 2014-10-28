@@ -27,7 +27,7 @@ class SearchItemAPIController {
         
         //var params = ["username":"b", "password":"2"] as Dictionary<String, String>
         let date = NSDate()
-        let timestamp = date.timeIntervalSince1970
+        let timestamp = date.timeIntervalSince1970 * 1000
         var requestBody = "newestTimestamp=\(timestamp)"
         let data = requestBody.dataUsingEncoding(NSUTF8StringEncoding)
         request.HTTPBody = data
@@ -70,8 +70,44 @@ class SearchItemAPIController {
             }
         })
         
-        println("herherhe")
-        
         task.resume()
     }
+    
+    func getUserItems() {
+        
+        let manager = AFHTTPRequestOperationManager()
+        //var acceptedValue = NSMutableSet()
+        //acceptedValue.addObject("text/html")
+        
+      //  manager.responseSerializer.acceptableContentTypes = acceptedValue
+    ///var userId: Int =  LOGGED_IN_USER_INFORMATION!["Userid"] as Int
+        var userId: Int = 1
+        var timeStamp: String = "\(NSDate().timeIntervalSince1970 * 1000)"
+        var parameter: [String: String] = ["Userid": "\(userId)", "Time": timeStamp, "Flag": "1", "Count": "1000"]
+       
+        manager.POST("http://14.29.65.186:9090/SpiriiitTradeServer/user-getGoodsListByUserId", parameters: parameter,
+            success: { operation, response in
+                var err: NSError?
+                var jsonResponse = NSJSONSerialization.JSONObjectWithData(response as NSData, options: .MutableLeaves, error: &err) as? NSDictionary
+                if (err != nil) {
+                    return
+                }
+                if let parsedJSON = jsonResponse {
+                    var code = parsedJSON["status"] as? Int
+                    if code == 101 {
+                        self.delegate?.didReceiveItems(jsonResponse!)
+                        return
+                    }
+                    else {
+                        return
+                    }
+                }
+            },
+            failure: {operation, error in
+                return
+            }
+        )
+
+    }
+
 }

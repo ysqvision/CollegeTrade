@@ -11,7 +11,7 @@ import UIKit
 
 class UpYunHelper {
     
-    class func postPicture (image: UIImage, fileName: String, uploadSuccess: (success: Bool) -> ()){
+    class func postPicture (image: UIImage, fileName: String, uploadSuccess: (success: Bool, url: String) -> ()){
         
        // var bucket = "bucket"
         var expiration: Int = Int(NSDate().timeIntervalSince1970 + 900.0)
@@ -43,17 +43,35 @@ class UpYunHelper {
         acceptedValue.addObject("text/html")
     
         manager.responseSerializer.acceptableContentTypes = acceptedValue
-        manager.POST("http://v0.api.upyun.com/spiriiit-sharejx/", parameters: parameter,
-            constructingBodyWithBlock: { (data: AFMultipartFormData!) in
-                data.appendPartWithFileData(imageData, name: "file", fileName: "switch.png", mimeType: "image/png")
+        
+        manager.POST("http://v0.api.upyun.com/spiriiit-sharejx/", parameters: parameter, constructingBodyWithBlock: {
+            (data: AFMultipartFormData!) in
+            data.appendPartWithFileData(imageData, name: "file", fileName: "switch.png", mimeType: "image/png")
+            }, success: { operation, response in
+                var err: NSError?
+                var jsonResponse = NSJSONSerialization.JSONObjectWithData(response as NSData, options: .MutableLeaves, error: &err) as? NSDictionary
+                if (err != nil) {
+                    uploadSuccess(success: false, url: "")
+                    return
+                }
+                if let parsedJSON = jsonResponse {
+                    var code = parsedJSON["code"] as? Int
+                    if code == 200 {
+                        var url = parsedJSON["url"] as NSString
+                        uploadSuccess(success: true, url: url)
+                        return
+                    }
+                    else {
+                        uploadSuccess(success: false, url: "")
+                        return
+                    }
+                }
             },
-            success: { operation, response in
-                println("[success] , response: \(response)")
-            },
-            failure: { operation, error in
-                println("[fail] , error: \(error)")
+            failure: {operation, error in
+                uploadSuccess(success: false, url: "")
             }
-        )        /*
+        )
+        /*
         var request = NSMutableURLRequest(URL: NSURL(string: "http://v0.api.upyun.com/spiriiit-sharejx/"))
         var session = NSURLSession.sharedSession()
         request.HTTPMethod = "POST"

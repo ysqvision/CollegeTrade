@@ -69,9 +69,10 @@ class UserProfileViewController: UIViewController, UIPopoverPresentationControll
         dismissViewControllerAnimated(true, completion: nil)
         self.profilePicture.image = value
         
-        UpYunHelper.postPicture(value, fileName: "picture.jpeg") { (success: Bool) -> () in
+        UpYunHelper.postPicture(value, fileName: "picture.jpeg") { (success: Bool, url: String) -> () in
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 if (success) {
+                    
                     println("upload success")
                 } else {
                     println("upload failed")
