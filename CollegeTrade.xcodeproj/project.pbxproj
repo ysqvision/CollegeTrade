@@ -48,6 +48,7 @@
 		57F288CD1A00321B0026949D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F288CC1A00321B0026949D /* UIKit.framework */; };
 		57F28B061A00507F0026949D /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F28B051A00507F0026949D /* FriendListViewController.swift */; };
 		57FA4B6A19E35DAC00BBC5FD /* ItemForSell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FA4B6919E35DAC00BBC5FD /* ItemForSell.swift */; };
+		704E76581A0082CC0057EE39 /* UserSettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704E76571A0082CC0057EE39 /* UserSettingTableViewController.swift */; };
 		709D7D6619ECC2BD0037A03C /* UserSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D7D6519ECC2BD0037A03C /* UserSettingViewController.swift */; };
 		70D7785819E36C6400437988 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D7785719E36C6400437988 /* UserProfileViewController.swift */; };
 		70D819B619F7487C0092CBAF /* SwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D819B519F7487C0092CBAF /* SwitchCell.swift */; };
@@ -192,6 +193,7 @@
 		57F28B051A00507F0026949D /* FriendListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
 		57FA4B6919E35DAC00BBC5FD /* ItemForSell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemForSell.swift; sourceTree = "<group>"; };
 		6404A3F56B88EBB2765C06C6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		704E76571A0082CC0057EE39 /* UserSettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettingTableViewController.swift; sourceTree = "<group>"; };
 		709D7D6519ECC2BD0037A03C /* UserSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettingViewController.swift; sourceTree = "<group>"; };
 		70D7785719E36C6400437988 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		70D819B519F7487C0092CBAF /* SwitchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchCell.swift; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 				5742032F19C8CF2100A84191 /* LaunchScreen.xib */,
 				5742032819C8CF2000A84191 /* LoginViewController.swift */,
 				5742032A19C8CF2000A84191 /* Main.storyboard */,
+				704E76571A0082CC0057EE39 /* UserSettingTableViewController.swift */,
 				5779466019FF58FD00B2512F /* NewItemForSellViewController.swift */,
 				57F288531A0020500026949D /* PagedImageScrollView.h */,
 				57F288541A0020500026949D /* PagedImageScrollView.m */,
@@ -715,6 +718,7 @@
 				57E52D7E19EE14AF00D33DE3 /* TakePhotoViewController.swift in Sources */,
 				57F288551A0020500026949D /* PagedImageScrollView.m in Sources */,
 				57ACA0791A006F2000A88172 /* ChatWithFriendViewController.swift in Sources */,
+				704E76581A0082CC0057EE39 /* UserSettingTableViewController.swift in Sources */,
 				5784C28719C916EE00DDA365 /* UserHomePageViewController.swift in Sources */,
 				70D819B619F7487C0092CBAF /* SwitchCell.swift in Sources */,
 				5731621C19FEC10500F17821 /* UpYunHelper.swift in Sources */,
