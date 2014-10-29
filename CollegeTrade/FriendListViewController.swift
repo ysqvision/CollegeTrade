@@ -12,19 +12,19 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
     var chatHistory = [String: [EMMessage]]()
     var conversation = [String: EMConversation]()
     var searchFriendListAPI = SearchForFriendList()
-    
+   
     @IBOutlet var friendListTable: UITableView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let addFriendButton = UIBarButtonItem(title: "添加好友", style: UIBarButtonItemStyle.Bordered, target: self, action: "addFriend")
-        self.navigationItem.rightBarButtonItem = addFriendButton
+    
+    override func viewWillAppear(animated: Bool) {
+       super.viewWillAppear(animated)
         searchFriendListAPI.delegate = self
         searchFriendListAPI.getFriendList()
     }
     
-    @IBAction func addFriend(sender: AnyObject) {
-        
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -60,6 +60,7 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
             chatWithFriendViewController.friendName = selectedFriend
             chatWithFriendViewController.messages = self.chatHistory[selectedFriend]!
             self.conversation[selectedFriend]?.markMessagesAsRead(true)
+            friendListTable.reloadData()
         }
         
     }

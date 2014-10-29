@@ -17,30 +17,40 @@ class ChatWithFriendViewController: UIViewController, IChatManagerDelegate {
     @IBOutlet var textView: UITextView!
     
     override func viewDidLoad() {
+        textView.editable = false
         textView.userInteractionEnabled = true
         super.viewDidLoad()
         EaseMob.sharedInstance().chatManager.addDelegate(self, delegateQueue: nil)
         for message in messages {
-            var chatter = message.conversation.chatter
             var messageBody = message.messageBodies.first as EMTextMessageBody
             var messageStr = messageBody.text
-            if chatter == friendName {
-                textView.text.write("\(chatter): \(messageStr)\n\n")
-            }
-            else {
-                textView.text.write("我: \(messageStr)\n\n")
+            if message.ext != nil {
+                var exten = message.ext as [String: String]
+                var name : String = exten["username"]! as String
+                if name == friendName {
+                    textView.text.write("\(name): \(messageStr)\n\n")
+                }
+                else {
+                    textView.text.write("我: \(messageStr)\n\n")
+                }
+
             }
         }
     }
     @IBAction func sendMessage(sender: AnyObject) {
         var text = textbox.text
         if (text != "") {
+        
             var emText = EMChatText(text: text)
             
             var emTextMessageBody = EMTextMessageBody(chatObject: emText)
             var msg = EMMessage(receiver: friendName, bodies: [emTextMessageBody])
+            
+            var exten = ["username": "123"]
+            msg.ext = exten
             EaseMob.sharedInstance().chatManager.sendMessage(msg, progress: nil, error: nil)
-            textView.text.write("我: \(text)")
+            textView.text.write("我: \(text)\n\n")
+            textbox.text = ""
         }
     }
     
