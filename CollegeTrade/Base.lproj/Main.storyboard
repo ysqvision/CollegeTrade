@@ -845,8 +845,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJc-ZP-ARC">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJc-ZP-ARC">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -858,8 +857,6 @@
                                     <action selector="userLogout:" destination="U5L-UF-7wj" eventType="touchUpInside" id="isM-g6-izY"/>
                                 </connections>
                             </button>
-
-
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsT-po-Jyt">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="个人头像">
@@ -959,11 +956,7 @@
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="oL5-f5-fiN" style="IBUITableViewCellStyleDefault" id="I8R-zQ-419">
                                         <autoresizingMask key="autoresizingMask"/>
-
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I8R-zQ-419" id="iu6-oM-htt">
-
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I8R-zQ-419" id="sM9-jw-owq">
-
                                             <rect key="frame" x="0.0" y="0.0" width="340" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -1340,6 +1333,7 @@
             <objects>
                 <tableViewController id="8sS-tF-DdL" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="opt-cH-pQX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -1635,23 +1629,15 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-<<<<<<< Updated upstream
-
-                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="20" y="76" width="300" height="189"/>
-=======
                                 <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="8" y="81" width="384" height="449"/>
->>>>>>> Stashed changes
+                                    <rect key="frame" x="20" y="76" width="300" height="189"/>
                                 </variation>
-
                                 <connections>
                                     <outlet property="dataSource" destination="zQ3-5R-Bgz" id="cs0-9z-gNE"/>
                                     <outlet property="delegate" destination="zQ3-5R-Bgz" id="NSF-We-kyZ"/>
                                 </connections>
                             </tableView>
-
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXf-E1-yMp">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXf-E1-yMp">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -1663,7 +1649,6 @@
                                     <action selector="goBackFromUserSetting:" destination="zQ3-5R-Bgz" eventType="touchUpInside" id="E4m-l5-gVV"/>
                                 </connections>
                             </button>
-
                         </subviews>
                         <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -1990,7 +1975,6 @@
             </objects>
             <point key="canvasLocation" x="3321" y="1699"/>
         </scene>
-
         <!--View Controller-->
         <scene sceneID="UVV-zw-s6Y">
             <objects>
@@ -2010,7 +1994,6 @@
             </objects>
             <point key="canvasLocation" x="5886" y="2534.5"/>
         </scene>
-
         <!--Item-->
         <scene sceneID="UjR-Ab-oiM">
             <objects>
