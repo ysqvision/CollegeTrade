@@ -30,7 +30,10 @@ class ChatWithFriendViewController: UIViewController, IChatManagerDelegate {
         }
     }
     
-    func didReceiveMessage(message: String) {
+    func didReceiveMessage(message: EMMessage) {
+        println(message)
+        println(message.conversation.chatter)
+        println(message.messageBodies)
         textView.text.write("\(message)\n\n")
     }
 }
