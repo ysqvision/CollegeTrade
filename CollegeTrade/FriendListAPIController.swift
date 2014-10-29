@@ -12,6 +12,7 @@ protocol didGetFriendListProtocol {
     func didGetFriendList(value : [String])
 }
 
+
 class SearchForFriendList {
     var delegate: didGetFriendListProtocol?
     init() {
@@ -26,7 +27,7 @@ class SearchForFriendList {
             }
         }
         self.delegate?.didGetFriendList(usernames)
-    
-
+        
     }
+
 }
