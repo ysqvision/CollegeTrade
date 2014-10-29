@@ -641,9 +641,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="wEm-Ir-R98" kind="show" id="jCT-5p-l6r"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -2018,8 +2015,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="zGh-vy-Oep"/>
         <segue reference="884-yj-daG"/>
-        <segue reference="qSN-ht-lIf"/>
+        <segue reference="zGh-vy-Oep"/>
     </inferredMetricsTieBreakers>
 </document>

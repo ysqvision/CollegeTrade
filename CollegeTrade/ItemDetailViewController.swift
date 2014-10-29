@@ -43,9 +43,9 @@ class ItemDetailViewController: UIViewController {
             
             itemPic.image = UIImage(named:"randomcat1.png")
             
-            var pagedImageScrollView: PagedImageScrollView = PagedImageScrollView(frame: CGRect(x:0, y:0, width: 320,height: 120))
-            pagedImageScrollView.setScrollViewContents(["randomcat1.png", "randomcat1.png"])
-            self.view.addSubview(pagedImageScrollView)
+           // var pagedImageScrollView: PagedImageScrollView = PagedImageScrollView(frame: CGRect(x:0, y:0, width: 320,height: 120))
+          //  pagedImageScrollView.setScrollViewContents(["randomcat1.png", "randomcat1.png"])
+           // self.view.addSubview(pagedImageScrollView)
     
         // Do any additional setup after loading the view, typically from a nib.
     }
