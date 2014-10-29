@@ -9,7 +9,7 @@
 
 import UIKit
 
-class UserStoreHomePageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, didReceiveItemsProtocol {
+class UserStoreHomePageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, didReceiveItemsProtocol{
     let kCellIdentifier: String = "ItemForSellCell"
     var itemsForSell = []
     var searchItemAPI = SearchItemAPIController()
@@ -31,7 +31,7 @@ class UserStoreHomePageViewController: UIViewController, UITableViewDataSource, 
     override func viewDidLoad() {
         searchItemAPI.delegate = self
         searchItemAPI.getUserItems()
-       
+        
     }
     
     override func didReceiveMemoryWarning() {

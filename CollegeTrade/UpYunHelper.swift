@@ -18,7 +18,7 @@ class UpYunHelper {
         var options = [String: String]()
         options["bucket"] = "spiriiit-sharejx"
         options["expiration"] = "\(expiration)"
-        options["save-key"] = "/test2/\(fileName)"
+        options["save-key"] = "/test/\(fileName)"
         options["allow-file-type"] = "jpeg,gif,png"
         var optionsString = String()
         
@@ -48,17 +48,23 @@ class UpYunHelper {
             (data: AFMultipartFormData!) in
             data.appendPartWithFileData(imageData, name: "file", fileName: "switch.png", mimeType: "image/png")
             }, success: { operation, response in
-                var err: NSError?
-                var jsonResponse = NSJSONSerialization.JSONObjectWithData(response as NSData, options: .MutableLeaves, error: &err) as? NSDictionary
-                if (err != nil) {
-                    uploadSuccess(success: false, url: "")
-                    return
-                }
+                println(response)
+                uploadSuccess(success: true, url: "")
+               // let responseString: String = "\(response)"
+               // var responseData: NSData = responseString.dataUsingEncoding(NSUTF8StringEncoding)!
+                
+               // var err: NSError?
+              //  var jsonResponse = NSJSONSerialization.JSONObjectWithData(responseData, options: .MutableLeaves, error: &err) as? NSDictionary
+               // if (err != nil) {
+                 //   uploadSuccess(success: false, url: "")
+                   // return
+                //}
+                /*
                 if let parsedJSON = jsonResponse {
                     var code = parsedJSON["code"] as? Int
                     if code == 200 {
-                        var url = parsedJSON["url"] as NSString
-                        uploadSuccess(success: true, url: url)
+                        //var url = parsedJSON["url"] as NSString
+                        uploadSuccess(success: true, url: "")
                         return
                     }
                     else {
@@ -66,11 +72,14 @@ class UpYunHelper {
                         return
                     }
                 }
+*/
             },
             failure: {operation, error in
+                println(error)
                 uploadSuccess(success: false, url: "")
             }
         )
+     
         /*
         var request = NSMutableURLRequest(URL: NSURL(string: "http://v0.api.upyun.com/spiriiit-sharejx/"))
         var session = NSURLSession.sharedSession()

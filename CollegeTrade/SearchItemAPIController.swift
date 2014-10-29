@@ -67,6 +67,7 @@ class SearchItemAPIController {
             }
             if (json != nil) {
                 self.delegate?.didReceiveItems(json!)
+                  println(json!)
             }
         })
         
@@ -95,6 +96,7 @@ class SearchItemAPIController {
                 if let parsedJSON = jsonResponse {
                     var code = parsedJSON["status"] as? Int
                     if code == 101 {
+                        println(jsonResponse!)
                         self.delegate?.didReceiveItems(jsonResponse!)
                         return
                     }
