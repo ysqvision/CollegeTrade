@@ -9,25 +9,28 @@
 import UIKit
 
 class UserSettingViewController : UIViewController {
+    
+    
     @IBOutlet weak var settingTableView: UITableView!
-    @IBAction func goBackFromUserSetting(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
-    }
+    var n: Int = 3
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+      //  n = 3
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        if section == 0 {return n}
+        return 0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var cell: UITableViewCell
         var cell1: SwitchCell
+        
+        print(indexPath.row)
 
         
         switch indexPath.row{
@@ -43,7 +46,7 @@ class UserSettingViewController : UIViewController {
             
         case 2:
             cell1 = tableView.dequeueReusableCellWithIdentifier("SettingCell4") as SwitchCell
-            cell1.titleLabel.text = "声音"
+            cell1.titleLabel.text = "震动"
             return cell1
             
         case 3:
