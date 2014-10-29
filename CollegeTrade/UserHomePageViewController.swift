@@ -23,7 +23,7 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        EaseMob.sharedInstance().chatManager.asyncLoginWithUsername("123", password: "123456", completion:
+        EaseMob.sharedInstance().chatManager.asyncLoginWithUsername("456", password: "123456", completion:
             { response, error in
                 if ((error) != nil) {
                     println("cannot login")

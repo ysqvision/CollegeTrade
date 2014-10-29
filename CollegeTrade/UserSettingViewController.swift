@@ -9,7 +9,8 @@
 import UIKit
 
 class UserSettingViewController : UIViewController {
-    
+
+    @IBOutlet weak var settingTable: UITableView!
     
     @IBOutlet weak var settingTableView: UITableView!
     var n: Int = 3
@@ -18,6 +19,12 @@ class UserSettingViewController : UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
       //  n = 3
+    }
+    
+    func newMessage(sender: UISwitch)
+    {
+        n = 4 - n
+        settingTable.reloadData()
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -37,6 +44,7 @@ class UserSettingViewController : UIViewController {
         case 0:
             cell1 = tableView.dequeueReusableCellWithIdentifier("SettingCell4") as SwitchCell
             cell1.titleLabel.text = "接受新消息通知"
+            cell1.switchButton.addTarget(self, action: "newMessage:", forControlEvents:UIControlEvents.ValueChanged)
             return cell1
             
         case 1:
