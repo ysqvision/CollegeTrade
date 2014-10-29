@@ -933,6 +933,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K72-He-gYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="4900.5" y="2115"/>
         </scene>
         <!--Table View Controller-->
@@ -1031,6 +1032,9 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PcM-o8-GYk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5659.5" y="2250"/>
+=======
+            <point key="canvasLocation" x="4900.5" y="2110"/>
+>>>>>>> FETCH_HEAD
         </scene>
         <!--New Item For Sell View Controller-->
         <scene sceneID="8KS-Ov-uZ3">
@@ -1708,8 +1712,13 @@
                         <segue destination="g5z-r9-iZ2" kind="relationship" relationship="viewControllers" id="xw1-eN-fxR"/>
                         <segue destination="hR2-eL-RHv" kind="relationship" relationship="viewControllers" id="x2F-W5-JZ1"/>
                         <segue destination="CLx-s6-sbX" kind="relationship" relationship="viewControllers" id="doA-8P-9yS"/>
+<<<<<<< HEAD
                         <segue destination="vwa-pE-vZG" kind="relationship" relationship="viewControllers" id="0MC-46-rd6"/>
                         <segue destination="uJd-41-toa" kind="relationship" relationship="viewControllers" id="rWC-vv-2E6"/>
+=======
+                        <segue destination="cgj-bf-HrO" kind="relationship" relationship="viewControllers" id="0MC-46-rd6"/>
+                        <segue destination="U5L-UF-7wj" kind="relationship" relationship="viewControllers" id="rWC-vv-2E6"/>
+>>>>>>> FETCH_HEAD
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dEd-z7-yBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1755,17 +1764,27 @@
             <point key="canvasLocation" x="1489.5" y="1763"/>
         </scene>
         <!--Item-->
+<<<<<<< HEAD
         <scene sceneID="yDw-e7-cXd">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uJd-41-toa" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="LwC-7t-huk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qXi-nA-Bxk">
+=======
+        <scene sceneID="cVk-cB-bz8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cgj-bf-HrO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="tkP-hq-Old"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qbb-G5-p8N">
+>>>>>>> FETCH_HEAD
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
+<<<<<<< HEAD
                         <segue destination="U5L-UF-7wj" kind="relationship" relationship="rootViewController" id="659-Wz-LZx"/>
                     </connections>
                 </navigationController>
@@ -1778,5 +1797,19 @@
         <segue reference="884-yj-daG"/>
         <segue reference="qSN-ht-lIf"/>
         <segue reference="zd9-Lw-DF0"/>
+=======
+                        <segue destination="vwa-pE-vZG" kind="relationship" relationship="rootViewController" id="gaB-Jo-Lij"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zlY-0q-D7E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3321" y="1699"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="qSN-ht-lIf"/>
+        <segue reference="zd9-Lw-DF0"/>
+        <segue reference="884-yj-daG"/>
+>>>>>>> FETCH_HEAD
     </inferredMetricsTieBreakers>
 </document>
