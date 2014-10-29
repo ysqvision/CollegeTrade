@@ -16,11 +16,24 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
     var itemsForSell = []
     var searchItemAPI = SearchItemAPIController()
     
+    var imageCache = [String: UIImage]()
     
     @IBOutlet weak var transition: UIButton!
     @IBOutlet weak var itemsTable: UITableView?
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        EaseMob.sharedInstance().chatManager.asyncLoginWithUsername("123", password: "123456", completion:
+            { response, error in
+                if ((error) != nil) {
+                    println("cannot login")
+                    println(error)
+                } else {
+                    println("success")
+                }
+                
+            }, onQueue: nil)
+
         activityIndicator.startAnimating();
         searchItemAPI.delegate = self
         searchItemAPI.getAllItems()
@@ -73,6 +86,46 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
         cell.detailTextLabel?.text = "价格: \(formattedPrice)"
         cell.imageView?.image = UIImage(named: "randomcat1.png")
         
+        if let imagePaths = rowData["goodsImage"] as? [String] {
+            if imagePaths.count != 0 {
+                var firstImage = imagePaths[0]
+                var image = imageCache[firstImage]
+                if( image == nil ) {
+                    // If the image does not exist, we need to download it
+                    var imgURL: NSURL = NSURL(string: firstImage)
+                    
+                    // Download an NSData representation of the image at the URL
+                    let request: NSURLRequest = NSURLRequest(URL: imgURL)
+                    NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {(response: NSURLResponse!,data: NSData!,error: NSError!) -> Void in
+                        if error == nil {
+                            image = UIImage(data: data)
+                            
+                            // Store the image in to our cache
+                            self.imageCache[firstImage] = image
+                            dispatch_async(dispatch_get_main_queue(), {
+                                if let cellToUpdate = tableView.cellForRowAtIndexPath(indexPath) {
+                                    cellToUpdate.imageView?.image = image
+                                }
+                            })
+                        }
+                        else {
+                            println("Error: \(error.localizedDescription)")
+                        }
+                    })
+                    
+                }
+                else {
+                    dispatch_async(dispatch_get_main_queue(), {
+                        if let cellToUpdate = tableView.cellForRowAtIndexPath(indexPath) {
+                            cellToUpdate.imageView?.image = image
+                        }
+                    })
+                }
+            }
+        } else {
+            
+        }
+        
         return cell
     }
     
@@ -81,6 +134,7 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "ShowItemDetailViewSegue") {
         var itemDetailViewController: ItemDetailViewController = segue.destinationViewController as ItemDetailViewController
         var itemIndex = itemsTable!.indexPathForSelectedRow()!.row;
         var selectedItem = self.itemsForSell[itemIndex] as NSDictionary
@@ -89,6 +143,7 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
         var item = ItemForSell(title: title, price: price)
         itemDetailViewController.item = item
        
+        }
         
     }
     func didReceiveItems(results: NSDictionary) {

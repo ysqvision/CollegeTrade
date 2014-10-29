@@ -10,3 +10,4 @@ import Foundation
 
 
 let UPYUN_SECRET_KEY = "kFwd48HLezpIIgAQnDfdErnyj34="
+let UPYUN_PUBLICK_DOMAIN = "http://spiriiit-sharejx.b0.upaiyun.com/test/"
