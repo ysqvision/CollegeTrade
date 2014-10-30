@@ -65,6 +65,7 @@ class ChatWithFriendViewController: UIViewController, IChatManagerDelegate {
             var exten = ["username": "123"]
             msg.ext = exten
             EaseMob.sharedInstance().chatManager.sendMessage(msg, progress: nil, error: nil)
+            
             textView.text.write("我: \(text)\n\n")
             textbox.text = ""
         }
