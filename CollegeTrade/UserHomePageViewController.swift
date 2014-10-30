@@ -39,6 +39,17 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
                         if success {
                             USER_IS_LOGGED_IN = true
+                            EaseMob.sharedInstance().chatManager.asyncLoginWithUsername(storedUsername, password: storedPassword, completion:
+                                { response, error in
+                                    if ((error) != nil) {
+                                        println("cannot login")
+                                        println(error)
+                                    } else {
+                                        println("success")
+                                    }
+                                    
+                                }, onQueue: nil)
+
                         }
                     })
                 }
