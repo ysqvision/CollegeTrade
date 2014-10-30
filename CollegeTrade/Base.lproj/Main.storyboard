@@ -271,9 +271,6 @@
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="webSearch"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="20" y="76" width="236" height="30"/>
-                                </variation>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBe-VD-bed">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -282,9 +279,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="290" y="76" width="30" height="30"/>
-                                </variation>
                                 <connections>
                                     <action selector="searchForItems:" destination="a0T-ah-qPp" eventType="touchUpInside" id="Atp-Ym-n34"/>
                                 </connections>
@@ -330,6 +324,10 @@
                                 <exclude reference="GgH-Fh-tSI"/>
                                 <exclude reference="Hh6-ms-qdw"/>
                                 <exclude reference="Qrs-rN-zfq"/>
+                                <exclude reference="EKA-7c-CPh"/>
+                                <exclude reference="Ncd-Yy-wcL"/>
+                                <exclude reference="NgF-H2-zPi"/>
+                                <exclude reference="wVA-Ol-FxV"/>
                                 <exclude reference="6UN-n5-kbe"/>
                                 <exclude reference="B3L-KL-HUh"/>
                                 <exclude reference="IDp-dd-lvU"/>
@@ -338,10 +336,6 @@
                                 <exclude reference="cDn-0F-EKF"/>
                                 <exclude reference="hxf-8e-1Sa"/>
                                 <exclude reference="opR-dp-jt8"/>
-                                <exclude reference="EKA-7c-CPh"/>
-                                <exclude reference="Ncd-Yy-wcL"/>
-                                <exclude reference="NgF-H2-zPi"/>
-                                <exclude reference="wVA-Ol-FxV"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -354,6 +348,10 @@
                                 <exclude reference="GgH-Fh-tSI"/>
                                 <include reference="Hh6-ms-qdw"/>
                                 <exclude reference="Qrs-rN-zfq"/>
+                                <exclude reference="EKA-7c-CPh"/>
+                                <include reference="Ncd-Yy-wcL"/>
+                                <include reference="NgF-H2-zPi"/>
+                                <include reference="wVA-Ol-FxV"/>
                                 <exclude reference="6UN-n5-kbe"/>
                                 <include reference="B3L-KL-HUh"/>
                                 <include reference="IDp-dd-lvU"/>
@@ -362,10 +360,6 @@
                                 <include reference="cDn-0F-EKF"/>
                                 <include reference="hxf-8e-1Sa"/>
                                 <exclude reference="opR-dp-jt8"/>
-                                <exclude reference="EKA-7c-CPh"/>
-                                <include reference="Ncd-Yy-wcL"/>
-                                <include reference="NgF-H2-zPi"/>
-                                <include reference="wVA-Ol-FxV"/>
                             </mask>
                         </variation>
                     </view>
@@ -2176,6 +2170,14 @@
             </objects>
             <point key="canvasLocation" x="2835" y="78"/>
         </scene>
+        <!--Swipe Page View Controller-->
+        <scene sceneID="Mb8-Dt-6gf">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="PAB-ni-CbD" customClass="SwipePageViewController" customModule="CollegeTrade" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zyG-e9-jon" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-705" y="256"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="QUA-Re-w1c">
             <objects>
@@ -2205,7 +2207,28 @@
                     <view key="view" contentMode="scaleToFill" id="hy9-Vb-Abd">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VQl-g4-2fp">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="24" y="33" width="339" height="206"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="PAB-ni-CbD" kind="embed" id="95M-Mc-OkH"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="VQl-g4-2fp"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="VQl-g4-2fp"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="h8l-xL-Qq2"/>
                 </viewController>
@@ -2553,6 +2576,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Yo-5J-kTK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="988.5" y="991"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="47Q-0g-b9K">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="wFL-Yz-h0U" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fx6-Lh-Jf1"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZbR-DQ-mJe"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="tZS-2j-cDQ">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="srt-Jd-aEz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

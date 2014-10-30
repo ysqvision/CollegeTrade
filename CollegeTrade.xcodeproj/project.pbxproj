@@ -59,6 +59,8 @@
 		70D7785819E36C6400437988 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D7785719E36C6400437988 /* UserProfileViewController.swift */; };
 		70D819B619F7487C0092CBAF /* SwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D819B519F7487C0092CBAF /* SwitchCell.swift */; };
 		70D819BC19F752770092CBAF /* randomcat1.png in Resources */ = {isa = PBXBuildFile; fileRef = 70D819BB19F752770092CBAF /* randomcat1.png */; };
+		70DF05AB1A0200870068B128 /* SwipePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DF05AA1A0200870068B128 /* SwipePageViewController.swift */; };
+		70DF05AD1A0206020068B128 /* SwipePageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DF05AC1A0206020068B128 /* SwipePageContentViewController.swift */; };
 		FF14D5532EC153A88182F49D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6404A3F56B88EBB2765C06C6 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -210,6 +212,8 @@
 		70D7785719E36C6400437988 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		70D819B519F7487C0092CBAF /* SwitchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchCell.swift; sourceTree = "<group>"; };
 		70D819BB19F752770092CBAF /* randomcat1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = randomcat1.png; sourceTree = "<group>"; };
+		70DF05AA1A0200870068B128 /* SwipePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipePageViewController.swift; sourceTree = "<group>"; };
+		70DF05AC1A0206020068B128 /* SwipePageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipePageContentViewController.swift; sourceTree = "<group>"; };
 		93859835CC3B67695617653F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -310,6 +314,8 @@
 				5742032F19C8CF2100A84191 /* LaunchScreen.xib */,
 				5742032819C8CF2000A84191 /* LoginViewController.swift */,
 				5742032A19C8CF2000A84191 /* Main.storyboard */,
+				70DF05AA1A0200870068B128 /* SwipePageViewController.swift */,
+				70DF05AC1A0206020068B128 /* SwipePageContentViewController.swift */,
 				577E4BBB1A01F2B4004B1111 /* StoreHomePageViewController.swift */,
 				577E4BB91A01D677004B1111 /* NewOrderViewController.swift */,
 				57D837881A017AB50078760C /* FriendRequestViewController.swift */,
@@ -734,6 +740,7 @@
 				57E52D7C19EC7BEB00D33DE3 /* KeyChainService.swift in Sources */,
 				5742032919C8CF2000A84191 /* LoginViewController.swift in Sources */,
 				57D837871A015C880078760C /* OrderDetailViewController.swift in Sources */,
+				70DF05AB1A0200870068B128 /* SwipePageViewController.swift in Sources */,
 				57ACA0771A006C5400A88172 /* FriendListAPIController.swift in Sources */,
 				5731621E19FEC2D800F17821 /* SwiftMD5.swift in Sources */,
 				57E52D7E19EE14AF00D33DE3 /* TakePhotoViewController.swift in Sources */,
@@ -746,6 +753,7 @@
 				70D819B619F7487C0092CBAF /* SwitchCell.swift in Sources */,
 				5731621C19FEC10500F17821 /* UpYunHelper.swift in Sources */,
 				5779466119FF58FD00B2512F /* NewItemForSellViewController.swift in Sources */,
+				70DF05AD1A0206020068B128 /* SwipePageContentViewController.swift in Sources */,
 				709D7D6619ECC2BD0037A03C /* UserSettingViewController.swift in Sources */,
 				5779465F19FF4D8000B2512F /* UserStoreHomePageViewController.swift in Sources */,
 				57D837851A0156A60078760C /* OrderAPIHelper.swift in Sources */,
