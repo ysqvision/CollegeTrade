@@ -56,7 +56,7 @@ class NewItemForSellViewController: UIViewController, selectedPictureDelegate, U
                     
                     // upload images
                     for index in 0...self.imageSet.count - 1 {
-                        UpYunHelper.postPicture(self.imageSet[index], fileName: self.imagePathSet[index]) { (success: Bool, url: String) -> () in
+                        UpYunHelper.postPicture(self.imageSet[index], fileName: self.imagePathSetForUpyun[index]) { (success: Bool, url: String) -> () in
                             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                                 if (success) {
                                     

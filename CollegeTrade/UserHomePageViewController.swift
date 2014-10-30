@@ -79,8 +79,7 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
         let formattedPrice: Double = rowData["price"] as Double
         cell.detailTextLabel?.text = "价格: \(formattedPrice)"
         cell.imageView?.image = UIImage(named: "randomcat1.png")
-        println(rowData)
-        println(rowData["goodsImage"])
+      
         //var imagePaths = rowData["goodsImage"] as String
         if let imagePaths = rowData["goodsImage"] as? [String] {
         //let imagePathsSet = imagePaths.componentsSeparatedByString(",")
@@ -139,8 +138,10 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
             var title = selectedItem["goodsName"] as NSString
             var price = selectedItem["price"] as Double
             var description = selectedItem["goodsDescription"] as String
+            println(selectedItem["goodsImage"])
             var imageUrlString = selectedItem["goodsImage"] as String
-            var imageUrl = imageUrlString.componentsSeparatedByString(imageUrlString)
+            println(imageUrlString)
+            var imageUrl = imageUrlString.componentsSeparatedByString(",")
             var item = ItemForSell(title: title, price: price, description: description, imageUrl: imageUrl)
             itemDetailViewController.item = item
        

@@ -49,7 +49,8 @@ class ItemDetailViewController: UIViewController {
             imagesScrollView.showsVerticalScrollIndicator = true
             
             for i in 0...item.imageUrl.count - 1 {
-                let imageView = UIImageView(frame: (CGRectMake(0, 0, 100, 100)))
+                var position = CGFloat(i * 100.0)
+                let imageView = UIImageView(frame: (CGRectMake(0, position, 100, 100)))
                 imageView.image = UIImage(named:"randomcat1.png")
                 imageViewSet.append(imageView)
                 imagesScrollView.addSubview(imageView)
@@ -71,7 +72,10 @@ class ItemDetailViewController: UIViewController {
                             // Store the image in to our cache
                             self.imageSet[url] = image
                             dispatch_async(dispatch_get_main_queue(), {
-                                self.imageViewSet[i].image = image
+                               self.imageViewSet[i].image = image
+                                //var view = UIImageView(0,0,100,100)
+                                //view.image = image
+                                //self.imagesScrollView.addSubview(view)
                             })
                         }
                         else {
