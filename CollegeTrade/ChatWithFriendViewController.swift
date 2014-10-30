@@ -50,6 +50,7 @@ class ChatWithFriendViewController: UIViewController, IChatManagerDelegate {
 
             }
         }
+          textView.scrollRangeToVisible(NSRange(location: countElements(textView.text), length: 0))
     }
     @IBAction func sendMessage(sender: AnyObject) {
         var text = textbox.text
@@ -66,7 +67,9 @@ class ChatWithFriendViewController: UIViewController, IChatManagerDelegate {
             textView.text.write("我: \(text)\n\n")
             textbox.text = ""
         }
-        cnt = cnt + 1
+        //cnt = cnt + 1
+        
+        textView.scrollRangeToVisible(NSRange(location: countElements(textView.text), length: 0))
         //let range:NSRange = NSRange(location:cnt - 1, length: 0)
         //textView.scrollRangeToVisible(range)
     }

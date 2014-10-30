@@ -802,9 +802,6 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="28" y="86" width="345" height="378"/>
-                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="vwa-pE-vZG" id="mvN-Tc-lub"/>
                                     <outlet property="delegate" destination="vwa-pE-vZG" id="CwC-ez-zos"/>
@@ -1532,7 +1529,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yJT-za-h2N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2475" y="2724"/>
+            <point key="canvasLocation" x="2698.5" y="2587"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="W4n-c5-j1i">
