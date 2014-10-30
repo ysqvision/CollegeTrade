@@ -19,16 +19,22 @@ class SwipePageContentViewController: UIViewController
     {
         super.viewDidLoad()
         
-        if pageIndex == 0 {view.backgroundColor = UIColor.redColor()}
+        /*if pageIndex == 0 {view.backgroundColor = UIColor.redColor()}
         if pageIndex == 1 {view.backgroundColor = UIColor.blueColor()}
         if pageIndex == 2 {view.backgroundColor = UIColor.greenColor()}
+        if pageIndex == 3 {view.backgroundColor = UIColor.grayColor()}*/
         
-        
-        let label = UILabel(frame: CGRectMake(0, 0, view.frame.width, 200))
+        /*let label = UILabel(frame: CGRectMake(0, 0, view.frame.width, 200))
         label.textColor = UIColor.whiteColor()
         label.text = "shaoqing"
         label.textAlignment = .Center
-        view.addSubview(label)
+        view.addSubview(label)*/
+        
+        let image = UIImage(named: self.imageFile) // imagFile
+        let imageview = UIImageView(frame: CGRectMake(0, 0, view.frame.width, view.frame.height))
+        imageview.image = image
+        view.addSubview(imageview)
+        
         
         /*let button = UIButton.buttonWithType(UIButtonType.System) as UIButton
         button.frame = CGRectMake(20, view.frame.height - 110, view.frame.width - 40, 50)

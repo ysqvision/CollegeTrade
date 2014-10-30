@@ -14,20 +14,23 @@ class SwipePageViewController : UIPageViewController, UIPageViewControllerDataSo
     
     var pageViewController : UIPageViewController?
     var pageTitles : Array<String> = ["1","2","3","4"]
-    var pageImages : Array<String> = ["page1.png", "page2.png", "page3.png", "page4.png"]
+    var pageImages : Array<String> = ["randomcat1.png", "randomcat1.png", "randomcat1.png", "randomcat1.png"]
     var currentIndex : Int = 0
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        pageViewController = UIPageViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
+        pageViewController =    UIPageViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal,  options: nil)
         pageViewController!.dataSource = self
+      //  pageViewController.transitionStyle = UIPageViewControllerTransitionStyle.PageCurl
+      //  pageViewController.spineLocation = UIPageViewControllerSpineLocation.Min
         
         let startingViewController: SwipePageContentViewController = viewControllerAtIndex(0)!
         let viewControllers: NSArray = [startingViewController]
         pageViewController!.setViewControllers(viewControllers, direction: .Forward, animated: false, completion: nil)
-        pageViewController!.view.frame = CGRectMake(0, 0, view.frame.size.width, 40);
+        pageViewController!.view.frame = CGRectMake(0, 0, view.frame.size.width, view.frame.size.height);
+        pageViewController!.view.tintColor = UIColor.redColor()
         
         addChildViewController(pageViewController!)
         view.addSubview(pageViewController!.view)
@@ -44,7 +47,8 @@ class SwipePageViewController : UIPageViewController, UIPageViewControllerDataSo
         var index = (viewController as SwipePageContentViewController).pageIndex
         
         if (index == 0) || (index == NSNotFound) {
-            return nil
+            index += pageTitles.count
+            //return nil
         }
         
         index--
@@ -63,7 +67,8 @@ class SwipePageViewController : UIPageViewController, UIPageViewControllerDataSo
         index++
         
         if (index == self.pageTitles.count) {
-            return nil
+            index = 0
+            //return nil
         }
         
         return viewControllerAtIndex(index)
