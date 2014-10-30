@@ -524,9 +524,6 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="100" y="159" width="200" height="300"/>
-                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="hR2-eL-RHv" id="tYn-5Q-Ctd"/>
                                     <outlet property="delegate" destination="hR2-eL-RHv" id="e3e-T3-9Ow"/>
@@ -789,7 +786,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nvc-aB-eBw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1906.5" y="991"/>
+            <point key="canvasLocation" x="1731" y="784"/>
         </scene>
         <!--我的好友-->
         <scene sceneID="Ot6-le-j3E">
@@ -2154,6 +2151,24 @@
             </objects>
             <point key="canvasLocation" x="147" y="198"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="InK-PB-7hq">
+            <objects>
+                <viewController id="mW9-0Q-a7T" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cGH-Ce-kj1"/>
+                        <viewControllerLayoutGuide type="bottom" id="q6T-bU-qzW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hy9-Vb-Abd">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="h8l-xL-Qq2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="osv-sT-Vbl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-610.5" y="1047"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="J4F-oG-uiO">
             <objects>
@@ -2165,6 +2180,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="mW9-0Q-a7T" kind="relationship" relationship="viewControllers" id="ALO-80-pdw"/>
                         <segue destination="g5z-r9-iZ2" kind="relationship" relationship="viewControllers" id="xw1-eN-fxR"/>
                         <segue destination="OOD-1p-9Ua" kind="relationship" relationship="viewControllers" id="x2F-W5-JZ1"/>
                         <segue destination="x2O-GY-tOx" kind="relationship" relationship="viewControllers" id="N5y-as-QY1"/>
