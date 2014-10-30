@@ -29,6 +29,7 @@ class ChatWithFriendViewController: UIViewController, IChatManagerDelegate {
     override func viewDidLoad() {
         textView.editable = false
         textView.userInteractionEnabled = true
+        
         super.viewDidLoad()
         EaseMob.sharedInstance().chatManager.addDelegate(self, delegateQueue: nil)
         
@@ -50,7 +51,7 @@ class ChatWithFriendViewController: UIViewController, IChatManagerDelegate {
 
             }
         }
-          textView.scrollRangeToVisible(NSRange(location: countElements(textView.text), length: 0))
+        textView.scrollRangeToVisible(NSRange(location: countElements(textView.text), length: 0))
     }
     @IBAction func sendMessage(sender: AnyObject) {
         var text = textbox.text
