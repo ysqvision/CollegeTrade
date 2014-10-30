@@ -128,7 +128,10 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
     
     func removeBuddyRequest(username: String) {
         var index = -1
-        for i in 0...buddyRequest.count {
+        if buddyRequest.count == 0 {
+            return
+        }
+        for i in 0...buddyRequest.count - 1 {
             if buddyRequest[i] == username {
                 index = i
                 break

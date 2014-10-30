@@ -50,6 +50,7 @@ class ItemDetailViewController: UIViewController {
             
             for i in 0...item.imageUrl.count - 1 {
                 let imageView = UIImageView(frame: (CGRectMake(0, 0, 100, 100)))
+                imageView.image = UIImage(named:"randomcat1.png")
                 imageViewSet.append(imageView)
                 imagesScrollView.addSubview(imageView)
             }

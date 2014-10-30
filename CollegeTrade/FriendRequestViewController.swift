@@ -22,7 +22,6 @@ class FriendRequestViewController: UIViewController, UITableViewDelegate, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        friendRequestList.append("testuser")
         delegate.clearNumOfNewRequest()
         requestTable.reloadData()
     }
@@ -32,7 +31,7 @@ class FriendRequestViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return friendRequestList.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
