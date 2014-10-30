@@ -718,19 +718,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="aEg-Z0-GZv">
                         <nil key="title"/>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="N0C-9H-vUv">
-                            <button key="customView" opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IQp-HA-H96">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="发表新物品">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="sg3-cB-DBH" kind="show" identifier="NewItemForSellSegue" id="QRx-xo-J1m"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" title="发表新物品" id="Tjf-58-Xre">
+                            <connections>
+                                <segue destination="sg3-cB-DBH" kind="show" identifier="NewItemForSellSegue" id="oef-bH-b6b"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -1474,7 +1465,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5JG-9m-VAE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2428.5" y="1326"/>
+            <point key="canvasLocation" x="2418" y="1236"/>
         </scene>
         <!--TakePhotoViewController-->
         <scene sceneID="nfs-gC-h4n">
