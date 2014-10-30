@@ -811,7 +811,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="s1R-L6-Yzn"/>
@@ -857,9 +857,6 @@
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="43" y="93" width="323" height="315"/>
-                                </variation>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3S0-hx-dUZ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -868,9 +865,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="308" y="451" width="58" height="30"/>
-                                </variation>
                                 <connections>
                                     <action selector="sendMessage:" destination="iDb-qp-7L6" eventType="touchUpInside" id="AH0-Gs-mPF"/>
                                 </connections>
@@ -879,9 +873,6 @@
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="43" y="451" width="236" height="30"/>
-                                </variation>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
@@ -918,18 +909,18 @@
                                 <exclude reference="T15-y1-Afp"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="KQT-3k-Jrn"/>
-                                <exclude reference="Qip-DV-FsQ"/>
-                                <exclude reference="bIb-xG-zFK"/>
-                                <exclude reference="nvd-0Y-EW7"/>
                                 <exclude reference="yu3-Gb-Vea"/>
+                                <exclude reference="wJ8-wi-Y6y"/>
                                 <exclude reference="7qO-Lx-YbY"/>
                                 <exclude reference="LeI-uJ-TH0"/>
                                 <exclude reference="Sgj-ba-Qrq"/>
                                 <exclude reference="fs1-KR-X4o"/>
                                 <exclude reference="iwf-Wc-FmK"/>
                                 <exclude reference="jrT-gy-u1P"/>
-                                <exclude reference="wJ8-wi-Y6y"/>
+                                <exclude reference="KQT-3k-Jrn"/>
+                                <exclude reference="Qip-DV-FsQ"/>
+                                <exclude reference="bIb-xG-zFK"/>
+                                <exclude reference="nvd-0Y-EW7"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -939,18 +930,18 @@
                                 <include reference="T15-y1-Afp"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="KQT-3k-Jrn"/>
-                                <include reference="Qip-DV-FsQ"/>
-                                <exclude reference="bIb-xG-zFK"/>
-                                <include reference="nvd-0Y-EW7"/>
                                 <include reference="yu3-Gb-Vea"/>
+                                <include reference="wJ8-wi-Y6y"/>
                                 <include reference="7qO-Lx-YbY"/>
                                 <include reference="LeI-uJ-TH0"/>
                                 <include reference="Sgj-ba-Qrq"/>
                                 <include reference="fs1-KR-X4o"/>
                                 <include reference="iwf-Wc-FmK"/>
                                 <exclude reference="jrT-gy-u1P"/>
-                                <include reference="wJ8-wi-Y6y"/>
+                                <include reference="KQT-3k-Jrn"/>
+                                <include reference="Qip-DV-FsQ"/>
+                                <exclude reference="bIb-xG-zFK"/>
+                                <include reference="nvd-0Y-EW7"/>
                             </mask>
                         </variation>
                     </view>
