@@ -451,6 +451,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="C7M-18-2o4">
+                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                                <segments>
+                                    <segment title="我的购买"/>
+                                    <segment title="我的订单"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="139" y="72" width="123" height="29"/>
+                                </variation>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="hR2-eL-RHv" eventType="valueChanged" id="ppW-d9-PE8"/>
+                                </connections>
+                            </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="xai-Se-aBC">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -485,39 +499,46 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="100" y="111" width="200" height="300"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="100" y="159" width="200" height="300"/>
                                 </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="hR2-eL-RHv" id="tYn-5Q-Ctd"/>
                                     <outlet property="delegate" destination="hR2-eL-RHv" id="e3e-T3-9Ow"/>
                                 </connections>
                             </tableView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="C7M-18-2o4">
-                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
-                                <segments>
-                                    <segment title="我的购买"/>
-                                    <segment title="我的订单"/>
-                                </segments>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="139" y="72" width="123" height="29"/>
-                                </variation>
-                                <connections>
-                                    <action selector="segmentChanged:" destination="hR2-eL-RHv" eventType="valueChanged" id="ppW-d9-PE8"/>
-                                </connections>
-                            </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.637886807" blue="0.020732176549999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="xai-Se-aBC" secondAttribute="centerY" constant="-9" id="H6w-fE-fLq">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstAttribute="height" secondItem="xai-Se-aBC" secondAttribute="height" multiplier="1.66667" id="Hoh-oi-2aW"/>
+                            <constraint firstAttribute="centerX" secondItem="xai-Se-aBC" secondAttribute="centerX" id="XUU-Qc-hvt"/>
+                            <constraint firstAttribute="width" secondItem="xai-Se-aBC" secondAttribute="width" multiplier="1.11111" id="c60-NH-syh"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="xai-Se-aBC"/>
                                 <exclude reference="C7M-18-2o4"/>
+                                <exclude reference="xai-Se-aBC"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="H6w-fE-fLq"/>
+                                <exclude reference="Hoh-oi-2aW"/>
+                                <exclude reference="XUU-Qc-hvt"/>
+                                <exclude reference="c60-NH-syh"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="xai-Se-aBC"/>
                                 <include reference="C7M-18-2o4"/>
+                                <include reference="xai-Se-aBC"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="H6w-fE-fLq"/>
+                                <include reference="Hoh-oi-2aW"/>
+                                <include reference="XUU-Qc-hvt"/>
+                                <include reference="c60-NH-syh"/>
                             </mask>
                         </variation>
                     </view>
