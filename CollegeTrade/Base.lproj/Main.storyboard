@@ -2197,7 +2197,7 @@
         <!--Item-->
         <scene sceneID="InK-PB-7hq">
             <objects>
-                <viewController id="mW9-0Q-a7T" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StoreHomePageViewController" id="mW9-0Q-a7T" customClass="StoreHomePageViewController" customModule="CollegeTrade" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cGH-Ce-kj1"/>
                         <viewControllerLayoutGuide type="bottom" id="q6T-bU-qzW"/>
@@ -2211,7 +2211,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="osv-sT-Vbl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-610.5" y="1047"/>
+            <point key="canvasLocation" x="-669" y="1047"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="J4F-oG-uiO">
