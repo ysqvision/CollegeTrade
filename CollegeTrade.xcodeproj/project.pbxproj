@@ -21,6 +21,7 @@
 		5746150519E37DD8008323E0 /* StoresNearByViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5746150419E37DD8008323E0 /* StoresNearByViewController.swift */; };
 		5779465F19FF4D8000B2512F /* UserStoreHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5779465E19FF4D8000B2512F /* UserStoreHomePageViewController.swift */; };
 		5779466119FF58FD00B2512F /* NewItemForSellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5779466019FF58FD00B2512F /* NewItemForSellViewController.swift */; };
+		577E4BBA1A01D677004B1111 /* NewOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577E4BB91A01D677004B1111 /* NewOrderViewController.swift */; };
 		5784C28519C9112B00DDA365 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784C28419C9112B00DDA365 /* SignUpViewController.swift */; };
 		5784C28719C916EE00DDA365 /* UserHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784C28619C916EE00DDA365 /* UserHomePageViewController.swift */; };
 		5784C28919C9245100DDA365 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784C28819C9245100DDA365 /* ItemDetailViewController.swift */; };
@@ -91,6 +92,7 @@
 		5746150419E37DD8008323E0 /* StoresNearByViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoresNearByViewController.swift; sourceTree = "<group>"; };
 		5779465E19FF4D8000B2512F /* UserStoreHomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStoreHomePageViewController.swift; sourceTree = "<group>"; };
 		5779466019FF58FD00B2512F /* NewItemForSellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemForSellViewController.swift; sourceTree = "<group>"; };
+		577E4BB91A01D677004B1111 /* NewOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewOrderViewController.swift; sourceTree = "<group>"; };
 		5784C28419C9112B00DDA365 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5784C28619C916EE00DDA365 /* UserHomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHomePageViewController.swift; sourceTree = "<group>"; };
 		5784C28819C9245100DDA365 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 				5742032F19C8CF2100A84191 /* LaunchScreen.xib */,
 				5742032819C8CF2000A84191 /* LoginViewController.swift */,
 				5742032A19C8CF2000A84191 /* Main.storyboard */,
+				577E4BB91A01D677004B1111 /* NewOrderViewController.swift */,
 				57D837881A017AB50078760C /* FriendRequestViewController.swift */,
 				57D837861A015C880078760C /* OrderDetailViewController.swift */,
 				57D837841A0156A50078760C /* OrderAPIHelper.swift */,
@@ -717,6 +720,7 @@
 				57FA4B6A19E35DAC00BBC5FD /* ItemForSell.swift in Sources */,
 				5784C28919C9245100DDA365 /* ItemDetailViewController.swift in Sources */,
 				57908E0719F5F4B900179925 /* SearchItemAPIController.swift in Sources */,
+				577E4BBA1A01D677004B1111 /* NewOrderViewController.swift in Sources */,
 				57E52D8019EEEC5500D33DE3 /* Protocol.swift in Sources */,
 				57D837831A0152AF0078760C /* OrderViewController.swift in Sources */,
 				70D7785819E36C6400437988 /* UserProfileViewController.swift in Sources */,
