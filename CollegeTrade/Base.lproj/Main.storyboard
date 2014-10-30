@@ -689,9 +689,6 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="49" y="127" width="303" height="360"/>
-                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="BLu-F0-HNQ" id="Sew-rO-hv0"/>
                                     <outlet property="delegate" destination="BLu-F0-HNQ" id="DhX-9M-EqZ"/>
@@ -2208,6 +2205,7 @@
                         <viewControllerLayoutGuide type="bottom" id="hzR-Qq-Tbc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xlL-81-Hbw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tp4-mi-PCr">
