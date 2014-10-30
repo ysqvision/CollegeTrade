@@ -989,38 +989,77 @@
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
+                                <variation key="widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="164" y="110" width="172" height="30"/>
                                 </variation>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="输入用户名：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcs-dl-8ws">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="950" verticalCompressionResistancePriority="950" text="输入用户名：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcs-dl-8ws">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="46" y="114" width="102" height="21"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="27" y="113" width="121" height="24"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPo-kE-Vih">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="加为好友">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="132" y="192" width="136" height="30"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="120" y="191" width="136" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="addFriend:" destination="W27-Eu-A5B" eventType="touchUpInside" id="ff4-QZ-YOp"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="4m3-gR-U52" firstAttribute="leading" secondItem="fcs-dl-8ws" secondAttribute="trailing" priority="800" constant="16" id="1MS-CF-Aee">
+                                <variation key="widthClass=compact" constant="30"/>
+                            </constraint>
+                            <constraint firstItem="tPo-kE-Vih" firstAttribute="width" secondItem="bdz-Z3-GaL" secondAttribute="width" multiplier="0.5" id="7Ou-df-kKm"/>
+                            <constraint firstItem="4m3-gR-U52" firstAttribute="centerY" secondItem="fcs-dl-8ws" secondAttribute="centerY" id="9kB-sZ-Ejt"/>
+                            <constraint firstItem="tPo-kE-Vih" firstAttribute="top" secondItem="4m3-gR-U52" secondAttribute="bottom" constant="51" id="N0a-13-cxQ">
+                                <variation key="widthClass=compact" constant="50"/>
+                            </constraint>
+                            <constraint firstItem="4m3-gR-U52" firstAttribute="centerY" secondItem="fcs-dl-8ws" secondAttribute="centerY" id="ZoN-1D-u7C"/>
+                            <constraint firstItem="4m3-gR-U52" firstAttribute="width" secondItem="bdz-Z3-GaL" secondAttribute="width" multiplier="0.4" id="eRG-Xj-9lo"/>
+                            <constraint firstItem="fcs-dl-8ws" firstAttribute="width" secondItem="bdz-Z3-GaL" secondAttribute="width" multiplier="0.4" id="jDc-83-1Wf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4m3-gR-U52" secondAttribute="trailing" priority="900" constant="48" id="mq3-ro-eD7">
+                                <variation key="widthClass=compact" constant="20"/>
+                            </constraint>
+                            <constraint firstItem="4m3-gR-U52" firstAttribute="top" secondItem="8gq-iG-wU0" secondAttribute="bottom" constant="46" id="oxx-RM-cFp">
+                                <variation key="widthClass=compact" constant="50"/>
+                            </constraint>
+                            <constraint firstAttribute="centerX" secondItem="tPo-kE-Vih" secondAttribute="centerX" constant="12" id="xaI-Ib-bNN"/>
+                            <constraint firstItem="fcs-dl-8ws" firstAttribute="leading" secondItem="bdz-Z3-GaL" secondAttribute="leadingMargin" constant="11" id="zaz-02-0QU">
+                                <variation key="widthClass=compact" constant="20"/>
+                            </constraint>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="4m3-gR-U52"/>
                                 <exclude reference="fcs-dl-8ws"/>
                                 <exclude reference="tPo-kE-Vih"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="jDc-83-1Wf"/>
+                                <exclude reference="zaz-02-0QU"/>
+                                <exclude reference="1MS-CF-Aee"/>
+                                <exclude reference="9kB-sZ-Ejt"/>
+                                <exclude reference="ZoN-1D-u7C"/>
+                                <exclude reference="eRG-Xj-9lo"/>
+                                <exclude reference="mq3-ro-eD7"/>
+                                <exclude reference="oxx-RM-cFp"/>
+                                <exclude reference="7Ou-df-kKm"/>
+                                <exclude reference="N0a-13-cxQ"/>
+                                <exclude reference="xaI-Ib-bNN"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -1028,6 +1067,19 @@
                                 <include reference="4m3-gR-U52"/>
                                 <include reference="fcs-dl-8ws"/>
                                 <include reference="tPo-kE-Vih"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="jDc-83-1Wf"/>
+                                <include reference="zaz-02-0QU"/>
+                                <include reference="1MS-CF-Aee"/>
+                                <include reference="9kB-sZ-Ejt"/>
+                                <exclude reference="ZoN-1D-u7C"/>
+                                <include reference="eRG-Xj-9lo"/>
+                                <include reference="mq3-ro-eD7"/>
+                                <include reference="oxx-RM-cFp"/>
+                                <include reference="7Ou-df-kKm"/>
+                                <include reference="N0a-13-cxQ"/>
+                                <include reference="xaI-Ib-bNN"/>
                             </mask>
                         </variation>
                     </view>
@@ -2219,7 +2271,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
-                                <variation key="widthClass=compact" fixedFrame="YES">
+                                <variation key="widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="0.0" y="64" width="400" height="464"/>
                                 </variation>
                                 <connections>
@@ -2228,15 +2280,40 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="RwU-LM-A20" firstAttribute="height" secondItem="SWw-vu-dcZ" secondAttribute="height" multiplier="0.6" id="1PI-j0-g1o"/>
+                            <constraint firstItem="RwU-LM-A20" firstAttribute="top" secondItem="fTW-bM-yrM" secondAttribute="bottom" id="9p2-ds-Up4">
+                                <variation key="widthClass=compact" constant="20"/>
+                            </constraint>
+                            <constraint firstItem="RwU-LM-A20" firstAttribute="leading" secondItem="SWw-vu-dcZ" secondAttribute="leadingMargin" constant="-16" id="PQf-IE-sge">
+                                <variation key="widthClass=compact" constant="20"/>
+                            </constraint>
+                            <constraint firstAttribute="centerX" secondItem="RwU-LM-A20" secondAttribute="centerX" id="dHD-h7-iMs"/>
+                            <constraint firstItem="RwU-LM-A20" firstAttribute="width" secondItem="SWw-vu-dcZ" secondAttribute="width" multiplier="0.8" id="xIs-yZ-F2z"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="RwU-LM-A20"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="1PI-j0-g1o"/>
+                                <exclude reference="9p2-ds-Up4"/>
+                                <exclude reference="PQf-IE-sge"/>
+                                <exclude reference="dHD-h7-iMs"/>
+                                <exclude reference="xIs-yZ-F2z"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="RwU-LM-A20"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="1PI-j0-g1o"/>
+                                <include reference="9p2-ds-Up4"/>
+                                <exclude reference="PQf-IE-sge"/>
+                                <include reference="dHD-h7-iMs"/>
+                                <include reference="xIs-yZ-F2z"/>
                             </mask>
                         </variation>
                     </view>
