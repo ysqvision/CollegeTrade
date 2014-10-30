@@ -718,7 +718,9 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.637886807" blue="0.020732176549999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="hMd-OJ-ZOy" secondAttribute="centerY" constant="-7" id="a4m-D6-XIh"/>
+                            <constraint firstAttribute="centerY" secondItem="hMd-OJ-ZOy" secondAttribute="centerY" constant="-7" id="a4m-D6-XIh">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstAttribute="centerX" secondItem="hMd-OJ-ZOy" secondAttribute="centerX" constant="-0.5" id="h6Z-3x-I12">
                                 <variation key="widthClass=compact" constant="0.0"/>
                             </constraint>
@@ -816,7 +818,9 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.637886807" blue="0.020732176549999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="s1R-L6-Yzn" secondAttribute="centerY" constant="16" id="Kvh-Vp-9Yo"/>
+                            <constraint firstAttribute="centerY" secondItem="s1R-L6-Yzn" secondAttribute="centerY" constant="16" id="Kvh-Vp-9Yo">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="s1R-L6-Yzn" firstAttribute="top" secondItem="R3o-zM-AV0" secondAttribute="bottom" constant="22" id="Wub-9r-6Oa">
                                 <variation key="widthClass=compact" constant="20"/>
                             </constraint>
@@ -1122,12 +1126,12 @@
                                 </connections>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.637886807" blue="0.020732176549999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="UCJ-hM-0rh" firstAttribute="height" secondItem="5tg-Gw-GW0" secondAttribute="height" multiplier="0.6" id="A9p-Vx-Zpg">
                                 <variation key="widthClass=compact" constant="0.0"/>
                             </constraint>
-                            <constraint firstItem="UCJ-hM-0rh" firstAttribute="width" secondItem="5tg-Gw-GW0" secondAttribute="width" multiplier="0.8" id="KU9-gH-5LM">
+                            <constraint firstItem="UCJ-hM-0rh" firstAttribute="width" secondItem="5tg-Gw-GW0" secondAttribute="width" multiplier="0.9" id="KU9-gH-5LM">
                                 <variation key="widthClass=compact" constant="0.0"/>
                             </constraint>
                             <constraint firstAttribute="centerY" secondItem="UCJ-hM-0rh" secondAttribute="centerY" constant="-40.5" id="X1e-0t-Iaz">
@@ -1833,6 +1837,7 @@
                                             <subviews>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iQv-4e-VUJ">
                                                     <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                                    <color key="onTintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <variation key="widthClass=compact" fixedFrame="YES">
                                                         <rect key="frame" x="258" y="3" width="51" height="31"/>
                                                     </variation>
@@ -1875,7 +1880,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.637886807" blue="0.020732176549999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="IXO-Eu-CPa" secondAttribute="centerY" constant="-5.5" id="8X0-Mv-jz6">
                                 <variation key="widthClass=compact" constant="0.0"/>
