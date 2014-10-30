@@ -91,24 +91,7 @@ class StoreHomePageViewController: UIViewController {
             self.view.addSubview(button)
             
         }
-        /*
-        var anotherButton = UIButton(frame: CGRectMake(150, 100, 100, 100))
-        anotherButton.backgroundColor = UIColor.blueColor()
-        anotherButton.addTarget(self, action: "showStore:", forControlEvents: .TouchUpInside)
-        //anotherButton.hitTest(<#point: CGPoint#>, withEvent: <#UIEvent?#>)
-        self.view.addSubview(anotherButton)
-    
-
-        
-        let imageView = UIImageView(frame: (CGRectMake(100, 100, mainScreenWidth/3, mainScreenWidth/3)))
-        imageView.image = UIImage(named:"randomcat1.png")
-        imageView.userInteractionEnabled = true
-        var tap = UITapGestureRecognizer(target: self, action: "showStore:")
-        //imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "showStore"))
-        imageView.addGestureRecognizer(tap)
-        recommendedStores.append(imageView)
-        self.view.addSubview(imageView)
-*/
+       
     }
     
     func showStore(sender: UIButton!) {
@@ -119,8 +102,6 @@ class StoreHomePageViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        println("herer")
-      //  println(segue.isKindOfClass(UIStoryboardEmbedSegue))
         if segue.destinationViewController.isKindOfClass(UserStoreHomePageViewController) {
             if segue.identifier == "ShowUserStoreHomePageSegue" {
                 var storeViewController: UserStoreHomePageViewController = segue.destinationViewController as UserStoreHomePageViewController
@@ -128,12 +109,7 @@ class StoreHomePageViewController: UIViewController {
                 storeViewController.storeId = selectedStoreIndex
             }
         }
-        /*
-        if segue.identifier == "NewItemForSellSegue" {
-            var newItemForSellViewController: NewItemForSellViewController = segue.destinationViewController as NewItemForSellViewController
-            //newItemForSellViewController.delegate = self
-        }
-*/
+   
     }
 }
 

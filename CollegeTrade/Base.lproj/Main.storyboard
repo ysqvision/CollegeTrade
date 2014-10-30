@@ -507,7 +507,7 @@
                         <viewControllerLayoutGuide type="bottom" id="RL5-Ie-A4s"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="K4t-iu-jT4">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="C7M-18-2o4">
@@ -617,7 +617,7 @@
                         <viewControllerLayoutGuide type="bottom" id="PFO-aP-kER"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="V17-Va-ZiA">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收货人电话：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdw-2n-JWA">
@@ -725,6 +725,23 @@
             </objects>
             <point key="canvasLocation" x="655.5" y="2704"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="oo6-Zz-Y31">
+            <objects>
+                <viewController id="Seb-Gh-aWx" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Md2-aX-xAc"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pmx-Xq-fcS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="F8M-bM-tcZ">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lok-m6-bE3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3921" y="-1801"/>
+        </scene>
         <!--User Store Home Page View Controller-->
         <scene sceneID="tBQ-2I-imF">
             <objects>
@@ -814,11 +831,11 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2Jv-92-a7e">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="发表新物品">
+                                <state key="normal" title="新物品">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="sg3-cB-DBH" kind="show" id="E5x-gy-OGe"/>
+                                    <segue destination="sg3-cB-DBH" kind="show" identifier="ShowNewItemForSellViewSegue" id="E5x-gy-OGe"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -827,11 +844,13 @@
                         <outlet property="addNewItemButton" destination="2Jv-92-a7e" id="fFp-dl-FgT"/>
                         <outlet property="itemsTable" destination="hMd-OJ-ZOy" id="JtB-7A-uTK"/>
                         <segue destination="hRZ-Bv-yry" kind="presentation" identifier="ShowLoginScreenFromUserStore" id="zGh-vy-Oep"/>
+                        <segue destination="wEm-Ir-R98" kind="show" identifier="ShowItemDetailViewSegue" id="USg-eL-ooG"/>
+                        <segue destination="Seb-Gh-aWx" kind="show" identifier="ShowEditItemViewSegue" id="6gH-pP-0ZN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nvc-aB-eBw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2805" y="625"/>
+            <point key="canvasLocation" x="3529.5" y="-1170"/>
         </scene>
         <!--我的好友-->
         <scene sceneID="Ot6-le-j3E">
@@ -842,7 +861,7 @@
                         <viewControllerLayoutGuide type="bottom" id="qg6-Zy-Ouj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="PQM-w2-lXI">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="s1R-L6-Yzn">
@@ -948,7 +967,7 @@
                         <viewControllerLayoutGuide type="bottom" id="XwK-gM-aHt"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MKL-Yo-bUz">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cya-kh-uNf">
@@ -1071,25 +1090,19 @@
                         <viewControllerLayoutGuide type="bottom" id="7TU-Z5-DET"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bdz-Z3-GaL">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4m3-gR-U52">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="180" y="114" width="144" height="30"/>
-                                </variation>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="950" verticalCompressionResistancePriority="950" text="输入用户名：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcs-dl-8ws">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="36" y="117" width="144" height="24"/>
-                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPo-kE-Vih">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1099,9 +1112,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="78" y="194" width="180" height="36"/>
-                                </variation>
                                 <connections>
                                     <action selector="addFriend:" destination="W27-Eu-A5B" eventType="touchUpInside" id="ff4-QZ-YOp"/>
                                 </connections>
@@ -1597,7 +1607,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5JG-9m-VAE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3289.5" y="722"/>
+            <point key="canvasLocation" x="3556.5" y="300"/>
         </scene>
         <!--TakePhotoViewController-->
         <scene sceneID="nfs-gC-h4n">
@@ -2524,7 +2534,7 @@
                         <viewControllerLayoutGuide type="bottom" id="jNJ-g8-1WR"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="SWw-vu-dcZ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="RwU-LM-A20">
@@ -2659,7 +2669,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Yo-5J-kTK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1923" y="1190"/>
+            <point key="canvasLocation" x="2053.5" y="1429"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="47Q-0g-b9K">
@@ -2702,9 +2712,10 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="VH3-tI-kBI"/>
-        <segue reference="Jpa-9R-88A"/>
         <segue reference="884-yj-daG"/>
-        <segue reference="zd9-Lw-DF0"/>
+        <segue reference="RDb-kb-FsJ"/>
+        <segue reference="USg-eL-ooG"/>
+        <segue reference="zGh-vy-Oep"/>
         <segue reference="Zja-L7-Vei"/>
     </inferredMetricsTieBreakers>
 </document>

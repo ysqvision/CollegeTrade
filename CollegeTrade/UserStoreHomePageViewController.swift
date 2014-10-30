@@ -16,6 +16,7 @@ class UserStoreHomePageViewController: UIViewController, UITableViewDataSource, 
     var itemsForSell = []
     var searchItemAPI = SearchItemAPIController()
     
+    var isMyStore = false
     
     @IBOutlet weak var itemsTable: UITableView!
     
@@ -35,6 +36,7 @@ class UserStoreHomePageViewController: UIViewController, UITableViewDataSource, 
         var selfUserId = LOGGED_IN_USER_INFORMATION!["userId"] as Int
         if userIdForThisStore != selfUserId {
             println("id is not smae")
+            isMyStore = false
    
             addNewItemButton.hidden = true
             /*
@@ -43,6 +45,8 @@ class UserStoreHomePageViewController: UIViewController, UITableViewDataSource, 
             addNewItemButton.enabled = false
             addNewItemButton.hidden = true
 */
+        } else {
+            isMyStore = true
         }
         searchItemAPI.delegate = self
         searchItemAPI.getUserItems("\(userIdForThisStore)")
@@ -84,6 +88,11 @@ class UserStoreHomePageViewController: UIViewController, UITableViewDataSource, 
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+        if isMyStore {
+            performSegueWithIdentifier("ShowEditItemViewSegue", sender: self)
+        } else {
+            performSegueWithIdentifier("ShowItemDetailViewSegue", sender: self)
+        }
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
