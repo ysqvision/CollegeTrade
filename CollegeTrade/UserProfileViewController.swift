@@ -38,6 +38,7 @@ class UserProfileViewController: UIViewController, UIPopoverPresentationControll
         KeychainService.removeToken("SPIRIIITCOLLEGETRADEPASSWORD", token: storedPass!)
         USER_IS_LOGGED_IN = false
         LOGGED_IN_USER_INFORMATION = nil
+        EaseMob.sharedInstance().chatManager.asyncLogoff()
         self.tabBarController?.selectedIndex = 0
     }
     override func viewDidLoad() {

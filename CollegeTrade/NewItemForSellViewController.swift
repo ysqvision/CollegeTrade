@@ -8,17 +8,25 @@
 
 import Foundation
 
+
+protocol postNewItemProtocol {
+    func didPostNewItem()
+}
+
 class NewItemForSellViewController: UIViewController, selectedPictureDelegate, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
+    
+    var delegate: postNewItemProtocol!
     
     var imageSet = [UIImage]()
     var imagePathSet = [String]()
+    var imagePathSetForUpyun = [String]()
     
     @IBOutlet var itemImage: UIImageView!
     
     @IBOutlet weak var itemName: UITextField!
     @IBOutlet var imageTable: UITableView!
     
-    @IBOutlet var itemDescription: UITextField!
+    @IBOutlet var itemDescription: UITextView!
     
     @IBAction func chooseImage(sender: AnyObject) {
         let popoverVC = self.storyboard?.instantiateViewControllerWithIdentifier("TakePhotoViewController") as TakePhotoViewController
@@ -114,8 +122,6 @@ class NewItemForSellViewController: UIViewController, selectedPictureDelegate, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        itemName.delegate = self
-        itemDescription.delegate = self
                // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -134,6 +140,7 @@ class NewItemForSellViewController: UIViewController, selectedPictureDelegate, U
         var currentTime :Int = Int(NSDate().timeIntervalSince1970 * 1000)
         imageSet.append(value)
         imagePathSet.append("http://spiriiit-sharejx.b0.upaiyun.com/test/\(currentTime).jpg")
+        imagePathSetForUpyun.append("\(currentTime).jpg")
         self.imageTable.reloadData()
         
     }

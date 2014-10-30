@@ -10,7 +10,6 @@
 		5731621A19FEC0CB00F17821 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5731621919FEC0CB00F17821 /* Constants.swift */; };
 		5731621C19FEC10500F17821 /* UpYunHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5731621B19FEC10500F17821 /* UpYunHelper.swift */; };
 		5731621E19FEC2D800F17821 /* SwiftMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5731621D19FEC2D800F17821 /* SwiftMD5.swift */; };
-		5731622219FEC4AC00F17821 /* Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 5731622119FEC4AC00F17821 /* Empty.m */; };
 		5742032719C8CF2000A84191 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742032619C8CF2000A84191 /* AppDelegate.swift */; };
 		5742032919C8CF2000A84191 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742032819C8CF2000A84191 /* LoginViewController.swift */; };
 		5742032C19C8CF2000A84191 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5742032A19C8CF2000A84191 /* Main.storyboard */; };
@@ -30,6 +29,10 @@
 		57ACA0771A006C5400A88172 /* FriendListAPIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ACA0761A006C5400A88172 /* FriendListAPIController.swift */; };
 		57ACA0791A006F2000A88172 /* ChatWithFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ACA0781A006F2000A88172 /* ChatWithFriendViewController.swift */; };
 		57D837811A00A1710078760C /* AddFriendToChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D837801A00A1710078760C /* AddFriendToChatViewController.swift */; };
+		57D837831A0152AF0078760C /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D837821A0152AF0078760C /* OrderViewController.swift */; };
+		57D837851A0156A60078760C /* OrderAPIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D837841A0156A50078760C /* OrderAPIHelper.swift */; };
+		57D837871A015C880078760C /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D837861A015C880078760C /* OrderDetailViewController.swift */; };
+		57D837891A017AB50078760C /* FriendRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D837881A017AB50078760C /* FriendRequestViewController.swift */; };
 		57E52D7C19EC7BEB00D33DE3 /* KeyChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E52D7B19EC7BEB00D33DE3 /* KeyChainService.swift */; };
 		57E52D7E19EE14AF00D33DE3 /* TakePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E52D7D19EE14AF00D33DE3 /* TakePhotoViewController.swift */; };
 		57E52D8019EEEC5500D33DE3 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E52D7F19EEEC5500D33DE3 /* Protocol.swift */; };
@@ -73,7 +76,6 @@
 		5731621B19FEC10500F17821 /* UpYunHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpYunHelper.swift; sourceTree = "<group>"; };
 		5731621D19FEC2D800F17821 /* SwiftMD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftMD5.swift; sourceTree = "<group>"; };
 		5731622019FEC4AB00F17821 /* CollegeTrade-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CollegeTrade-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
-		5731622119FEC4AC00F17821 /* Empty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Empty.m; sourceTree = "<group>"; };
 		5742032119C8CF2000A84191 /* CollegeTrade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollegeTrade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5742032519C8CF2000A84191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5742032619C8CF2000A84191 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,10 @@
 		57ACA0761A006C5400A88172 /* FriendListAPIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendListAPIController.swift; sourceTree = "<group>"; };
 		57ACA0781A006F2000A88172 /* ChatWithFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatWithFriendViewController.swift; sourceTree = "<group>"; };
 		57D837801A00A1710078760C /* AddFriendToChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendToChatViewController.swift; sourceTree = "<group>"; };
+		57D837821A0152AF0078760C /* OrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		57D837841A0156A50078760C /* OrderAPIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderAPIHelper.swift; sourceTree = "<group>"; };
+		57D837861A015C880078760C /* OrderDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailViewController.swift; sourceTree = "<group>"; };
+		57D837881A017AB50078760C /* FriendRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendRequestViewController.swift; sourceTree = "<group>"; };
 		57E52D7B19EC7BEB00D33DE3 /* KeyChainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainService.swift; sourceTree = "<group>"; };
 		57E52D7D19EE14AF00D33DE3 /* TakePhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakePhotoViewController.swift; sourceTree = "<group>"; };
 		57E52D7F19EEEC5500D33DE3 /* Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
@@ -265,7 +271,6 @@
 		5742031819C8CF2000A84191 = {
 			isa = PBXGroup;
 			children = (
-				5731622119FEC4AC00F17821 /* Empty.m */,
 				574614FE19E37138008323E0 /* Images.xcassets */,
 				5742032319C8CF2000A84191 /* CollegeTrade */,
 				5742033919C8CF2100A84191 /* CollegeTradeTests */,
@@ -301,6 +306,10 @@
 				5742032F19C8CF2100A84191 /* LaunchScreen.xib */,
 				5742032819C8CF2000A84191 /* LoginViewController.swift */,
 				5742032A19C8CF2000A84191 /* Main.storyboard */,
+				57D837881A017AB50078760C /* FriendRequestViewController.swift */,
+				57D837861A015C880078760C /* OrderDetailViewController.swift */,
+				57D837841A0156A50078760C /* OrderAPIHelper.swift */,
+				57D837821A0152AF0078760C /* OrderViewController.swift */,
 				57D837801A00A1710078760C /* AddFriendToChatViewController.swift */,
 				704E76571A0082CC0057EE39 /* UserSettingTableViewController.swift */,
 				5779466019FF58FD00B2512F /* NewItemForSellViewController.swift */,
@@ -709,6 +718,7 @@
 				5784C28919C9245100DDA365 /* ItemDetailViewController.swift in Sources */,
 				57908E0719F5F4B900179925 /* SearchItemAPIController.swift in Sources */,
 				57E52D8019EEEC5500D33DE3 /* Protocol.swift in Sources */,
+				57D837831A0152AF0078760C /* OrderViewController.swift in Sources */,
 				70D7785819E36C6400437988 /* UserProfileViewController.swift in Sources */,
 				5746150119E375D7008323E0 /* Store.swift in Sources */,
 				5784C28519C9112B00DDA365 /* SignUpViewController.swift in Sources */,
@@ -716,11 +726,12 @@
 				57F28B061A00507F0026949D /* FriendListViewController.swift in Sources */,
 				57E52D7C19EC7BEB00D33DE3 /* KeyChainService.swift in Sources */,
 				5742032919C8CF2000A84191 /* LoginViewController.swift in Sources */,
-				5731622219FEC4AC00F17821 /* Empty.m in Sources */,
+				57D837871A015C880078760C /* OrderDetailViewController.swift in Sources */,
 				57ACA0771A006C5400A88172 /* FriendListAPIController.swift in Sources */,
 				5731621E19FEC2D800F17821 /* SwiftMD5.swift in Sources */,
 				57E52D7E19EE14AF00D33DE3 /* TakePhotoViewController.swift in Sources */,
 				57F288551A0020500026949D /* PagedImageScrollView.m in Sources */,
+				57D837891A017AB50078760C /* FriendRequestViewController.swift in Sources */,
 				57ACA0791A006F2000A88172 /* ChatWithFriendViewController.swift in Sources */,
 				704E76581A0082CC0057EE39 /* UserSettingTableViewController.swift in Sources */,
 				5784C28719C916EE00DDA365 /* UserHomePageViewController.swift in Sources */,
@@ -729,6 +740,7 @@
 				5779466119FF58FD00B2512F /* NewItemForSellViewController.swift in Sources */,
 				709D7D6619ECC2BD0037A03C /* UserSettingViewController.swift in Sources */,
 				5779465F19FF4D8000B2512F /* UserStoreHomePageViewController.swift in Sources */,
+				57D837851A0156A60078760C /* OrderAPIHelper.swift in Sources */,
 				5742032719C8CF2000A84191 /* AppDelegate.swift in Sources */,
 				5731621A19FEC0CB00F17821 /* Constants.swift in Sources */,
 			);

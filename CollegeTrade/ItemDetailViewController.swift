@@ -15,8 +15,16 @@ class ItemDetailViewController: UIViewController {
     @IBOutlet weak var itemPic: UIImageView!
     var item: ItemForSell!
     var commentNum: Int!
+    var imageUrl: [String]!
+    var firstImage: UIImage!
     
+    var imageSet = [String: UIImage]()
+    
+    var imageViewSet = [UIImageView]()
+    
+    @IBOutlet var imagesScrollView: UIScrollView!
     @IBOutlet weak var commentTable: UITableView!
+    
     
     @IBAction func add(sender: AnyObject) {
         
@@ -36,6 +44,44 @@ class ItemDetailViewController: UIViewController {
     
         override func viewDidLoad() {
         super.viewDidLoad()
+            imagesScrollView.scrollEnabled = true
+            imagesScrollView.userInteractionEnabled = true
+            imagesScrollView.showsVerticalScrollIndicator = true
+            
+            for i in 0...item.imageUrl.count - 1 {
+                let imageView = UIImageView(frame: (CGRectMake(0, 0, 100, 100)))
+                imageViewSet.append(imageView)
+                imagesScrollView.addSubview(imageView)
+            }
+            
+            for i in 0...item.imageUrl.count - 1 {
+                var url = item.imageUrl[i]
+                if (imageSet[url] != nil) {
+                    imageViewSet[i].image = imageSet[url]
+                } else {
+                    var imgURL: NSURL = NSURL(string: url)
+                    
+                    // Download an NSData representation of the image at the URL
+                    let request: NSURLRequest = NSURLRequest(URL: imgURL)
+                    NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {(response: NSURLResponse!,data: NSData!,error: NSError!) -> Void in
+                        if error == nil {
+                            var image = UIImage(data: data)
+                            
+                            // Store the image in to our cache
+                            self.imageSet[url] = image
+                            dispatch_async(dispatch_get_main_queue(), {
+                                self.imageViewSet[i].image = image
+                            })
+                        }
+                        else {
+                            println("Error: \(error.localizedDescription)")
+                        }
+                    })
+                }
+
+            }
+            
+            
             itemName.text = "名称： \(self.item.title)"
             itemPrice.text = "价格： \(self.item.price)"
             

@@ -23,20 +23,13 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        EaseMob.sharedInstance().chatManager.asyncLoginWithUsername("456", password: "123456", completion:
-            { response, error in
-                if ((error) != nil) {
-                    println("cannot login")
-                    println(error)
-                } else {
-                    println("success")
-                }
-                
-            }, onQueue: nil)
+        
 
         activityIndicator.startAnimating();
         searchItemAPI.delegate = self
+        
         searchItemAPI.getAllItems()
+        
         if USER_IS_LOGGED_IN == false {
             println("is false")
             var storedUsername = KeychainService.loadToken("SPIRIIITCOLLEGETRADEUSERNAME")
@@ -71,6 +64,7 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
         let rowData: NSDictionary = self.itemsForSell[indexPath.row] as NSDictionary
         
         cell.textLabel?.text = rowData["goodsName"] as NSString
+        println(rowData["goodsName"])
         
         // Grab the artworkUrl60 key to get an image URL for the app's thumbnail
        // let urlString: NSString = rowData["goodsName"] as NSString
@@ -85,8 +79,11 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
         let formattedPrice: Double = rowData["price"] as Double
         cell.detailTextLabel?.text = "价格: \(formattedPrice)"
         cell.imageView?.image = UIImage(named: "randomcat1.png")
-        
+        println(rowData)
+        println(rowData["goodsImage"])
+        //var imagePaths = rowData["goodsImage"] as String
         if let imagePaths = rowData["goodsImage"] as? [String] {
+        //let imagePathsSet = imagePaths.componentsSeparatedByString(",")
             if imagePaths.count != 0 {
                 var firstImage = imagePaths[0]
                 var image = imageCache[firstImage]
@@ -126,6 +123,7 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
             
         }
         
+        
         return cell
     }
     
@@ -135,13 +133,16 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "ShowItemDetailViewSegue") {
-        var itemDetailViewController: ItemDetailViewController = segue.destinationViewController as ItemDetailViewController
-        var itemIndex = itemsTable!.indexPathForSelectedRow()!.row;
-        var selectedItem = self.itemsForSell[itemIndex] as NSDictionary
-        var title = selectedItem["goodsName"] as NSString
-        var price = selectedItem["price"] as Double
-        var item = ItemForSell(title: title, price: price)
-        itemDetailViewController.item = item
+            var itemDetailViewController: ItemDetailViewController = segue.destinationViewController as ItemDetailViewController
+            var itemIndex = itemsTable!.indexPathForSelectedRow()!.row;
+            var selectedItem = self.itemsForSell[itemIndex] as NSDictionary
+            var title = selectedItem["goodsName"] as NSString
+            var price = selectedItem["price"] as Double
+            var description = selectedItem["goodsDescription"] as String
+            var imageUrlString = selectedItem["goodsImage"] as String
+            var imageUrl = imageUrlString.componentsSeparatedByString(imageUrlString)
+            var item = ItemForSell(title: title, price: price, description: description, imageUrl: imageUrl)
+            itemDetailViewController.item = item
        
         }
         
@@ -150,6 +151,7 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
         var resultsArr: NSArray = results["data"] as NSArray
         dispatch_async(dispatch_get_main_queue(), {
             self.itemsForSell = resultsArr
+            println(self.itemsForSell)
             self.itemsTable!.reloadData()
         })
     }

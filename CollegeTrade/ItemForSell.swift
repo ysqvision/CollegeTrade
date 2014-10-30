@@ -11,9 +11,13 @@ import Foundation
 class ItemForSell {
     var title: String
     var price: Double
+    var description: String
+    var imageUrl: [String]
     
-    init(title: String, price: Double) {
+    init(title: String, price: Double, description: String, imageUrl: [String]) {
         self.title = title;
         self.price = price;
+        self.description = description
+        self.imageUrl = imageUrl
     }
 }

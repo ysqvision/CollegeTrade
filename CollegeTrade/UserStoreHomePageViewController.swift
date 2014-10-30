@@ -9,7 +9,7 @@
 
 import UIKit
 
-class UserStoreHomePageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, didReceiveItemsProtocol{
+class UserStoreHomePageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, didReceiveItemsProtocol, postNewItemProtocol {
     let kCellIdentifier: String = "ItemForSellCell"
     var itemsForSell = []
     var searchItemAPI = SearchItemAPIController()
@@ -26,6 +26,7 @@ class UserStoreHomePageViewController: UIViewController, UITableViewDataSource, 
         if USER_IS_LOGGED_IN == false {
             self.performSegueWithIdentifier("ShowLoginScreenFromUserStore", sender: self)
         }
+        itemsTable.reloadData()
     }
     
     override func viewDidLoad() {
@@ -78,9 +79,16 @@ class UserStoreHomePageViewController: UIViewController, UITableViewDataSource, 
             var selectedItem = self.itemsForSell[itemIndex] as NSDictionary
             var title = selectedItem["goodsName"] as NSString
             var price = selectedItem["price"] as Double
-            var item = ItemForSell(title: title, price: price)
+            var description = selectedItem["goodsDescription"] as String
+            var imageUrlString = selectedItem["goodsImage"] as String
+            var imageUrl = imageUrlString.componentsSeparatedByString(imageUrlString)
+            var item = ItemForSell(title: title, price: price, description: description, imageUrl: imageUrl)
             itemDetailViewController.item = item
         
+        }
+        if segue.identifier == "NewItemForSellSegue" {
+            var newItemForSellViewController: NewItemForSellViewController = segue.destinationViewController as NewItemForSellViewController
+            newItemForSellViewController.delegate = self
         }
     }
 
@@ -93,4 +101,7 @@ class UserStoreHomePageViewController: UIViewController, UITableViewDataSource, 
         })
     }
     
+    func didPostNewItem() {
+        searchItemAPI.getUserItems()
+    }
 }

@@ -8,10 +8,18 @@
 
 import UIKit
 
+protocol chatProtocol {
+    func receivedMessage(message: EMMessage)
+    
+    func receivedBuddyRequest(username: String, message: String)
+}
+
 class ChatWithFriendViewController: UIViewController, IChatManagerDelegate {
     
     var friendName: String!
     var messages = [EMMessage]()
+    
+    var delegate: chatProtocol!
     
     @IBOutlet var textbox: UITextField!
     @IBOutlet var textView: UITextView!
@@ -21,6 +29,8 @@ class ChatWithFriendViewController: UIViewController, IChatManagerDelegate {
         textView.userInteractionEnabled = true
         super.viewDidLoad()
         EaseMob.sharedInstance().chatManager.addDelegate(self, delegateQueue: nil)
+        
+        
         for message in messages {
             var messageBody = message.messageBodies.first as EMTextMessageBody
             var messageStr = messageBody.text
@@ -28,6 +38,7 @@ class ChatWithFriendViewController: UIViewController, IChatManagerDelegate {
                 var exten = message.ext as [String: String]
                 var name : String = exten["username"]! as String
                 if name == friendName {
+                    println(name)
                     textView.text.write("\(name): \(messageStr)\n\n")
                 }
                 else {
@@ -60,6 +71,14 @@ class ChatWithFriendViewController: UIViewController, IChatManagerDelegate {
             var messageBody = message.messageBodies.first as EMTextMessageBody
             var messageStr = messageBody.text
             textView.text.write("\(chatter): \(messageStr)\n\n")
+        } else {
+            self.delegate.receivedMessage(message)
         }
+
     }
+    
+    func didReceiveBuddyRequest(username: String!, message: String!) {
+        self.delegate.receivedBuddyRequest(username, message: message)
+    }
+    
 }

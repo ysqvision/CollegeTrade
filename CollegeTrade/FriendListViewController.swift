@@ -7,11 +7,17 @@
 //
 import UIKit
 
-class FriendListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, didGetFriendListProtocol {
+class FriendListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, didGetFriendListProtocol, chatProtocol, friendRequestProtocol {
     var friendName = [String]()
     var chatHistory = [String: [EMMessage]]()
     var conversation = [String: EMConversation]()
     var searchFriendListAPI = SearchForFriendList()
+    
+    var buddyRequest = [String]()
+    
+    var newFriendRequest = 0
+    
+    //var friendRequest
    
     @IBOutlet var friendListTable: UITableView!
     
@@ -19,10 +25,13 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
        super.viewWillAppear(animated)
         searchFriendListAPI.delegate = self
         searchFriendListAPI.getFriendList()
+        friendListTable.reloadData()
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+          super.viewDidLoad()
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -31,29 +40,39 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return friendName.count
+        return friendName.count + 1
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("FriendCell") as UITableViewCell
-        var name = friendName[indexPath.row]
-        
-        cell.textLabel?.text = name
-        var conversationWithName = self.conversation[name]
-        var numOfUnreadMessage: UInt = conversationWithName!.unreadMessagesCount() as UInt
-        if numOfUnreadMessage != 0 {
-            cell.detailTextLabel?.text = "\(numOfUnreadMessage)条未读消息"
+     
+        if indexPath.row == 0 {
+            cell.detailTextLabel?.text = "\(newFriendRequest)条新好友请求"
+        } else {
+            var name = friendName[indexPath.row]
+            
+            cell.textLabel?.text = name
+            var conversationWithName = self.conversation[name]
+            var numOfUnreadMessage: UInt = conversationWithName!.unreadMessagesCount() as UInt
+            if numOfUnreadMessage != 0 {
+                cell.detailTextLabel?.text = "\(numOfUnreadMessage)条未读消息"
+            }
         }
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        if indexPath.row == 0 {
+            performSegueWithIdentifier("ShowFriendRequestSegue", sender: nil)
+        } else {
+            performSegueWithIdentifier("ChatWithFriendSegue", sender: nil)
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "ChatWithFriend") {
+        if segue.identifier == "ChatWithFriendSegue" {
             var chatWithFriendViewController: ChatWithFriendViewController = segue.destinationViewController as ChatWithFriendViewController
+            chatWithFriendViewController.delegate = self
             var index = friendListTable.indexPathForSelectedRow()!.row;
 
             var selectedFriend = self.friendName[index]
@@ -61,6 +80,10 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
             chatWithFriendViewController.messages = self.chatHistory[selectedFriend]!
             self.conversation[selectedFriend]?.markMessagesAsRead(true)
             friendListTable.reloadData()
+        } else if segue.identifier == "ShowFriendRequestSegue" {
+            var friendRequestViewController: FriendRequestViewController = segue.destinationViewController as FriendRequestViewController
+            friendRequestViewController.friendRequestList = buddyRequest
+            friendRequestViewController.delegate = self
         }
         
     }
@@ -81,4 +104,40 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
         })
         
     }
+    
+    func receivedBuddyRequest(username: String, message: String) {
+        buddyRequest.append(username)
+        newFriendRequest = newFriendRequest + 1
+        friendListTable.reloadRowsAtIndexPaths([0], withRowAnimation: UITableViewRowAnimation.Fade)
+    }
+
+    func receivedMessage(message: EMMessage) {
+        var exten = message.ext as [String: String]
+        var username: String = exten["username"]! as String
+        var conversation = EaseMob.sharedInstance().chatManager.conversationForChatter(username, isGroup: true)
+        self.conversation[username] = conversation
+        var messages: [EMMessage] = conversation.loadAllMessages() as [EMMessage]
+        self.chatHistory[username] = messages
+        friendListTable.reloadData()
+    }
+    
+    func clearNumOfNewRequest() {
+        newFriendRequest = 0
+        friendListTable.reloadData()
+    }
+    
+    func removeBuddyRequest(username: String) {
+        var index = -1
+        for i in 0...buddyRequest.count {
+            if buddyRequest[i] == username {
+                index = i
+                break
+            }
+        }
+        if index != -1 {
+            buddyRequest.removeAtIndex(index)
+        }
+        
+    }
+    
 }

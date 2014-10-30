@@ -24,6 +24,16 @@ class LoginViewController: UIViewController {
                     USER_IS_LOGGED_IN = true
                     KeychainService.saveToken("SPIRIIITCOLLEGETRADEUSERNAME", token: username)
                     KeychainService.saveToken("SPIRIIITCOLLEGETRADEPASSWORD", token: password)
+                    EaseMob.sharedInstance().chatManager.asyncLoginWithUsername(username, password: password, completion:
+                        { response, error in
+                            if ((error) != nil) {
+                                println("cannot login")
+                                println(error)
+                            } else {
+                                println("success")
+                            }
+                            
+                        }, onQueue: nil)
                     self.dismissViewControllerAnimated(true, completion: nil)
 
                 } else {
