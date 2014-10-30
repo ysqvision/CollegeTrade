@@ -854,52 +854,80 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cya-kh-uNf">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                <variation key="widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="43" y="93" width="323" height="315"/>
                                 </variation>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T15-y1-Afp">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="43" y="451" width="236" height="30"/>
-                                </variation>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3S0-hx-dUZ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="发送">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                <variation key="widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="308" y="451" width="58" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="sendMessage:" destination="iDb-qp-7L6" eventType="touchUpInside" id="AH0-Gs-mPF"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T15-y1-Afp">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="43" y="451" width="236" height="30"/>
+                                </variation>
+                            </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="3S0-hx-dUZ" firstAttribute="top" secondItem="cya-kh-uNf" secondAttribute="bottom" constant="43" id="7qO-Lx-YbY"/>
-                            <constraint firstItem="cya-kh-uNf" firstAttribute="width" secondItem="MKL-Yo-bUz" secondAttribute="width" id="bIb-xG-zFK"/>
+                            <constraint firstItem="3S0-hx-dUZ" firstAttribute="top" secondItem="cya-kh-uNf" secondAttribute="bottom" constant="43" id="7qO-Lx-YbY">
+                                <variation key="widthClass=compact" constant="50"/>
+                            </constraint>
+                            <constraint firstItem="cya-kh-uNf" firstAttribute="top" secondItem="ONR-xf-peX" secondAttribute="bottom" constant="29" id="KQT-3k-Jrn"/>
+                            <constraint firstItem="3S0-hx-dUZ" firstAttribute="centerY" secondItem="T15-y1-Afp" secondAttribute="centerY" id="LeI-uJ-TH0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cya-kh-uNf" secondAttribute="trailing" constant="18" id="Qip-DV-FsQ">
+                                <variation key="widthClass=compact" constant="20"/>
+                            </constraint>
+                            <constraint firstItem="3S0-hx-dUZ" firstAttribute="leading" secondItem="T15-y1-Afp" secondAttribute="trailing" constant="29" id="Sgj-ba-Qrq">
+                                <variation key="widthClass=compact" constant="20"/>
+                            </constraint>
+                            <constraint firstItem="cya-kh-uNf" firstAttribute="width" secondItem="MKL-Yo-bUz" secondAttribute="width" multiplier="0.8" id="bIb-xG-zFK"/>
+                            <constraint firstItem="3S0-hx-dUZ" firstAttribute="width" secondItem="MKL-Yo-bUz" secondAttribute="width" multiplier="0.2" id="fs1-KR-X4o"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3S0-hx-dUZ" secondAttribute="trailing" constant="18" id="iwf-Wc-FmK">
+                                <variation key="widthClass=compact" constant="20"/>
+                            </constraint>
                             <constraint firstItem="3S0-hx-dUZ" firstAttribute="centerY" secondItem="T15-y1-Afp" secondAttribute="centerY" id="jrT-gy-u1P"/>
-                            <constraint firstAttribute="centerX" secondItem="cya-kh-uNf" secondAttribute="centerX" constant="-4.5" id="nvd-0Y-EW7"/>
+                            <constraint firstAttribute="centerX" secondItem="cya-kh-uNf" secondAttribute="centerX" constant="-4.5" id="nvd-0Y-EW7">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="XwK-gM-aHt" firstAttribute="top" secondItem="T15-y1-Afp" secondAttribute="bottom" constant="70" id="wJ8-wi-Y6y"/>
+                            <constraint firstItem="T15-y1-Afp" firstAttribute="leading" secondItem="MKL-Yo-bUz" secondAttribute="leadingMargin" constant="27" id="yu3-Gb-Vea">
+                                <variation key="widthClass=compact" constant="20"/>
+                            </constraint>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="cya-kh-uNf"/>
-                                <exclude reference="T15-y1-Afp"/>
                                 <exclude reference="3S0-hx-dUZ"/>
+                                <exclude reference="T15-y1-Afp"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="KQT-3k-Jrn"/>
+                                <exclude reference="Qip-DV-FsQ"/>
                                 <exclude reference="bIb-xG-zFK"/>
                                 <exclude reference="nvd-0Y-EW7"/>
+                                <exclude reference="yu3-Gb-Vea"/>
                                 <exclude reference="7qO-Lx-YbY"/>
+                                <exclude reference="LeI-uJ-TH0"/>
+                                <exclude reference="Sgj-ba-Qrq"/>
+                                <exclude reference="fs1-KR-X4o"/>
+                                <exclude reference="iwf-Wc-FmK"/>
                                 <exclude reference="jrT-gy-u1P"/>
                                 <exclude reference="wJ8-wi-Y6y"/>
                             </mask>
@@ -907,14 +935,21 @@
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="cya-kh-uNf"/>
-                                <include reference="T15-y1-Afp"/>
                                 <include reference="3S0-hx-dUZ"/>
+                                <include reference="T15-y1-Afp"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="bIb-xG-zFK"/>
+                                <include reference="KQT-3k-Jrn"/>
+                                <include reference="Qip-DV-FsQ"/>
+                                <exclude reference="bIb-xG-zFK"/>
                                 <include reference="nvd-0Y-EW7"/>
+                                <include reference="yu3-Gb-Vea"/>
                                 <include reference="7qO-Lx-YbY"/>
-                                <include reference="jrT-gy-u1P"/>
+                                <include reference="LeI-uJ-TH0"/>
+                                <include reference="Sgj-ba-Qrq"/>
+                                <include reference="fs1-KR-X4o"/>
+                                <include reference="iwf-Wc-FmK"/>
+                                <exclude reference="jrT-gy-u1P"/>
                                 <include reference="wJ8-wi-Y6y"/>
                             </mask>
                         </variation>

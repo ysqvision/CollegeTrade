@@ -19,6 +19,8 @@ class ChatWithFriendViewController: UIViewController, IChatManagerDelegate {
     var friendName: String!
     var messages = [EMMessage]()
     
+    var cnt:Int = 0
+    
     var delegate: chatProtocol!
     
     @IBOutlet var textbox: UITextField!
@@ -30,13 +32,14 @@ class ChatWithFriendViewController: UIViewController, IChatManagerDelegate {
         super.viewDidLoad()
         EaseMob.sharedInstance().chatManager.addDelegate(self, delegateQueue: nil)
         
-        
+        cnt = 0
         for message in messages {
             var messageBody = message.messageBodies.first as EMTextMessageBody
             var messageStr = messageBody.text
             if message.ext != nil {
                 var exten = message.ext as [String: String]
                 var name : String = exten["username"]! as String
+                cnt = cnt + 1
                 if name == friendName {
                     println(name)
                     textView.text.write("\(name): \(messageStr)\n\n")
@@ -63,10 +66,14 @@ class ChatWithFriendViewController: UIViewController, IChatManagerDelegate {
             textView.text.write("我: \(text)\n\n")
             textbox.text = ""
         }
+        cnt = cnt + 1
+        //let range:NSRange = NSRange(location:cnt - 1, length: 0)
+        //textView.scrollRangeToVisible(range)
     }
     
     func didReceiveMessage(message: EMMessage) {
         var chatter = message.conversation.chatter
+        cnt = cnt + 1
         if chatter == friendName {
             var messageBody = message.messageBodies.first as EMTextMessageBody
             var messageStr = messageBody.text
