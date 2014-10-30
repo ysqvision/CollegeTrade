@@ -695,14 +695,14 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.637886807" blue="0.020732176549999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="hMd-OJ-ZOy" secondAttribute="centerY" constant="-7" id="a4m-D6-XIh"/>
                             <constraint firstAttribute="centerX" secondItem="hMd-OJ-ZOy" secondAttribute="centerX" constant="-0.5" id="h6Z-3x-I12">
                                 <variation key="widthClass=compact" constant="0.0"/>
                             </constraint>
                             <constraint firstItem="hMd-OJ-ZOy" firstAttribute="height" secondItem="aCo-ra-kbO" secondAttribute="height" multiplier="0.6" id="pd1-HN-Kii"/>
-                            <constraint firstItem="hMd-OJ-ZOy" firstAttribute="width" secondItem="aCo-ra-kbO" secondAttribute="width" multiplier="0.8" id="vCd-EM-8D4"/>
+                            <constraint firstItem="hMd-OJ-ZOy" firstAttribute="width" secondItem="aCo-ra-kbO" secondAttribute="width" multiplier="0.9" id="vCd-EM-8D4"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -729,6 +729,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="aEg-Z0-GZv">
                         <barButtonItem key="rightBarButtonItem" title="发表新物品" id="Tjf-58-Xre">
+                            <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="sg3-cB-DBH" kind="show" identifier="NewItemForSellSegue" id="l2d-f0-9H0"/>
                             </connections>
@@ -1403,7 +1404,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.637886807" blue="0.020732176549999998" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="54Y-NM-2oL"/>
@@ -1938,7 +1939,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Xe-cl-B0D">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="注册">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -1955,7 +1956,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.637886807" blue="0.020732176549999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="3Xe-cl-B0D" secondAttribute="centerY" constant="-87" id="0RI-RL-c7M">
                                 <variation key="widthClass=compact" constant="-80"/>
@@ -2439,7 +2440,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="zGh-vy-Oep"/>
         <segue reference="884-yj-daG"/>
-        <segue reference="zd9-Lw-DF0"/>
     </inferredMetricsTieBreakers>
 </document>
