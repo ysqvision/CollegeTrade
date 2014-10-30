@@ -20,7 +20,29 @@ class OrderViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     var orderController = OrderAPIHelper()
     
+    
+    override func viewWillAppear(animated: Bool) {
+
+        super.viewWillAppear(animated)
+        if USER_IS_LOGGED_IN == false {
+            self.performSegueWithIdentifier("ShowLoginScreenFromUserStore", sender: self)
+        }
+        orderController.delegate = self
+        
+        switch segment.selectedSegmentIndex
+            {
+        case 0:
+            isFirstSelected = true
+        case 1:
+            isFirstSelected = false
+        default:
+            break;
+        }
+        orderTable.tableFooterView = UIView(frame: CGRect.zeroRect)
+        orderTable.reloadData()
+    }
     override func viewDidLoad() {
+        /*
         if USER_IS_LOGGED_IN == false {
             self.performSegueWithIdentifier("ShowLoginScreenFromUserStore", sender: self)
         }
@@ -36,9 +58,9 @@ class OrderViewController: UIViewController, UITableViewDataSource, UITableViewD
             break;
         }
         
-       
+       */
         super.viewDidLoad()
-        orderTable.tableFooterView = UIView(frame: CGRect.zeroRect)
+        //orderTable.tableFooterView = UIView(frame: CGRect.zeroRect)
     }
     
     @IBOutlet var segment: UISegmentedControl!

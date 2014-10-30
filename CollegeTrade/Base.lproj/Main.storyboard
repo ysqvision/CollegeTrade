@@ -645,7 +645,7 @@
             </objects>
             <point key="canvasLocation" x="655.5" y="2704"/>
         </scene>
-        <!--User Store Home Page View Controller-->
+        <!--我的物品-->
         <scene sceneID="tBQ-2I-imF">
             <objects>
                 <viewController id="BLu-F0-HNQ" customClass="UserStoreHomePageViewController" customModule="CollegeTrade" customModuleProvider="target" sceneMemberID="viewController">
@@ -727,14 +727,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="aEg-Z0-GZv">
-                        <nil key="title"/>
-                        <barButtonItem key="rightBarButtonItem" title="发表新物品" id="Tjf-58-Xre">
-                            <connections>
-                                <segue destination="sg3-cB-DBH" kind="show" identifier="NewItemForSellSegue" id="oef-bH-b6b"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="我的物品" id="aEg-Z0-GZv"/>
                     <connections>
                         <outlet property="itemsTable" destination="hMd-OJ-ZOy" id="JtB-7A-uTK"/>
                         <segue destination="hRZ-Bv-yry" kind="presentation" identifier="ShowLoginScreenFromUserStore" id="zGh-vy-Oep"/>
@@ -828,6 +821,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="我的好友" id="3rm-Mk-6tS">
                         <barButtonItem key="rightBarButtonItem" title="添加好友" id="agA-tS-90N">
                             <connections>
@@ -835,6 +829,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="friendListTable" destination="s1R-L6-Yzn" id="9iG-w8-Nmg"/>
                         <segue destination="iDb-qp-7L6" kind="show" identifier="ChatWithFriendSegue" id="0Qz-yY-uvY"/>
@@ -1066,7 +1061,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ppO-4l-DQS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5371.5" y="2080"/>
+            <point key="canvasLocation" x="4464" y="2194"/>
         </scene>
         <!--User Profile View Controller-->
         <scene sceneID="Ze8-3l-2WD">
@@ -2194,7 +2189,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EtC-Ss-RIU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2407.5" y="1763"/>
+            <point key="canvasLocation" x="2104.5" y="1914"/>
         </scene>
         <!--New Order View Controller-->
         <scene sceneID="Wkw-8S-VIV">
@@ -2433,7 +2428,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a9C-4Q-M41" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5677.5" y="2784"/>
+            <point key="canvasLocation" x="5601" y="2808"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UjR-Ab-oiM">
@@ -2473,10 +2468,11 @@
             </objects>
             <point key="canvasLocation" x="282" y="1796"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--我的物品-->
         <scene sceneID="3q9-mu-LfA">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="miR-vb-gdc" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lRe-ra-AGW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController title="我的物品" automaticallyAdjustsScrollViewInsets="NO" id="miR-vb-gdc" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="lKV-J5-ceC"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fzL-CX-36q">
@@ -2488,9 +2484,8 @@
                         <segue destination="BLu-F0-HNQ" kind="relationship" relationship="rootViewController" id="9pK-W5-o3e"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lRe-ra-AGW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1036.5" y="639"/>
+            <point key="canvasLocation" x="1080" y="768"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
