@@ -10,6 +10,16 @@ import UIKit
 
 class UserHomePageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, didReceiveItemsProtocol {
 
+    @IBOutlet var searchBox: UITextField!
+    @IBAction func searchForItems(sender: AnyObject) {
+        if searchBox.text == "" {
+            searchItemAPI.getAllItems()
+        } else {
+            var searchString = searchBox.text
+            searchItemAPI.getItemsWithName(searchString)
+        }
+    }
+    
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     let kCellIdentifier: String = "ItemForSellCell"
@@ -23,8 +33,6 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-
         activityIndicator.startAnimating();
         searchItemAPI.delegate = self
         
