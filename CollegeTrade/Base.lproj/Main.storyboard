@@ -476,6 +476,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="C7M-18-2o4">
+                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                                <segments>
+                                    <segment title="我的购买"/>
+                                    <segment title="我的订单"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="139" y="72" width="123" height="29"/>
+                                </variation>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="hR2-eL-RHv" eventType="valueChanged" id="ppW-d9-PE8"/>
+                                </connections>
+                            </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="xai-Se-aBC">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -510,39 +524,46 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="100" y="111" width="200" height="300"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="100" y="159" width="200" height="300"/>
                                 </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="hR2-eL-RHv" id="tYn-5Q-Ctd"/>
                                     <outlet property="delegate" destination="hR2-eL-RHv" id="e3e-T3-9Ow"/>
                                 </connections>
                             </tableView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="C7M-18-2o4">
-                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
-                                <segments>
-                                    <segment title="我的购买"/>
-                                    <segment title="我的订单"/>
-                                </segments>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="139" y="72" width="123" height="29"/>
-                                </variation>
-                                <connections>
-                                    <action selector="segmentChanged:" destination="hR2-eL-RHv" eventType="valueChanged" id="ppW-d9-PE8"/>
-                                </connections>
-                            </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.637886807" blue="0.020732176549999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="xai-Se-aBC" secondAttribute="centerY" constant="-9" id="H6w-fE-fLq">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstAttribute="height" secondItem="xai-Se-aBC" secondAttribute="height" multiplier="1.66667" id="Hoh-oi-2aW"/>
+                            <constraint firstAttribute="centerX" secondItem="xai-Se-aBC" secondAttribute="centerX" id="XUU-Qc-hvt"/>
+                            <constraint firstAttribute="width" secondItem="xai-Se-aBC" secondAttribute="width" multiplier="1.11111" id="c60-NH-syh"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="xai-Se-aBC"/>
                                 <exclude reference="C7M-18-2o4"/>
+                                <exclude reference="xai-Se-aBC"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="H6w-fE-fLq"/>
+                                <exclude reference="Hoh-oi-2aW"/>
+                                <exclude reference="XUU-Qc-hvt"/>
+                                <exclude reference="c60-NH-syh"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="xai-Se-aBC"/>
                                 <include reference="C7M-18-2o4"/>
+                                <include reference="xai-Se-aBC"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="H6w-fE-fLq"/>
+                                <include reference="Hoh-oi-2aW"/>
+                                <include reference="XUU-Qc-hvt"/>
+                                <include reference="c60-NH-syh"/>
                             </mask>
                         </variation>
                     </view>
@@ -635,7 +656,7 @@
                                 </variation>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.637886807" blue="0.020732176549999998" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="Rdw-2n-JWA"/>
@@ -720,14 +741,16 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.637886807" blue="0.020732176549999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="hMd-OJ-ZOy" secondAttribute="centerY" constant="-7" id="a4m-D6-XIh"/>
+                            <constraint firstAttribute="centerY" secondItem="hMd-OJ-ZOy" secondAttribute="centerY" constant="-7" id="a4m-D6-XIh">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstAttribute="centerX" secondItem="hMd-OJ-ZOy" secondAttribute="centerX" constant="-0.5" id="h6Z-3x-I12">
                                 <variation key="widthClass=compact" constant="0.0"/>
                             </constraint>
                             <constraint firstItem="hMd-OJ-ZOy" firstAttribute="height" secondItem="aCo-ra-kbO" secondAttribute="height" multiplier="0.6" id="pd1-HN-Kii"/>
-                            <constraint firstItem="hMd-OJ-ZOy" firstAttribute="width" secondItem="aCo-ra-kbO" secondAttribute="width" multiplier="0.8" id="vCd-EM-8D4"/>
+                            <constraint firstItem="hMd-OJ-ZOy" firstAttribute="width" secondItem="aCo-ra-kbO" secondAttribute="width" multiplier="0.9" id="vCd-EM-8D4"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -818,22 +841,26 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.637886807" blue="0.020732176549999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="centerY" secondItem="s1R-L6-Yzn" secondAttribute="centerY" constant="16" id="Kvh-Vp-9Yo">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="s1R-L6-Yzn" firstAttribute="top" secondItem="R3o-zM-AV0" secondAttribute="bottom" constant="22" id="Wub-9r-6Oa">
                                 <variation key="widthClass=compact" constant="20"/>
                             </constraint>
-                            <constraint firstAttribute="width" secondItem="s1R-L6-Yzn" secondAttribute="width" multiplier="1.2" id="gPP-dF-tRx"/>
+                            <constraint firstAttribute="width" secondItem="s1R-L6-Yzn" secondAttribute="width" multiplier="1.11111" id="gPP-dF-tRx"/>
                             <constraint firstAttribute="centerX" secondItem="s1R-L6-Yzn" secondAttribute="centerX" constant="-0.5" id="iAS-Ue-HAh">
                                 <variation key="widthClass=compact" constant="0.0"/>
                             </constraint>
-                            <constraint firstAttribute="height" secondItem="s1R-L6-Yzn" secondAttribute="height" multiplier="1.5" id="mYh-gm-cBa"/>
+                            <constraint firstAttribute="height" secondItem="s1R-L6-Yzn" secondAttribute="height" multiplier="1.66667" id="mYh-gm-cBa"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="s1R-L6-Yzn"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Kvh-Vp-9Yo"/>
                                 <exclude reference="Wub-9r-6Oa"/>
                                 <exclude reference="gPP-dF-tRx"/>
                                 <exclude reference="iAS-Ue-HAh"/>
@@ -845,7 +872,8 @@
                                 <include reference="s1R-L6-Yzn"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Wub-9r-6Oa"/>
+                                <include reference="Kvh-Vp-9Yo"/>
+                                <exclude reference="Wub-9r-6Oa"/>
                                 <include reference="gPP-dF-tRx"/>
                                 <include reference="iAS-Ue-HAh"/>
                                 <include reference="mYh-gm-cBa"/>
@@ -883,13 +911,13 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cya-kh-uNf">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3S0-hx-dUZ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="发送">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -904,7 +932,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.637886807" blue="0.020732176549999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="3S0-hx-dUZ" firstAttribute="top" secondItem="cya-kh-uNf" secondAttribute="bottom" constant="43" id="7qO-Lx-YbY">
                                 <variation key="widthClass=compact" constant="50"/>
@@ -1008,7 +1036,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPo-kE-Vih">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="加为好友">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -1019,7 +1047,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.637886807" blue="0.020732176549999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="4m3-gR-U52" firstAttribute="leading" secondItem="fcs-dl-8ws" secondAttribute="trailing" priority="800" constant="16" id="1MS-CF-Aee">
                                 <variation key="widthClass=compact" constant="30"/>
@@ -1123,12 +1151,12 @@
                                 </connections>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.637886807" blue="0.020732176549999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="UCJ-hM-0rh" firstAttribute="height" secondItem="5tg-Gw-GW0" secondAttribute="height" multiplier="0.6" id="A9p-Vx-Zpg">
                                 <variation key="widthClass=compact" constant="0.0"/>
                             </constraint>
-                            <constraint firstItem="UCJ-hM-0rh" firstAttribute="width" secondItem="5tg-Gw-GW0" secondAttribute="width" multiplier="0.8" id="KU9-gH-5LM">
+                            <constraint firstItem="UCJ-hM-0rh" firstAttribute="width" secondItem="5tg-Gw-GW0" secondAttribute="width" multiplier="0.9" id="KU9-gH-5LM">
                                 <variation key="widthClass=compact" constant="0.0"/>
                             </constraint>
                             <constraint firstAttribute="centerY" secondItem="UCJ-hM-0rh" secondAttribute="centerY" constant="-40.5" id="X1e-0t-Iaz">
@@ -1428,7 +1456,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.637886807" blue="0.020732176549999998" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="54Y-NM-2oL"/>
@@ -1834,6 +1862,7 @@
                                             <subviews>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iQv-4e-VUJ">
                                                     <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                                    <color key="onTintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <variation key="widthClass=compact" fixedFrame="YES">
                                                         <rect key="frame" x="258" y="3" width="51" height="31"/>
                                                     </variation>
@@ -1876,7 +1905,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.637886807" blue="0.020732176549999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="IXO-Eu-CPa" secondAttribute="centerY" constant="-5.5" id="8X0-Mv-jz6">
                                 <variation key="widthClass=compact" constant="0.0"/>
@@ -1963,7 +1992,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Xe-cl-B0D">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="注册">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -1980,7 +2009,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.637886807" blue="0.020732176549999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="3Xe-cl-B0D" secondAttribute="centerY" constant="-87" id="0RI-RL-c7M">
                                 <variation key="widthClass=compact" constant="-80"/>
@@ -2359,9 +2388,10 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.637886807" blue="0.020732176549999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="RwU-LM-A20" firstAttribute="height" secondItem="SWw-vu-dcZ" secondAttribute="height" multiplier="0.6" id="1PI-j0-g1o"/>
+                            <constraint firstAttribute="centerY" secondItem="RwU-LM-A20" secondAttribute="centerY" constant="36" id="7fZ-v2-bXA"/>
                             <constraint firstItem="RwU-LM-A20" firstAttribute="top" secondItem="fTW-bM-yrM" secondAttribute="bottom" id="9p2-ds-Up4">
                                 <variation key="widthClass=compact" constant="20"/>
                             </constraint>
@@ -2369,7 +2399,7 @@
                                 <variation key="widthClass=compact" constant="20"/>
                             </constraint>
                             <constraint firstAttribute="centerX" secondItem="RwU-LM-A20" secondAttribute="centerX" id="dHD-h7-iMs"/>
-                            <constraint firstItem="RwU-LM-A20" firstAttribute="width" secondItem="SWw-vu-dcZ" secondAttribute="width" multiplier="0.8" id="xIs-yZ-F2z"/>
+                            <constraint firstItem="RwU-LM-A20" firstAttribute="width" secondItem="SWw-vu-dcZ" secondAttribute="width" multiplier="0.9" id="xIs-yZ-F2z"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -2377,6 +2407,7 @@
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="1PI-j0-g1o"/>
+                                <exclude reference="7fZ-v2-bXA"/>
                                 <exclude reference="9p2-ds-Up4"/>
                                 <exclude reference="PQf-IE-sge"/>
                                 <exclude reference="dHD-h7-iMs"/>
@@ -2389,7 +2420,8 @@
                             </mask>
                             <mask key="constraints">
                                 <include reference="1PI-j0-g1o"/>
-                                <include reference="9p2-ds-Up4"/>
+                                <include reference="7fZ-v2-bXA"/>
+                                <exclude reference="9p2-ds-Up4"/>
                                 <exclude reference="PQf-IE-sge"/>
                                 <include reference="dHD-h7-iMs"/>
                                 <include reference="xIs-yZ-F2z"/>
@@ -2464,7 +2496,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="zGh-vy-Oep"/>
         <segue reference="884-yj-daG"/>
-        <segue reference="zd9-Lw-DF0"/>
     </inferredMetricsTieBreakers>
 </document>
