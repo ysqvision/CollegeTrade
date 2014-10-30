@@ -146,9 +146,12 @@ class DataBaseAPIHelper {
                 if let parseJSON = json {
                     // Okay, the parsedJSON is here, let's get the value for 'success' out of it
                     var code = parseJSON["Status"] as? Int
+                  
+                    
                     if code == 101 {
                         println("Setting status to be true")
-                        LOGGED_IN_USER_INFORMATION = json
+                        var body = parseJSON["data"] as? NSArray
+                        LOGGED_IN_USER_INFORMATION = body![1] as NSDictionary
                         loginSuccess(success: true)
                         return
                     }
@@ -171,17 +174,20 @@ class DataBaseAPIHelper {
     }
     
     
-    class func postItem(name: String, description: String, images: [String], postSuccess: (success: Bool) -> ()) {
+    class func postItem(name: String, description: String, images: [String], price: String, quantity: String, postSuccess: (success: Bool) -> ()) {
         // Check if username and password pass
         var request = NSMutableURLRequest(URL: NSURL(string: "http://14.29.65.186:9090/SpiriiitTradeServer/user-postGoods"))
         var session = NSURLSession.sharedSession()
         request.HTTPMethod = "POST"
         var timestamp = NSDate().timeIntervalSince1970 * 1000
         var type = 0
+        
+        var userId = LOGGED_IN_USER_INFORMATION!["userId"] as Int
+        println("userId is \(userId)")
         var joinedPaths = ",".join(images)
         var imageData: String = "\(joinedPaths)"
         
-        var requestBody = "goodsName=\(name)&goodsDescription=\(description)&goodsImage=\(imageData)&newestTimestamp=\(timestamp)&type=\(type)"
+        var requestBody = "goodsName=\(name)&goodsDescription=\(description)&goodsImage=\(imageData)&newestTimestamp=\(timestamp)&type=\(type)&userId=\(userId)&schoolId=0&specialPrice=0"
         let data = requestBody.dataUsingEncoding(NSUTF8StringEncoding)
         request.HTTPBody = data
         // request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)

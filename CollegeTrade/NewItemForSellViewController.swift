@@ -28,6 +28,9 @@ class NewItemForSellViewController: UIViewController, selectedPictureDelegate, U
     
     @IBOutlet var itemDescription: UITextView!
     
+    @IBOutlet var itemQuantity: UITextField!
+    @IBOutlet var itemPrice: UITextField!
+    
     @IBAction func chooseImage(sender: AnyObject) {
         let popoverVC = self.storyboard?.instantiateViewControllerWithIdentifier("TakePhotoViewController") as TakePhotoViewController
         popoverVC.delegate = self
@@ -46,9 +49,28 @@ class NewItemForSellViewController: UIViewController, selectedPictureDelegate, U
     @IBAction func postItem(sender: AnyObject) {
         var name = self.itemName.text
         var description = self.itemDescription.text
+        var price = self.itemPrice.text as NSString
+        var quantity = self.itemQuantity.text
         
+        if (name == "" || description == "" || price == "" || quantity == "") {
+            var myAlert = UIAlertView(title: "信息不能为空",
+                message: "请填写必要信息。",
+                delegate: nil, cancelButtonTitle: "返回")
+            myAlert.show()
+        } else if (price.doubleValue <= 0.0) {
+            var myAlert = UIAlertView(title: "价格错误",
+                message: "价格必须要大于0。",
+                delegate: nil, cancelButtonTitle: "返回")
+            myAlert.show()
+        }
+        else if (quantity.toInt() <= 0) {
+            var myAlert = UIAlertView(title: "库存错误",
+                message: "库存必须要大于0。",
+                delegate: nil, cancelButtonTitle: "返回")
+            myAlert.show()
+        } else {
         
-        DataBaseAPIHelper.postItem(name, description: description, images: imagePathSet) { (success: Bool) -> () in
+        DataBaseAPIHelper.postItem(name, description: description, images: imagePathSet, price: price, quantity: quantity) { (success: Bool) -> () in
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 if success {
                     
@@ -79,6 +101,7 @@ class NewItemForSellViewController: UIViewController, selectedPictureDelegate, U
                     myAlert.show()
                 }
             })
+        }
         }
     }
 

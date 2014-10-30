@@ -496,7 +496,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h5e-bn-J6n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6880.5" y="748"/>
+            <point key="canvasLocation" x="7798.5" y="748"/>
         </scene>
         <!--Order View Controller-->
         <scene sceneID="CF1-wC-kbD">
@@ -606,7 +606,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rc1-4Y-EBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="988.5" y="1796"/>
+            <point key="canvasLocation" x="1906.5" y="1796"/>
         </scene>
         <!--Order Detail View Controller-->
         <scene sceneID="Roj-Uj-nWn">
@@ -810,20 +810,28 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="aEg-Z0-GZv">
-                        <barButtonItem key="rightBarButtonItem" title="发表新物品" id="Tjf-58-Xre">
-                            <connections>
-                                <segue destination="sg3-cB-DBH" kind="show" identifier="NewItemForSellSegue" id="l2d-f0-9H0"/>
-                            </connections>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="vhR-bE-gDd">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2Jv-92-a7e">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="发表新物品">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="sg3-cB-DBH" kind="show" id="E5x-gy-OGe"/>
+                                </connections>
+                            </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addNewItemButton" destination="2Jv-92-a7e" id="fFp-dl-FgT"/>
                         <outlet property="itemsTable" destination="hMd-OJ-ZOy" id="JtB-7A-uTK"/>
                         <segue destination="hRZ-Bv-yry" kind="presentation" identifier="ShowLoginScreenFromUserStore" id="zGh-vy-Oep"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nvc-aB-eBw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1731" y="784"/>
+            <point key="canvasLocation" x="2805" y="625"/>
         </scene>
         <!--我的好友-->
         <scene sceneID="Ot6-le-j3E">
@@ -929,7 +937,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BiB-ZS-TMc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4900.5" y="2873"/>
+            <point key="canvasLocation" x="4996.5" y="2735"/>
         </scene>
         <!--Chat With Friend View Controller-->
         <scene sceneID="cQP-zp-7OF">
@@ -948,6 +956,9 @@
                                 <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="36" y="93" width="288" height="308"/>
+                                </variation>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3S0-hx-dUZ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -956,6 +967,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="252" y="451" width="72" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="sendMessage:" destination="iDb-qp-7L6" eventType="touchUpInside" id="AH0-Gs-mPF"/>
                                 </connections>
@@ -964,6 +978,9 @@
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="36" y="451" width="196" height="30"/>
+                                </variation>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.637886807" blue="0.020732176549999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -1061,12 +1078,18 @@
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="180" y="114" width="144" height="30"/>
+                                </variation>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="950" verticalCompressionResistancePriority="950" text="输入用户名：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcs-dl-8ws">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="36" y="117" width="144" height="24"/>
+                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPo-kE-Vih">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1076,6 +1099,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="78" y="194" width="180" height="36"/>
+                                </variation>
                                 <connections>
                                     <action selector="addFriend:" destination="W27-Eu-A5B" eventType="touchUpInside" id="ff4-QZ-YOp"/>
                                 </connections>
@@ -1152,7 +1178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ppO-4l-DQS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5371.5" y="2080"/>
+            <point key="canvasLocation" x="5458.5" y="2150"/>
         </scene>
         <!--User Profile View Controller-->
         <scene sceneID="Ze8-3l-2WD">
@@ -1280,6 +1306,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BLu-F0-HNQ" kind="show" identifier="ShowUserStoreSegue" id="8QW-V6-kwt"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="uAm-PL-4Zi" style="IBUITableViewCellStyleDefault" id="Ve4-lj-Yfl">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -1298,6 +1327,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="cgj-bf-HrO" kind="show" id="VH3-tI-kBI"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="aDo-eo-FnO" style="IBUITableViewCellStyleDefault" id="SXR-kJ-2P9">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -1305,7 +1337,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="340" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="我的商品评论" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aDo-eo-FnO">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="我的订单" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aDo-eo-FnO">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1316,6 +1348,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="OOD-1p-9Ua" kind="show" id="Zja-L7-Vei"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -1378,7 +1413,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W3f-Xq-yPa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7414.5" y="2202"/>
+            <point key="canvasLocation" x="7164" y="2673"/>
         </scene>
         <!--New Item For Sell View Controller-->
         <scene sceneID="8KS-Ov-uZ3">
@@ -1434,12 +1469,6 @@
                                     <action selector="postItem:" destination="sg3-cB-DBH" eventType="touchUpInside" id="lJm-ef-v0k"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IEV-58-Sz7">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="35" y="199" width="89" height="53"/>
-                                </variation>
-                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="3q1-6d-Uk0">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1453,7 +1482,7 @@
                                 </prototypes>
                                 <sections/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="161" y="279" width="200" height="206"/>
+                                    <rect key="frame" x="161" y="327" width="200" height="158"/>
                                 </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="sg3-cB-DBH" id="5hh-Zj-3bP"/>
@@ -1466,7 +1495,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="161" y="149" width="161" height="86"/>
+                                    <rect key="frame" x="161" y="149" width="161" height="53"/>
                                 </variation>
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ERt-S3-agj">
@@ -1489,6 +1518,40 @@
                                     <action selector="cancel:" destination="sg3-cB-DBH" eventType="touchUpInside" id="U1A-wk-5tW"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="库存：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l6c-hA-eqM">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="65" y="269" width="62" height="21"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bl3-ao-PoJ">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="161" y="215" width="97" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8ma-Zd-2AI">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="161" y="265" width="97" height="30"/>
+                                </variation>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="价格：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DyQ-P9-Ahz">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="65" y="218" width="72" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.637886807" blue="0.020732176549999998" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -1497,11 +1560,14 @@
                                 <exclude reference="hME-ki-iGZ"/>
                                 <exclude reference="xxx-OR-j0c"/>
                                 <exclude reference="B6m-iM-tg6"/>
-                                <exclude reference="IEV-58-Sz7"/>
                                 <exclude reference="3q1-6d-Uk0"/>
                                 <exclude reference="LTi-1e-noL"/>
                                 <exclude reference="ERt-S3-agj"/>
                                 <exclude reference="oeI-IP-alg"/>
+                                <exclude reference="l6c-hA-eqM"/>
+                                <exclude reference="bl3-ao-PoJ"/>
+                                <exclude reference="8ma-Zd-2AI"/>
+                                <exclude reference="DyQ-P9-Ahz"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -1510,24 +1576,28 @@
                                 <include reference="hME-ki-iGZ"/>
                                 <include reference="xxx-OR-j0c"/>
                                 <include reference="B6m-iM-tg6"/>
-                                <include reference="IEV-58-Sz7"/>
                                 <include reference="3q1-6d-Uk0"/>
                                 <include reference="LTi-1e-noL"/>
                                 <include reference="ERt-S3-agj"/>
                                 <include reference="oeI-IP-alg"/>
+                                <include reference="l6c-hA-eqM"/>
+                                <include reference="bl3-ao-PoJ"/>
+                                <include reference="8ma-Zd-2AI"/>
+                                <include reference="DyQ-P9-Ahz"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="imageTable" destination="3q1-6d-Uk0" id="M0c-OE-MFh"/>
                         <outlet property="itemDescription" destination="LTi-1e-noL" id="L7p-Cu-2Gr"/>
-                        <outlet property="itemImage" destination="IEV-58-Sz7" id="uys-d2-ncB"/>
                         <outlet property="itemName" destination="ERt-S3-agj" id="kxc-Ov-hkL"/>
+                        <outlet property="itemPrice" destination="bl3-ao-PoJ" id="anH-KA-gzW"/>
+                        <outlet property="itemQuantity" destination="8ma-Zd-2AI" id="shf-qY-v5X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5JG-9m-VAE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4254" y="1236"/>
+            <point key="canvasLocation" x="3289.5" y="722"/>
         </scene>
         <!--TakePhotoViewController-->
         <scene sceneID="nfs-gC-h4n">
@@ -1858,7 +1928,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ylk-4u-0Me" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9139.5" y="1041"/>
+            <point key="canvasLocation" x="10057.5" y="1041"/>
         </scene>
         <!--User Setting View Controller-->
         <scene sceneID="Gyd-eH-2we">
@@ -1983,7 +2053,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ju0-uc-DMl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7323" y="1614"/>
+            <point key="canvasLocation" x="8241" y="1614"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="uaV-zJ-Awy">
@@ -2196,7 +2266,7 @@
             </objects>
             <point key="canvasLocation" x="147" y="198"/>
         </scene>
-        <!--Item-->
+        <!--Store Home Page View Controller-->
         <scene sceneID="InK-PB-7hq">
             <objects>
                 <viewController storyboardIdentifier="StoreHomePageViewController" id="mW9-0Q-a7T" customClass="StoreHomePageViewController" customModule="CollegeTrade" customModuleProvider="target" sceneMemberID="viewController">
@@ -2211,30 +2281,44 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VQl-g4-2fp">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="24" y="33" width="339" height="206"/>
+                                    <rect key="frame" x="30" y="51" width="340" height="150"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="PAB-ni-CbD" kind="embed" id="95M-Mc-OkH"/>
+                                    <segue destination="PAB-ni-CbD" kind="embed" identifier="EmbeddedViewSegue" id="95M-Mc-OkH"/>
                                 </connections>
                             </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="推荐店铺：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjW-FQ-H1l">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="30" y="250" width="85" height="30"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="VQl-g4-2fp"/>
+                                <exclude reference="tjW-FQ-H1l"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="VQl-g4-2fp"/>
+                                <include reference="tjW-FQ-H1l"/>
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="h8l-xL-Qq2"/>
+                    <navigationItem key="navigationItem" id="dKE-Dh-OZs"/>
+                    <connections>
+                        <segue destination="BLu-F0-HNQ" kind="show" identifier="ShowUserStoreHomePageSegue" id="Jpa-9R-88A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="osv-sT-Vbl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-669" y="1047"/>
+            <point key="canvasLocation" x="-271.5" y="1126"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="J4F-oG-uiO">
@@ -2247,7 +2331,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="mW9-0Q-a7T" kind="relationship" relationship="viewControllers" id="ALO-80-pdw"/>
+                        <segue destination="zS6-jZ-klp" kind="relationship" relationship="viewControllers" id="ALO-80-pdw"/>
                         <segue destination="g5z-r9-iZ2" kind="relationship" relationship="viewControllers" id="xw1-eN-fxR"/>
                         <segue destination="OOD-1p-9Ua" kind="relationship" relationship="viewControllers" id="x2F-W5-JZ1"/>
                         <segue destination="x2O-GY-tOx" kind="relationship" relationship="viewControllers" id="N5y-as-QY1"/>
@@ -2257,7 +2341,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dEd-z7-yBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="331.5" y="984"/>
+            <point key="canvasLocation" x="1249.5" y="984"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JzX-O6-YDt">
@@ -2276,7 +2360,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iZZ-Bq-Ua8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4866" y="732"/>
+            <point key="canvasLocation" x="5784" y="732"/>
         </scene>
         <!--New Order View Controller-->
         <scene sceneID="Wkw-8S-VIV">
@@ -2410,7 +2494,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ecg-f4-sRq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4866" y="1457"/>
+            <point key="canvasLocation" x="5784" y="1457"/>
         </scene>
         <!--Item-->
         <scene sceneID="cVk-cB-bz8">
@@ -2429,7 +2513,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zlY-0q-D7E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3804" y="1821"/>
+            <point key="canvasLocation" x="5068.5" y="1727"/>
         </scene>
         <!--Friend Request View Controller-->
         <scene sceneID="UVV-zw-s6Y">
@@ -2556,7 +2640,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ys1-Tx-iiJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="282" y="1796"/>
+            <point key="canvasLocation" x="1200" y="1796"/>
         </scene>
         <!--Item-->
         <scene sceneID="1Bn-KO-WD0">
@@ -2575,7 +2659,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Yo-5J-kTK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="988.5" y="991"/>
+            <point key="canvasLocation" x="1923" y="1190"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="47Q-0g-b9K">
@@ -2586,6 +2670,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ZbR-DQ-mJe"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="tZS-2j-cDQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -2593,10 +2678,33 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="srt-Jd-aEz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="597" y="805"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="lkd-A4-FW4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zS6-jZ-klp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="h8l-xL-Qq2"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ohl-mS-5oz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mW9-0Q-a7T" kind="relationship" relationship="rootViewController" id="4ZX-4e-wdG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j8g-hE-BGw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1114.5" y="1353"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="zGh-vy-Oep"/>
+        <segue reference="VH3-tI-kBI"/>
+        <segue reference="Jpa-9R-88A"/>
         <segue reference="884-yj-daG"/>
+        <segue reference="zd9-Lw-DF0"/>
+        <segue reference="Zja-L7-Vei"/>
     </inferredMetricsTieBreakers>
 </document>

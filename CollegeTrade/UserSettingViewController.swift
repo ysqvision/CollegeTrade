@@ -77,6 +77,14 @@ class UserSettingViewController : UIViewController {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
     }
-    
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowUserStoreSegue" {
+            println("herer2")
+            var storeViewController: UserStoreHomePageViewController = segue.destinationViewController as UserStoreHomePageViewController
+            storeViewController.userIdForThisStore = 1
+            storeViewController.storeId = LOGGED_IN_USER_INFORMATION!["userId"] as? Int
+        }
+    }
     
 }

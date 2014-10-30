@@ -12,9 +12,9 @@ class OrderViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     @IBOutlet var orderTable: UITableView!
     
-    var buyOrderList = [String: String]()
+    var buyOrderList = []
     
-    var sellOrderList = [String: String]()
+    var sellOrderList = []
     
     var isFirstSelected = false
     
@@ -70,11 +70,11 @@ class OrderViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         if index == 0 {
             isFirstSelected = true
-            orderController.getBuyOrderCount()
+            orderController.getBuyOrders()
         }
         else if (index == 1) {
             isFirstSelected = false
-            orderController.getSellOrderCount()
+            orderController.getSellOrders()
         }
         orderTable.reloadData()
     }
@@ -127,24 +127,31 @@ class OrderViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func didGetBuyOrderCount(results: Int) {
         if (results != buyOrderList.count) {
-            orderController.getBuyOrders()
+            //orderController.getBuyOrders()
         }
     }
     
     func didGetSellOrderCount(results: Int) {
         if (results != sellOrderList.count) {
-            orderController.getSellOrders()
+            //orderController.getSellOrders()
         }
+        println("getOrder")
     }
     
     func didGetSellOrders(results: NSDictionary) {
-        sellOrderList = results as [String: String]
-        orderTable.reloadData()
+        var resultsArr: NSArray = results["data"] as NSArray
+        dispatch_async(dispatch_get_main_queue(), {
+            self.sellOrderList = resultsArr
+            self.orderTable.reloadData()
+        })
     }
     
     func didGetBuyOrders(results: NSDictionary) {
-        buyOrderList = results as [String: String]
-        orderTable.reloadData()
+        var resultsArr: NSArray = results["data"] as NSArray
+        dispatch_async(dispatch_get_main_queue(), {
+            self.buyOrderList = resultsArr
+            self.orderTable.reloadData()
+        })
     }
 }
 

@@ -10,26 +10,45 @@
 import UIKit
 
 class UserStoreHomePageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, didReceiveItemsProtocol, postNewItemProtocol {
+    var userIdForThisStore: Int?
+    var storeId: Int?
     let kCellIdentifier: String = "ItemForSellCell"
     var itemsForSell = []
     var searchItemAPI = SearchItemAPIController()
     
+    
     @IBOutlet weak var itemsTable: UITableView!
     
+    @IBOutlet var addNewItemButton: UIButton!
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         if USER_IS_LOGGED_IN == false {
+            
             self.performSegueWithIdentifier("ShowLoginScreenFromUserStore", sender: self)
         }
         itemsTable.reloadData()
     }
     
     override func viewDidLoad() {
+        //var selfId = LOGGED_IN_USER_INFORMATION!["userId"] as String
+        println("userid for this store  \(userIdForThisStore)")
+        var selfUserId = LOGGED_IN_USER_INFORMATION!["userId"] as Int
+        if userIdForThisStore != selfUserId {
+            println("id is not smae")
+   
+            addNewItemButton.hidden = true
+            /*
+            var toolbarButtons = self.toolbarItems
+            toolbarButtons.
+            addNewItemButton.enabled = false
+            addNewItemButton.hidden = true
+*/
+        }
         searchItemAPI.delegate = self
-        searchItemAPI.getUserItems()
+        searchItemAPI.getUserItems("\(userIdForThisStore)")
         
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -97,6 +116,6 @@ class UserStoreHomePageViewController: UIViewController, UITableViewDataSource, 
     }
     
     func didPostNewItem() {
-        searchItemAPI.getUserItems()
+        searchItemAPI.getUserItems("\(userIdForThisStore)")
     }
 }

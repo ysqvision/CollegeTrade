@@ -32,4 +32,14 @@ class UserSettingTableViewController: UITableViewController {
         }
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowUserStoreSegue" {
+               println("herer1")
+            var storeViewController: UserStoreHomePageViewController = segue.destinationViewController as UserStoreHomePageViewController
+            storeViewController.userIdForThisStore = LOGGED_IN_USER_INFORMATION!["userId"] as? Int
+
+            storeViewController.storeId = 1
+        }
+    }
+    
 }

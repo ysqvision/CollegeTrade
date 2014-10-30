@@ -9,5 +9,5 @@
 import Foundation
 
 var USER_IS_LOGGED_IN: Bool = false
-var LOGGED_IN_USER_INFORMATION: NSDictionary? = nil
+var LOGGED_IN_USER_INFORMATION: AnyObject? = nil
 

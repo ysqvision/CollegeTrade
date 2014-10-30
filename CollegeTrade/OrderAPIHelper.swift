@@ -203,21 +203,243 @@ class OrderAPIHelper {
     }
     
     func getBuyOrders() {
+        var request = NSMutableURLRequest(URL: NSURL(string: "http://14.29.65.186:9090/SpiriiitTradeServer/user-getOrdersAsUserByUserId"))
+        var session = NSURLSession.sharedSession()
+        request.HTTPMethod = "POST"
+        println(LOGGED_IN_USER_INFORMATION)
+        var userId: Int = LOGGED_IN_USER_INFORMATION!["userId"] as Int
+        var currentTime: Int = Int(NSDate().timeIntervalSince1970 * 1000)
+        var requestBody = "userid=\(userId)&time=\(currentTime)"
+        let data = requestBody.dataUsingEncoding(NSUTF8StringEncoding)
+        request.HTTPBody = data
+        // request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)
+        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        //print(NSString(data:request.HTTPBody!, encoding: NSUTF8StringEncoding))
         
+        var task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
+            println("Response: \(response)")
+            // println(error)
+            var strData = NSString(data: data, encoding: NSUTF8StringEncoding)
+            println("Body: \(strData)")
+            var err: NSError?
+            var json = NSJSONSerialization.JSONObjectWithData(data, options: .MutableLeaves, error: &err) as? NSDictionary
+            
+            // Did the JSONObjectWithData constructor return an error? If so, log the error to the console
+            if(err != nil) {
+                println(err!.localizedDescription)
+                let jsonStr = NSString(data: data, encoding: NSUTF8StringEncoding)
+                println("Error could not parse JSON: '\(jsonStr)'")
+                
+            }
+            else {
+                // The JSONObjectWithData constructor didn't return an error. But, we should still
+                // check and make sure that json has a value using optional binding.
+                if let parseJSON = json {
+                    // Okay, the parsedJSON is here, let's get the value for 'success' out of it
+                    var code = parseJSON["status"] as? Int
+                    if code == 101 {
+                        println("Setting status to be true")
+                        self.delegate!.didGetBuyOrders(parseJSON)
+                        return
+                    }
+                    else {
+                        return
+                    }
+                }
+                else {
+                    // Woa, okay the json object was nil, something went worng. Maybe the server isn't running?
+                    let jsonStr = NSString(data: data, encoding: NSUTF8StringEncoding)
+                    println("Error could not parse JSON: \(jsonStr)")
+                    return
+                }
+            }
+        })
+        
+        task.resume()
+        
+
     }
     
     func getSellOrders() {
-    
+        
+        var request = NSMutableURLRequest(URL: NSURL(string: "http://14.29.65.186:9090/SpiriiitTradeServer/user-getOrdersAsSellerByUserId"))
+        var session = NSURLSession.sharedSession()
+        request.HTTPMethod = "POST"
+        println(LOGGED_IN_USER_INFORMATION)
+        var userId: Int = LOGGED_IN_USER_INFORMATION!["userId"] as Int
+        var currentTime: Int = Int(NSDate().timeIntervalSince1970 * 1000)
+        var requestBody = "userid=\(userId)&time=\(currentTime)"
+        let data = requestBody.dataUsingEncoding(NSUTF8StringEncoding)
+        request.HTTPBody = data
+        // request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)
+        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        //print(NSString(data:request.HTTPBody!, encoding: NSUTF8StringEncoding))
+        
+        var task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
+            println("Response: \(response)")
+            // println(error)
+            var strData = NSString(data: data, encoding: NSUTF8StringEncoding)
+            println("Body: \(strData)")
+            var err: NSError?
+            var json = NSJSONSerialization.JSONObjectWithData(data, options: .MutableLeaves, error: &err) as? NSDictionary
+            
+            // Did the JSONObjectWithData constructor return an error? If so, log the error to the console
+            if(err != nil) {
+                println(err!.localizedDescription)
+                let jsonStr = NSString(data: data, encoding: NSUTF8StringEncoding)
+                println("Error could not parse JSON: '\(jsonStr)'")
+                
+            }
+            else {
+                // The JSONObjectWithData constructor didn't return an error. But, we should still
+                // check and make sure that json has a value using optional binding.
+                if let parseJSON = json {
+                    // Okay, the parsedJSON is here, let's get the value for 'success' out of it
+                    var code = parseJSON["status"] as? Int
+                    if code == 101 {
+                        println("Setting status to be true")
+                        self.delegate!.didGetSellOrders(parseJSON)
+                        return
+                    }
+                    else {
+                        return
+                    }
+                }
+                else {
+                    // Woa, okay the json object was nil, something went worng. Maybe the server isn't running?
+                    let jsonStr = NSString(data: data, encoding: NSUTF8StringEncoding)
+                    println("Error could not parse JSON: \(jsonStr)")
+                    return
+                }
+            }
+        })
+        
+        task.resume()
+        
+
     }
     
+    /*
     func getBuyOrderCount() {
-    
+        
+        var request = NSMutableURLRequest(URL: NSURL(string: "http://14.29.65.186:9090/SpiriiitTradeServer/user-getOrdersAsUserByUserId"))
+        var session = NSURLSession.sharedSession()
+        request.HTTPMethod = "POST"
+        println(LOGGED_IN_USER_INFORMATION)
+        var userId: Int = LOGGED_IN_USER_INFORMATION!["userId"] as Int
+        var currentTime: Int = Int(NSDate().timeIntervalSince1970 * 1000)
+        var requestBody = "userId=\(userId)&timeStamp=\(currentTime)"
+        let data = requestBody.dataUsingEncoding(NSUTF8StringEncoding)
+        request.HTTPBody = data
+        // request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)
+        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        //print(NSString(data:request.HTTPBody!, encoding: NSUTF8StringEncoding))
+        
+        var task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
+            println("Response: \(response)")
+            // println(error)
+            var strData = NSString(data: data, encoding: NSUTF8StringEncoding)
+            println("Body: \(strData)")
+            var err: NSError?
+            var json = NSJSONSerialization.JSONObjectWithData(data, options: .MutableLeaves, error: &err) as? NSDictionary
+            
+            // Did the JSONObjectWithData constructor return an error? If so, log the error to the console
+            if(err != nil) {
+                println(err!.localizedDescription)
+                let jsonStr = NSString(data: data, encoding: NSUTF8StringEncoding)
+                println("Error could not parse JSON: '\(jsonStr)'")
+                
+            }
+            else {
+                // The JSONObjectWithData constructor didn't return an error. But, we should still
+                // check and make sure that json has a value using optional binding.
+                if let parseJSON = json {
+                    // Okay, the parsedJSON is here, let's get the value for 'success' out of it
+                    var code = parseJSON["status"] as? Int
+                    if code == 101 {
+                        println("Setting status to be true")
+                        self.delegate!.didGetBuyOrderCount(0)
+                        return
+                    }
+                    else {
+                        return
+                    }
+                }
+                else {
+                    // Woa, okay the json object was nil, something went worng. Maybe the server isn't running?
+                    let jsonStr = NSString(data: data, encoding: NSUTF8StringEncoding)
+                    println("Error could not parse JSON: \(jsonStr)")
+                    return
+                }
+            }
+        })
+        
+        task.resume()
+        
     }
     
     func getSellOrderCount() {
     
+        var request = NSMutableURLRequest(URL: NSURL(string: "http://14.29.65.186:9090/SpiriiitTradeServer/user-getOrdersAsSellerBySellerId"))
+        var session = NSURLSession.sharedSession()
+        request.HTTPMethod = "POST"
+        println(LOGGED_IN_USER_INFORMATION)
+        var userId: Int = LOGGED_IN_USER_INFORMATION!["userId"] as Int
+        var currentTime: Int = Int(NSDate().timeIntervalSince1970 * 1000)
+        var requestBody = "userid=\(userId)&time=\(currentTime)"
+        let data = requestBody.dataUsingEncoding(NSUTF8StringEncoding)
+        request.HTTPBody = data
+        // request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)
+        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        //print(NSString(data:request.HTTPBody!, encoding: NSUTF8StringEncoding))
+        
+        var task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
+            println("Response: \(response)")
+            // println(error)
+            var strData = NSString(data: data, encoding: NSUTF8StringEncoding)
+            println("Body: \(strData)")
+            var err: NSError?
+            var json = NSJSONSerialization.JSONObjectWithData(data, options: .MutableLeaves, error: &err) as? NSDictionary
+            
+            // Did the JSONObjectWithData constructor return an error? If so, log the error to the console
+            if(err != nil) {
+                println(err!.localizedDescription)
+                let jsonStr = NSString(data: data, encoding: NSUTF8StringEncoding)
+                println("Error could not parse JSON: '\(jsonStr)'")
+                
+            }
+            else {
+                // The JSONObjectWithData constructor didn't return an error. But, we should still
+                // check and make sure that json has a value using optional binding.
+                if let parseJSON = json {
+                    // Okay, the parsedJSON is here, let's get the value for 'success' out of it
+                    var code = parseJSON["status"] as? Int
+                    if code == 101 {
+                        println("Setting status to be true")
+                        self.delegate!.didGetSellOrderCount(0)
+                        return
+                    }
+                    else {
+                        return
+                    }
+                }
+                else {
+                    // Woa, okay the json object was nil, something went worng. Maybe the server isn't running?
+                    let jsonStr = NSString(data: data, encoding: NSUTF8StringEncoding)
+                    println("Error could not parse JSON: \(jsonStr)")
+                    return
+                }
+            }
+        })
+        
+        task.resume()
+
     }
-    
+    */
     /*
     func getAllItems() {
         

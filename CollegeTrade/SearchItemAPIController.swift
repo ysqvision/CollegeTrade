@@ -129,7 +129,7 @@ class SearchItemAPIController {
         task.resume()
     }
     
-    func getUserItems() {
+    func getUserItems(userId: String) {
         
         let manager = AFHTTPRequestOperationManager()
         //var acceptedValue = NSMutableSet()
@@ -137,7 +137,7 @@ class SearchItemAPIController {
         
       //  manager.responseSerializer.acceptableContentTypes = acceptedValue
     ///var userId: Int =  LOGGED_IN_USER_INFORMATION!["Userid"] as Int
-        var userId: Int = 1
+       // var userId: Int = 1
         var timeStamp: String = "\(NSDate().timeIntervalSince1970 * 1000)"
         var parameter: [String: String] = ["Userid": "\(userId)", "Time": timeStamp, "Flag": "1", "Count": "1000"]
        
