@@ -802,8 +802,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="77" width="400" height="355"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="28" y="86" width="345" height="378"/>
                                 </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="vwa-pE-vZG" id="mvN-Tc-lub"/>
@@ -812,14 +812,32 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="s1R-L6-Yzn" firstAttribute="top" secondItem="R3o-zM-AV0" secondAttribute="bottom" constant="22" id="Wub-9r-6Oa"/>
+                            <constraint firstAttribute="width" secondItem="s1R-L6-Yzn" secondAttribute="width" id="gPP-dF-tRx"/>
+                            <constraint firstAttribute="centerX" secondItem="s1R-L6-Yzn" secondAttribute="centerX" constant="-0.5" id="iAS-Ue-HAh"/>
+                            <constraint firstAttribute="height" secondItem="s1R-L6-Yzn" secondAttribute="height" id="mYh-gm-cBa"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="s1R-L6-Yzn"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Wub-9r-6Oa"/>
+                                <exclude reference="gPP-dF-tRx"/>
+                                <exclude reference="iAS-Ue-HAh"/>
+                                <exclude reference="mYh-gm-cBa"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="s1R-L6-Yzn"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Wub-9r-6Oa"/>
+                                <include reference="gPP-dF-tRx"/>
+                                <include reference="iAS-Ue-HAh"/>
+                                <include reference="mYh-gm-cBa"/>
                             </mask>
                         </variation>
                     </view>
