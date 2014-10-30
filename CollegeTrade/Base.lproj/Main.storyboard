@@ -228,7 +228,7 @@
                                     <rect key="frame" x="-10" y="-10" width="20" height="20"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="color" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="color" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </activityIndicatorView>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ItemForSellCell" textLabel="w5Q-PF-H0P" detailTextLabel="gdo-FW-Nic" style="IBUITableViewCellStyleSubtitle" id="qFT-0g-QdU">
@@ -262,30 +262,23 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="20" y="114" width="360" height="360"/>
-                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="a0T-ah-qPp" id="CxL-QB-6mN"/>
                                     <outlet property="delegate" destination="a0T-ah-qPp" id="9Kp-RW-YaU"/>
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="AZv-d1-hvQ" firstAttribute="top" secondItem="F2t-70-Ydg" secondAttribute="bottom" constant="8" id="6UN-n5-kbe">
-                                <variation key="widthClass=compact" constant="20"/>
+                                <variation key="widthClass=compact" constant="50"/>
                             </constraint>
-                            <constraint firstAttribute="height" secondItem="AZv-d1-hvQ" secondAttribute="height" id="FcR-hG-5sn"/>
                             <constraint firstAttribute="centerX" secondItem="AZv-d1-hvQ" secondAttribute="centerX" id="IDp-dd-lvU"/>
-                            <constraint firstItem="AZv-d1-hvQ" firstAttribute="width" secondItem="EYS-lP-BsK" secondAttribute="width" multiplier="0.8" id="JWP-qA-h3q">
-                                <variation key="widthClass=compact" constant="0.0"/>
+                            <constraint firstItem="AZv-d1-hvQ" firstAttribute="width" secondItem="EYS-lP-BsK" secondAttribute="width" id="JWP-qA-h3q">
+                                <variation key="widthClass=compact" constant="-40"/>
                             </constraint>
-                            <constraint firstAttribute="width" secondItem="AZv-d1-hvQ" secondAttribute="width" id="e6K-c3-N88"/>
-                            <constraint firstItem="AZv-d1-hvQ" firstAttribute="height" secondItem="EYS-lP-BsK" secondAttribute="height" multiplier="0.7" id="hxf-8e-1Sa"/>
+                            <constraint firstItem="AZv-d1-hvQ" firstAttribute="height" secondItem="EYS-lP-BsK" secondAttribute="height" multiplier="0.6" id="hxf-8e-1Sa"/>
                             <constraint firstItem="AZv-d1-hvQ" firstAttribute="width" secondItem="EYS-lP-BsK" secondAttribute="width" multiplier="0.8" id="opR-dp-jt8"/>
-                            <constraint firstItem="AZv-d1-hvQ" firstAttribute="top" secondItem="F2t-70-Ydg" secondAttribute="bottom" constant="50" id="swh-83-en3"/>
-                            <constraint firstAttribute="centerX" secondItem="AZv-d1-hvQ" secondAttribute="centerX" id="tal-aq-dLT"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -293,14 +286,10 @@
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="6UN-n5-kbe"/>
-                                <exclude reference="FcR-hG-5sn"/>
                                 <exclude reference="IDp-dd-lvU"/>
                                 <exclude reference="JWP-qA-h3q"/>
-                                <exclude reference="e6K-c3-N88"/>
                                 <exclude reference="hxf-8e-1Sa"/>
                                 <exclude reference="opR-dp-jt8"/>
-                                <exclude reference="swh-83-en3"/>
-                                <exclude reference="tal-aq-dLT"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -309,14 +298,10 @@
                             </mask>
                             <mask key="constraints">
                                 <include reference="6UN-n5-kbe"/>
-                                <exclude reference="FcR-hG-5sn"/>
-                                <exclude reference="IDp-dd-lvU"/>
+                                <include reference="IDp-dd-lvU"/>
                                 <include reference="JWP-qA-h3q"/>
-                                <exclude reference="e6K-c3-N88"/>
                                 <include reference="hxf-8e-1Sa"/>
                                 <exclude reference="opR-dp-jt8"/>
-                                <exclude reference="swh-83-en3"/>
-                                <include reference="tal-aq-dLT"/>
                             </mask>
                         </variation>
                     </view>
@@ -698,38 +683,12 @@
                                     <outlet property="delegate" destination="BLu-F0-HNQ" id="DhX-9M-EqZ"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQp-HA-H96">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="发表新物品">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="304" y="78" width="75" height="30"/>
-                                </variation>
-                                <connections>
-                                    <segue destination="sg3-cB-DBH" kind="show" identifier="NewItemForSellSegue" id="QRx-xo-J1m"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="IQp-HA-H96" firstAttribute="width" secondItem="aCo-ra-kbO" secondAttribute="width" multiplier="0.25" id="2BV-WR-Qdp"/>
-                            <constraint firstItem="IQp-HA-H96" firstAttribute="top" secondItem="7wI-PS-AaO" secondAttribute="bottom" constant="14" id="Guw-5o-evH">
-                                <variation key="widthClass=compact" constant="0.0"/>
-                            </constraint>
-                            <constraint firstAttribute="trailingMargin" secondItem="IQp-HA-H96" secondAttribute="trailing" constant="5" id="S4E-ar-6mY">
-                                <variation key="widthClass=compact" constant="20"/>
-                            </constraint>
-                            <constraint firstItem="hMd-OJ-ZOy" firstAttribute="top" secondItem="IQp-HA-H96" secondAttribute="bottom" constant="19" id="WUA-w9-Dy7">
-                                <variation key="widthClass=compact" constant="20"/>
-                            </constraint>
+                            <constraint firstAttribute="centerY" secondItem="hMd-OJ-ZOy" secondAttribute="centerY" constant="-7" id="a4m-D6-XIh"/>
                             <constraint firstAttribute="centerX" secondItem="hMd-OJ-ZOy" secondAttribute="centerX" constant="-0.5" id="h6Z-3x-I12">
                                 <variation key="widthClass=compact" constant="0.0"/>
-                            </constraint>
-                            <constraint firstItem="IQp-HA-H96" firstAttribute="top" secondItem="7wI-PS-AaO" secondAttribute="bottom" constant="14" id="nbU-2j-jIT">
-                                <variation key="widthClass=compact" constant="20"/>
                             </constraint>
                             <constraint firstItem="hMd-OJ-ZOy" firstAttribute="height" secondItem="aCo-ra-kbO" secondAttribute="height" multiplier="0.6" id="pd1-HN-Kii"/>
                             <constraint firstItem="hMd-OJ-ZOy" firstAttribute="width" secondItem="aCo-ra-kbO" secondAttribute="width" multiplier="0.8" id="vCd-EM-8D4"/>
@@ -737,37 +696,43 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="hMd-OJ-ZOy"/>
-                                <exclude reference="IQp-HA-H96"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="WUA-w9-Dy7"/>
+                                <exclude reference="a4m-D6-XIh"/>
                                 <exclude reference="h6Z-3x-I12"/>
                                 <exclude reference="pd1-HN-Kii"/>
                                 <exclude reference="vCd-EM-8D4"/>
-                                <exclude reference="2BV-WR-Qdp"/>
-                                <exclude reference="Guw-5o-evH"/>
-                                <exclude reference="S4E-ar-6mY"/>
-                                <exclude reference="nbU-2j-jIT"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="hMd-OJ-ZOy"/>
-                                <include reference="IQp-HA-H96"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="WUA-w9-Dy7"/>
+                                <include reference="a4m-D6-XIh"/>
                                 <include reference="h6Z-3x-I12"/>
                                 <include reference="pd1-HN-Kii"/>
                                 <include reference="vCd-EM-8D4"/>
-                                <include reference="2BV-WR-Qdp"/>
-                                <include reference="Guw-5o-evH"/>
-                                <include reference="S4E-ar-6mY"/>
-                                <exclude reference="nbU-2j-jIT"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="aEg-Z0-GZv"/>
+                    <navigationItem key="navigationItem" id="aEg-Z0-GZv">
+                        <nil key="title"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="N0C-9H-vUv">
+                            <button key="customView" opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IQp-HA-H96">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="发表新物品">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="sg3-cB-DBH" kind="show" identifier="NewItemForSellSegue" id="QRx-xo-J1m"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="itemsTable" destination="hMd-OJ-ZOy" id="JtB-7A-uTK"/>
                         <segue destination="hRZ-Bv-yry" kind="presentation" identifier="ShowLoginScreenFromUserStore" id="zGh-vy-Oep"/>
@@ -775,7 +740,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nvc-aB-eBw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1896" y="577"/>
+            <point key="canvasLocation" x="1941" y="575"/>
         </scene>
         <!--我的好友-->
         <scene sceneID="Ot6-le-j3E">

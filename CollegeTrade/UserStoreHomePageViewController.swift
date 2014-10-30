@@ -82,8 +82,8 @@ class UserStoreHomePageViewController: UIViewController, UITableViewDataSource, 
         
         }
         if segue.identifier == "NewItemForSellSegue" {
-            //var newItemForSellViewController: NewItemForSellViewController = segue.destinationViewController as NewItemForSellViewController
-            //newItemForSellViewController.delegate = self
+            var newItemForSellViewController: NewItemForSellViewController = segue.destinationViewController as NewItemForSellViewController
+            newItemForSellViewController.delegate = self
         }
     }
 

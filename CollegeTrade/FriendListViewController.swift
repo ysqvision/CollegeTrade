@@ -47,6 +47,7 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
         let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("FriendCell") as UITableViewCell
      
         if indexPath.row == 0 {
+            cell.textLabel?.text = "处理好友申请"
             cell.detailTextLabel?.text = "\(newFriendRequest)条新好友请求"
         } else {
             var name = friendName[indexPath.row - 1]
