@@ -49,7 +49,7 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
         if indexPath.row == 0 {
             cell.detailTextLabel?.text = "\(newFriendRequest)条新好友请求"
         } else {
-            var name = friendName[indexPath.row]
+            var name = friendName[indexPath.row - 1]
             
             cell.textLabel?.text = name
             var conversationWithName = self.conversation[name]
@@ -75,7 +75,7 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
             chatWithFriendViewController.delegate = self
             var index = friendListTable.indexPathForSelectedRow()!.row;
 
-            var selectedFriend = self.friendName[index]
+            var selectedFriend = self.friendName[index - 1]
             chatWithFriendViewController.friendName = selectedFriend
             chatWithFriendViewController.messages = self.chatHistory[selectedFriend]!
             self.conversation[selectedFriend]?.markMessagesAsRead(true)
