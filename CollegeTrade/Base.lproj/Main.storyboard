@@ -228,7 +228,7 @@
                                     <rect key="frame" x="-10" y="-10" width="20" height="20"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="color" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="color" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
                                 </activityIndicatorView>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ItemForSellCell" textLabel="w5Q-PF-H0P" detailTextLabel="gdo-FW-Nic" style="IBUITableViewCellStyleSubtitle" id="qFT-0g-QdU">
@@ -262,23 +262,30 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="20" y="114" width="360" height="360"/>
+                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="a0T-ah-qPp" id="CxL-QB-6mN"/>
                                     <outlet property="delegate" destination="a0T-ah-qPp" id="9Kp-RW-YaU"/>
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="AZv-d1-hvQ" firstAttribute="top" secondItem="F2t-70-Ydg" secondAttribute="bottom" constant="8" id="6UN-n5-kbe">
-                                <variation key="widthClass=compact" constant="50"/>
+                                <variation key="widthClass=compact" constant="20"/>
                             </constraint>
+                            <constraint firstAttribute="height" secondItem="AZv-d1-hvQ" secondAttribute="height" id="FcR-hG-5sn"/>
                             <constraint firstAttribute="centerX" secondItem="AZv-d1-hvQ" secondAttribute="centerX" id="IDp-dd-lvU"/>
-                            <constraint firstItem="AZv-d1-hvQ" firstAttribute="width" secondItem="EYS-lP-BsK" secondAttribute="width" id="JWP-qA-h3q">
-                                <variation key="widthClass=compact" constant="-40"/>
+                            <constraint firstItem="AZv-d1-hvQ" firstAttribute="width" secondItem="EYS-lP-BsK" secondAttribute="width" multiplier="0.8" id="JWP-qA-h3q">
+                                <variation key="widthClass=compact" constant="0.0"/>
                             </constraint>
-                            <constraint firstItem="AZv-d1-hvQ" firstAttribute="height" secondItem="EYS-lP-BsK" secondAttribute="height" multiplier="0.6" id="hxf-8e-1Sa"/>
+                            <constraint firstAttribute="width" secondItem="AZv-d1-hvQ" secondAttribute="width" id="e6K-c3-N88"/>
+                            <constraint firstItem="AZv-d1-hvQ" firstAttribute="height" secondItem="EYS-lP-BsK" secondAttribute="height" multiplier="0.7" id="hxf-8e-1Sa"/>
                             <constraint firstItem="AZv-d1-hvQ" firstAttribute="width" secondItem="EYS-lP-BsK" secondAttribute="width" multiplier="0.8" id="opR-dp-jt8"/>
+                            <constraint firstItem="AZv-d1-hvQ" firstAttribute="top" secondItem="F2t-70-Ydg" secondAttribute="bottom" constant="50" id="swh-83-en3"/>
+                            <constraint firstAttribute="centerX" secondItem="AZv-d1-hvQ" secondAttribute="centerX" id="tal-aq-dLT"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -286,10 +293,14 @@
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="6UN-n5-kbe"/>
+                                <exclude reference="FcR-hG-5sn"/>
                                 <exclude reference="IDp-dd-lvU"/>
                                 <exclude reference="JWP-qA-h3q"/>
+                                <exclude reference="e6K-c3-N88"/>
                                 <exclude reference="hxf-8e-1Sa"/>
                                 <exclude reference="opR-dp-jt8"/>
+                                <exclude reference="swh-83-en3"/>
+                                <exclude reference="tal-aq-dLT"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -298,10 +309,14 @@
                             </mask>
                             <mask key="constraints">
                                 <include reference="6UN-n5-kbe"/>
-                                <include reference="IDp-dd-lvU"/>
+                                <exclude reference="FcR-hG-5sn"/>
+                                <exclude reference="IDp-dd-lvU"/>
                                 <include reference="JWP-qA-h3q"/>
+                                <exclude reference="e6K-c3-N88"/>
                                 <include reference="hxf-8e-1Sa"/>
                                 <exclude reference="opR-dp-jt8"/>
+                                <exclude reference="swh-83-en3"/>
+                                <include reference="tal-aq-dLT"/>
                             </mask>
                         </variation>
                     </view>
@@ -316,7 +331,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="01p-lF-SS2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3139.5" y="275"/>
+            <point key="canvasLocation" x="4057.5" y="275"/>
         </scene>
         <!--Item Detail View Controller-->
         <scene sceneID="GXm-IW-kUn">
@@ -423,7 +438,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h5e-bn-J6n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4126.5" y="748"/>
+            <point key="canvasLocation" x="5044.5" y="748"/>
         </scene>
         <!--Order View Controller-->
         <scene sceneID="CF1-wC-kbD">
@@ -675,8 +690,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="122" width="400" height="429"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="49" y="127" width="303" height="360"/>
                                 </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="BLu-F0-HNQ" id="Sew-rO-hv0"/>
@@ -685,22 +700,54 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQp-HA-H96">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="发表新物品">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
+                                <variation key="widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="304" y="78" width="75" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="newItemForSellSegue:" destination="BLu-F0-HNQ" eventType="touchUpInside" id="h69-ON-IFS"/>
+                                    <segue destination="sg3-cB-DBH" kind="show" identifier="NewItemForSellSegue" id="QRx-xo-J1m"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="IQp-HA-H96" firstAttribute="width" secondItem="aCo-ra-kbO" secondAttribute="width" multiplier="0.25" id="2BV-WR-Qdp"/>
+                            <constraint firstItem="IQp-HA-H96" firstAttribute="top" secondItem="7wI-PS-AaO" secondAttribute="bottom" constant="14" id="Guw-5o-evH">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="IQp-HA-H96" secondAttribute="trailing" constant="5" id="S4E-ar-6mY">
+                                <variation key="widthClass=compact" constant="20"/>
+                            </constraint>
+                            <constraint firstItem="hMd-OJ-ZOy" firstAttribute="top" secondItem="IQp-HA-H96" secondAttribute="bottom" constant="19" id="WUA-w9-Dy7">
+                                <variation key="widthClass=compact" constant="20"/>
+                            </constraint>
+                            <constraint firstAttribute="centerX" secondItem="hMd-OJ-ZOy" secondAttribute="centerX" constant="-0.5" id="h6Z-3x-I12">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="IQp-HA-H96" firstAttribute="top" secondItem="7wI-PS-AaO" secondAttribute="bottom" constant="14" id="nbU-2j-jIT">
+                                <variation key="widthClass=compact" constant="20"/>
+                            </constraint>
+                            <constraint firstItem="hMd-OJ-ZOy" firstAttribute="height" secondItem="aCo-ra-kbO" secondAttribute="height" multiplier="0.6" id="pd1-HN-Kii"/>
+                            <constraint firstItem="hMd-OJ-ZOy" firstAttribute="width" secondItem="aCo-ra-kbO" secondAttribute="width" multiplier="0.8" id="vCd-EM-8D4"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="hMd-OJ-ZOy"/>
                                 <exclude reference="IQp-HA-H96"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="WUA-w9-Dy7"/>
+                                <exclude reference="h6Z-3x-I12"/>
+                                <exclude reference="pd1-HN-Kii"/>
+                                <exclude reference="vCd-EM-8D4"/>
+                                <exclude reference="2BV-WR-Qdp"/>
+                                <exclude reference="Guw-5o-evH"/>
+                                <exclude reference="S4E-ar-6mY"/>
+                                <exclude reference="nbU-2j-jIT"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -708,18 +755,27 @@
                                 <include reference="hMd-OJ-ZOy"/>
                                 <include reference="IQp-HA-H96"/>
                             </mask>
+                            <mask key="constraints">
+                                <include reference="WUA-w9-Dy7"/>
+                                <include reference="h6Z-3x-I12"/>
+                                <include reference="pd1-HN-Kii"/>
+                                <include reference="vCd-EM-8D4"/>
+                                <include reference="2BV-WR-Qdp"/>
+                                <include reference="Guw-5o-evH"/>
+                                <include reference="S4E-ar-6mY"/>
+                                <exclude reference="nbU-2j-jIT"/>
+                            </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="aEg-Z0-GZv"/>
                     <connections>
                         <outlet property="itemsTable" destination="hMd-OJ-ZOy" id="JtB-7A-uTK"/>
-                        <segue destination="sg3-cB-DBH" kind="presentation" identifier="NewItemForSellSegue" id="2et-oJ-BR8"/>
                         <segue destination="hRZ-Bv-yry" kind="presentation" identifier="ShowLoginScreenFromUserStore" id="zGh-vy-Oep"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nvc-aB-eBw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="930" y="661"/>
+            <point key="canvasLocation" x="1896" y="577"/>
         </scene>
         <!--我的好友-->
         <scene sceneID="Ot6-le-j3E">
@@ -952,18 +1008,12 @@
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="164" y="110" width="172" height="30"/>
-                                </variation>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="950" verticalCompressionResistancePriority="950" text="输入用户名：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcs-dl-8ws">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="27" y="113" width="121" height="24"/>
-                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPo-kE-Vih">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -973,9 +1023,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="120" y="191" width="136" height="30"/>
-                                </variation>
                                 <connections>
                                     <action selector="addFriend:" destination="W27-Eu-A5B" eventType="touchUpInside" id="ff4-QZ-YOp"/>
                                 </connections>
@@ -1012,14 +1059,14 @@
                                 <exclude reference="tPo-kE-Vih"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="jDc-83-1Wf"/>
-                                <exclude reference="zaz-02-0QU"/>
                                 <exclude reference="1MS-CF-Aee"/>
                                 <exclude reference="9kB-sZ-Ejt"/>
                                 <exclude reference="ZoN-1D-u7C"/>
                                 <exclude reference="eRG-Xj-9lo"/>
                                 <exclude reference="mq3-ro-eD7"/>
                                 <exclude reference="oxx-RM-cFp"/>
+                                <exclude reference="jDc-83-1Wf"/>
+                                <exclude reference="zaz-02-0QU"/>
                                 <exclude reference="7Ou-df-kKm"/>
                                 <exclude reference="N0a-13-cxQ"/>
                                 <exclude reference="xaI-Ib-bNN"/>
@@ -1032,14 +1079,14 @@
                                 <include reference="tPo-kE-Vih"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="jDc-83-1Wf"/>
-                                <include reference="zaz-02-0QU"/>
                                 <include reference="1MS-CF-Aee"/>
                                 <include reference="9kB-sZ-Ejt"/>
                                 <exclude reference="ZoN-1D-u7C"/>
                                 <include reference="eRG-Xj-9lo"/>
                                 <include reference="mq3-ro-eD7"/>
                                 <include reference="oxx-RM-cFp"/>
+                                <include reference="jDc-83-1Wf"/>
+                                <include reference="zaz-02-0QU"/>
                                 <include reference="7Ou-df-kKm"/>
                                 <include reference="N0a-13-cxQ"/>
                                 <include reference="xaI-Ib-bNN"/>
@@ -1314,7 +1361,7 @@
             </objects>
             <point key="canvasLocation" x="7414.5" y="2202"/>
         </scene>
-        <!--New Item For Sell View Controller-->
+        <!--Title-->
         <scene sceneID="8KS-Ov-uZ3">
             <objects>
                 <viewController id="sg3-cB-DBH" customClass="NewItemForSellViewController" customModule="CollegeTrade" customModuleProvider="target" sceneMemberID="viewController">
@@ -1394,18 +1441,6 @@
                                     <outlet property="delegate" destination="sg3-cB-DBH" id="E5j-wG-Rjy"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeI-IP-alg">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="返回">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="70" y="506" width="30" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="cancel:" destination="sg3-cB-DBH" eventType="touchUpInside" id="U1A-wk-5tW"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LTi-1e-noL">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1423,6 +1458,18 @@
                                     <rect key="frame" x="161" y="88" width="158" height="30"/>
                                 </variation>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeI-IP-alg">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="返回">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="70" y="506" width="30" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="cancel:" destination="sg3-cB-DBH" eventType="touchUpInside" id="U1A-wk-5tW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -1433,9 +1480,9 @@
                                 <exclude reference="B6m-iM-tg6"/>
                                 <exclude reference="IEV-58-Sz7"/>
                                 <exclude reference="3q1-6d-Uk0"/>
-                                <exclude reference="oeI-IP-alg"/>
                                 <exclude reference="LTi-1e-noL"/>
                                 <exclude reference="ERt-S3-agj"/>
+                                <exclude reference="oeI-IP-alg"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -1446,12 +1493,13 @@
                                 <include reference="B6m-iM-tg6"/>
                                 <include reference="IEV-58-Sz7"/>
                                 <include reference="3q1-6d-Uk0"/>
-                                <include reference="oeI-IP-alg"/>
                                 <include reference="LTi-1e-noL"/>
                                 <include reference="ERt-S3-agj"/>
+                                <include reference="oeI-IP-alg"/>
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="aXB-fq-IcT"/>
                     <connections>
                         <outlet property="imageTable" destination="3q1-6d-Uk0" id="M0c-OE-MFh"/>
                         <outlet property="itemDescription" destination="LTi-1e-noL" id="L7p-Cu-2Gr"/>
@@ -1461,7 +1509,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5JG-9m-VAE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2028" y="2587"/>
+            <point key="canvasLocation" x="2428.5" y="1326"/>
         </scene>
         <!--TakePhotoViewController-->
         <scene sceneID="nfs-gC-h4n">
@@ -1792,7 +1840,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ylk-4u-0Me" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6385.5" y="1041"/>
+            <point key="canvasLocation" x="7303.5" y="1041"/>
         </scene>
         <!--User Setting View Controller-->
         <scene sceneID="Gyd-eH-2we">
@@ -2101,7 +2149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y0l-Ob-mGf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1917" y="78"/>
+            <point key="canvasLocation" x="2835" y="78"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QUA-Re-w1c">
@@ -2160,7 +2208,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iZZ-Bq-Ua8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2112" y="732"/>
+            <point key="canvasLocation" x="3030" y="732"/>
         </scene>
         <!--Item-->
         <scene sceneID="f7J-cP-YiF">
@@ -2174,7 +2222,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BLu-F0-HNQ" kind="relationship" relationship="rootViewController" id="yFk-cS-QpN"/>
+                        <segue destination="miR-vb-gdc" kind="relationship" relationship="rootViewController" id="yFk-cS-QpN"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EtC-Ss-RIU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2234,9 +2282,6 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="64" width="400" height="464"/>
-                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="Q3h-Yr-WJu" id="QWr-2R-7Ld"/>
                                     <outlet property="delegate" destination="Q3h-Yr-WJu" id="guW-0M-4G1"/>
@@ -2326,6 +2371,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ys1-Tx-iiJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="282" y="1796"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3q9-mu-LfA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="miR-vb-gdc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="lKV-J5-ceC"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fzL-CX-36q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BLu-F0-HNQ" kind="relationship" relationship="rootViewController" id="9pK-W5-o3e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lRe-ra-AGW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1036.5" y="639"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

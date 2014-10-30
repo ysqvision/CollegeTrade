@@ -16,11 +16,6 @@ class UserStoreHomePageViewController: UIViewController, UITableViewDataSource, 
     
     @IBOutlet weak var itemsTable: UITableView!
     
-    @IBAction func newItemForSellSegue(sender: AnyObject) {
-        performSegueWithIdentifier("NewItemForSellSegue", sender: self)
-
-    }
-    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         if USER_IS_LOGGED_IN == false {
@@ -87,8 +82,8 @@ class UserStoreHomePageViewController: UIViewController, UITableViewDataSource, 
         
         }
         if segue.identifier == "NewItemForSellSegue" {
-            var newItemForSellViewController: NewItemForSellViewController = segue.destinationViewController as NewItemForSellViewController
-            newItemForSellViewController.delegate = self
+            //var newItemForSellViewController: NewItemForSellViewController = segue.destinationViewController as NewItemForSellViewController
+            //newItemForSellViewController.delegate = self
         }
     }
 
