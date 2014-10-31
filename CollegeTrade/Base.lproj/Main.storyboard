@@ -386,7 +386,7 @@
                         <viewControllerLayoutGuide type="bottom" id="F1Y-yx-JTn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OpK-3A-NQV">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31v-tw-iPO">
@@ -781,7 +781,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Pmx-Xq-fcS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="F8M-bM-tcZ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="物品名称：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ms-BY-RD9">
@@ -914,7 +914,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ELh-Tf-s1p"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aCo-ra-kbO">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hMd-OJ-ZOy">
@@ -1588,7 +1588,7 @@
                         <viewControllerLayoutGuide type="bottom" id="q1v-C5-FzJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5Sq-fU-xCy">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="物品名称：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="54Y-NM-2oL">
@@ -2442,36 +2442,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="推荐店铺：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjW-FQ-H1l">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="20"/>
+                                    <rect key="frame" x="30" y="250" width="105" height="52"/>
+                                </variation>
+                            </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VQl-g4-2fp">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="30" y="51" width="340" height="150"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="30" y="64" width="340" height="150"/>
                                 </variation>
                                 <connections>
                                     <segue destination="PAB-ni-CbD" kind="embed" identifier="EmbeddedViewSegue" id="95M-Mc-OkH"/>
                                 </connections>
                             </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="推荐店铺：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjW-FQ-H1l">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="30" y="250" width="85" height="30"/>
-                                </variation>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.637886807" blue="0.020732176549999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="VQl-g4-2fp" firstAttribute="width" secondItem="hy9-Vb-Abd" secondAttribute="width" id="1X5-sD-Xo9"/>
+                            <constraint firstItem="VQl-g4-2fp" firstAttribute="height" secondItem="hy9-Vb-Abd" secondAttribute="height" multiplier="0.3" id="BRw-5g-faW"/>
+                            <constraint firstAttribute="centerX" secondItem="VQl-g4-2fp" secondAttribute="centerX" id="Da8-i9-Csi"/>
+                            <constraint firstItem="VQl-g4-2fp" firstAttribute="top" secondItem="cGH-Ce-kj1" secondAttribute="bottom" id="hPq-oA-Jej"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="VQl-g4-2fp"/>
                                 <exclude reference="tjW-FQ-H1l"/>
+                                <exclude reference="VQl-g4-2fp"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="1X5-sD-Xo9"/>
+                                <exclude reference="BRw-5g-faW"/>
+                                <exclude reference="Da8-i9-Csi"/>
+                                <exclude reference="hPq-oA-Jej"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="VQl-g4-2fp"/>
                                 <include reference="tjW-FQ-H1l"/>
+                                <include reference="VQl-g4-2fp"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="1X5-sD-Xo9"/>
+                                <include reference="BRw-5g-faW"/>
+                                <include reference="Da8-i9-Csi"/>
+                                <include reference="hPq-oA-Jej"/>
                             </mask>
                         </variation>
                     </view>
@@ -2537,7 +2556,7 @@
                         <viewControllerLayoutGuide type="bottom" id="hzR-Qq-Tbc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xlL-81-Hbw">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tp4-mi-PCr">

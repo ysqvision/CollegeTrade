@@ -31,7 +31,7 @@ class SwipePageContentViewController: UIViewController
         view.addSubview(label)*/
         
         let image = UIImage(named: self.imageFile) // imagFile
-        let imageview = UIImageView(frame: CGRectMake(0, 0, view.frame.width, view.frame.height))
+        let imageview = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width, self.view.frame.height*0.3))
         imageview.image = image
         view.addSubview(imageview)
         
