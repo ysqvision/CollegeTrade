@@ -12,6 +12,8 @@
 		5731621E19FEC2D800F17821 /* SwiftMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5731621D19FEC2D800F17821 /* SwiftMD5.swift */; };
 		573B95911A035F5900352625 /* UserDetailedInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573B95901A035F5900352625 /* UserDetailedInformationViewController.swift */; };
 		573B95931A04026000352625 /* EditUserDetailInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573B95921A04026000352625 /* EditUserDetailInformationViewController.swift */; };
+		573B95951A04289800352625 /* opensoon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 573B95941A04289800352625 /* opensoon.jpg */; };
+		573B95971A04301A00352625 /* Placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 573B95961A04301A00352625 /* Placeholder.png */; };
 		5742032719C8CF2000A84191 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742032619C8CF2000A84191 /* AppDelegate.swift */; };
 		5742032919C8CF2000A84191 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742032819C8CF2000A84191 /* LoginViewController.swift */; };
 		5742032C19C8CF2000A84191 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5742032A19C8CF2000A84191 /* Main.storyboard */; };
@@ -98,6 +100,8 @@
 		5731622019FEC4AB00F17821 /* CollegeTrade-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CollegeTrade-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		573B95901A035F5900352625 /* UserDetailedInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailedInformationViewController.swift; sourceTree = "<group>"; };
 		573B95921A04026000352625 /* EditUserDetailInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditUserDetailInformationViewController.swift; sourceTree = "<group>"; };
+		573B95941A04289800352625 /* opensoon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = opensoon.jpg; sourceTree = "<group>"; };
+		573B95961A04301A00352625 /* Placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Placeholder.png; sourceTree = "<group>"; };
 		5742032119C8CF2000A84191 /* CollegeTrade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollegeTrade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5742032519C8CF2000A84191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5742032619C8CF2000A84191 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -384,12 +388,14 @@
 		5742032419C8CF2000A84191 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				573B95941A04289800352625 /* opensoon.jpg */,
 				70F3E4091A031FCC0051C276 /* kurumi.png */,
 				70DF05AE1A0310940068B128 /* 附近商店橙色.png */,
 				709622401A0325C100961466 /* clannad.png */,
 				709622411A0325C100961466 /* fatezero.png */,
 				709622421A0325C100961466 /* madoka.png */,
 				70DF05AF1A0310940068B128 /* 附近商店灰色.png */,
+				573B95961A04301A00352625 /* Placeholder.png */,
 				70DF05B01A0310940068B128 /* 格式按钮灰色.png */,
 				70DF05B11A0310940068B128 /* 个人界面按钮橙色.png */,
 				70DF05B21A0310940068B128 /* 聊天室按扭橙色.png */,
@@ -717,9 +723,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				70DF05BF1A0310940068B128 /* 我的收藏按钮2.png in Resources */,
+				573B95951A04289800352625 /* opensoon.jpg in Resources */,
 				70DF05B81A0310940068B128 /* 附近商店橙色.png in Resources */,
 				70DF05BA1A0310940068B128 /* 格式按钮灰色.png in Resources */,
 				70DF05C11A0310940068B128 /* 主页按钮灰色.png in Resources */,
+				573B95971A04301A00352625 /* Placeholder.png in Resources */,
 				70DF05BB1A0310940068B128 /* 个人界面按钮橙色.png in Resources */,
 				574614FF19E37138008323E0 /* Images.xcassets in Resources */,
 				5742032C19C8CF2000A84191 /* Main.storyboard in Resources */,

@@ -82,7 +82,7 @@ class UserStoreHomePageViewController: UIViewController, UITableViewDataSource, 
         //let formattedPrice: NSString = rowData["price"] as NSString
         let formattedPrice: Double = rowData["price"] as Double
         cell.detailTextLabel?.text = "价格: \(formattedPrice)"
-        cell.imageView?.image = UIImage(named: "randomcat1.png")
+        cell.imageView?.image = UIImage(named: "Placeholder.png")
         
         return cell
     }
@@ -121,7 +121,10 @@ class UserStoreHomePageViewController: UIViewController, UITableViewDataSource, 
 
     
     func didReceiveItems(results: NSDictionary) {
-        var resultsArr: NSArray = results["data"] as NSArray
+        
+        
+        // 等数据库改好， 这个地方要改回"data"
+        var resultsArr: NSArray = results["date"] as NSArray
         dispatch_async(dispatch_get_main_queue(), {
             self.itemsForSell = resultsArr
             self.itemsTable!.reloadData()

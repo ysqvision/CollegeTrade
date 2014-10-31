@@ -120,7 +120,8 @@ class OrderAPIHelper {
                 // check and make sure that json has a value using optional binding.
                 if let parseJSON = json {
                     // Okay, the parsedJSON is here, let's get the value for 'success' out of it
-                    var code = parseJSON["status"] as? Int
+                    println(parseJSON)
+                    var code = parseJSON["Status"] as? Int
                     if code == 101 {
                         println("Setting status to be true")
                         updateSuccess(success: true)
@@ -178,7 +179,7 @@ class OrderAPIHelper {
                 // check and make sure that json has a value using optional binding.
                 if let parseJSON = json {
                     // Okay, the parsedJSON is here, let's get the value for 'success' out of it
-                    var code = parseJSON["status"] as? Int
+                    var code = parseJSON["Status"] as? Int
                     if code == 101 {
                         println("Setting status to be true")
                         updateSuccess(success: true)
@@ -208,8 +209,8 @@ class OrderAPIHelper {
         request.HTTPMethod = "POST"
         println(LOGGED_IN_USER_INFORMATION)
         var userId: Int = LOGGED_IN_USER_INFORMATION!["userId"] as Int
-        var currentTime: Int = Int(NSDate().timeIntervalSince1970 * 1000)
-        var requestBody = "userid=\(userId)&time=\(currentTime)"
+        //var currentTime: Int = Int(NSDate().timeIntervalSince1970 * 1000)
+        var requestBody = "userid=\(userId)&time=0"
         let data = requestBody.dataUsingEncoding(NSUTF8StringEncoding)
         request.HTTPBody = data
         // request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)
@@ -237,7 +238,7 @@ class OrderAPIHelper {
                 // check and make sure that json has a value using optional binding.
                 if let parseJSON = json {
                     // Okay, the parsedJSON is here, let's get the value for 'success' out of it
-                    var code = parseJSON["status"] as? Int
+                    var code = parseJSON["Status"] as? Int
                     if code == 101 {
                         println("Setting status to be true")
                         self.delegate!.didGetBuyOrders(parseJSON)

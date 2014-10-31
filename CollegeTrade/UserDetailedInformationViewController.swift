@@ -62,7 +62,7 @@ class UserDetailedInformationViewController: UITableViewController, selectedPict
         userImageButton.tag = 0
         userImageButton.addTarget(self, action: "addImage:", forControlEvents: .TouchUpInside)
         if LOGGED_IN_USER_IMAGE == nil {
-            userImageButton.setImage(UIImage(named: "randomcat1.png"), forState: UIControlState.Normal)
+            userImageButton.setImage(UIImage(named: "Placeholder.png"), forState: UIControlState.Normal)
             println("reached here sdfsdfsdf \(LOGGED_IN_USER_IMAGE)")
         } else {
             //println("reached here sdfsdfsdf \(LOGGED_IN_USER_IMAGE)")

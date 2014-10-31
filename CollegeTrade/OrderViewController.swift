@@ -33,14 +33,15 @@ class OrderViewController: UIViewController, UITableViewDataSource, UITableViewD
             {
         case 0:
             isFirstSelected = true
+             orderController.getBuyOrders()
         case 1:
             isFirstSelected = false
+             orderController.getSellOrders()
         default:
             break;
         }
         orderTable.tableFooterView = UIView(frame: CGRect.zeroRect)
-        orderTable.reloadData()
-    }
+        }
     override func viewDidLoad() {
         /*
         if USER_IS_LOGGED_IN == false {
@@ -70,7 +71,8 @@ class OrderViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         if index == 0 {
             isFirstSelected = true
-            orderController.getBuyOrders()
+           
+            
         }
         else if (index == 1) {
             isFirstSelected = false
@@ -81,8 +83,8 @@ class OrderViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 1
         if isFirstSelected {
+            println(buyOrderList.count)
             return buyOrderList.count
         }
         else {
@@ -94,7 +96,10 @@ class OrderViewController: UIViewController, UITableViewDataSource, UITableViewD
         //    let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "ItemForSellCell")
         let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("OrderCell") as UITableViewCell
         if isFirstSelected {
-            cell.textLabel?.text = "first"
+            var index = indexPath.row
+            var order = buyOrderList[index] as NSDictionary
+            var goodsId = order["goodsId"] as Int
+            cell.textLabel?.text = "商品号：\(goodsId)"
         }
         else {
             cell.textLabel?.text = "second"
@@ -120,6 +125,9 @@ class OrderViewController: UIViewController, UITableViewDataSource, UITableViewD
             else if (index == 1) {
                 isBuy = false            }
 
+            var cellIndex = orderTable.indexPathForSelectedRow()!.row
+            var order = buyOrderList[index] as NSDictionary
+            orderDetailViewController.order = order
             orderDetailViewController.isBuyOrder = isBuy
         
         }
@@ -127,7 +135,7 @@ class OrderViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func didGetBuyOrderCount(results: Int) {
         if (results != buyOrderList.count) {
-            //orderController.getBuyOrders()
+            orderController.getBuyOrders()
         }
     }
     
@@ -150,6 +158,7 @@ class OrderViewController: UIViewController, UITableViewDataSource, UITableViewD
         var resultsArr: NSArray = results["data"] as NSArray
         dispatch_async(dispatch_get_main_queue(), {
             self.buyOrderList = resultsArr
+            println(self.buyOrderList)
             self.orderTable.reloadData()
         })
     }

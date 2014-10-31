@@ -22,6 +22,8 @@ class StoreHomePageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+     
+        
         if USER_IS_LOGGED_IN == false {
             println("is false")
             var storedUsername = KeychainService.loadToken("SPIRIIITCOLLEGETRADEUSERNAME")
@@ -59,7 +61,7 @@ class StoreHomePageViewController: UIViewController {
             var j = CGFloat(i)
             var xLocation = j * (pictureWidth + 20.0) + 30.0
             button.frame = CGRectMake(xLocation, 300, pictureWidth, pictureHeight)
-            button.setImage(UIImage(named:"randomcat1.png"), forState: UIControlState.Normal)
+            button.setImage(UIImage(named:"opensoon.jpg"), forState: UIControlState.Normal)
             button.tag = i
             button.addTarget(self, action: "showStore:", forControlEvents: .TouchUpInside)
             recommendedStores.append(button)
@@ -72,7 +74,7 @@ class StoreHomePageViewController: UIViewController {
             var j = CGFloat(i)
             var xLocation = j * (pictureWidth + 20.0) + 30.0
             button.frame = CGRectMake(xLocation, 300 + pictureHeight + 10, pictureWidth, pictureHeight)
-            button.setImage(UIImage(named:"randomcat1.png"), forState: UIControlState.Normal)
+            button.setImage(UIImage(named:"opensoon.jpg"), forState: UIControlState.Normal)
             button.tag = i + 3
             button.addTarget(self, action: "showStore:", forControlEvents: .TouchUpInside)
             recommendedStores.append(button)
@@ -84,7 +86,7 @@ class StoreHomePageViewController: UIViewController {
             var j = CGFloat(i)
             var xLocation = j * (pictureWidth + 20.0) + 30.0
             button.frame = CGRectMake(xLocation, 300 + (pictureHeight + 10) * 2, pictureWidth, pictureHeight)
-            button.setImage(UIImage(named:"randomcat1.png"), forState: UIControlState.Normal)
+            button.setImage(UIImage(named:"opensoon.jpg"), forState: UIControlState.Normal)
             button.tag = i + 6
             button.addTarget(self, action: "showStore:", forControlEvents: .TouchUpInside)
             recommendedStores.append(button)
@@ -106,7 +108,6 @@ class StoreHomePageViewController: UIViewController {
             if segue.identifier == "ShowUserStoreHomePageSegue" {
                 var storeViewController: UserStoreHomePageViewController = segue.destinationViewController as UserStoreHomePageViewController
                 storeViewController.userIdForThisStore = 1
-                storeViewController.storeId = selectedStoreIndex
             }
         }
    

@@ -68,13 +68,13 @@ class EditItemViewController: UIViewController {
         super.viewDidLoad()
         var title = itemToEdit["goodsName"] as NSString
         var price = itemToEdit["price"] as Double
-        var quantity = itemToEdit["quantity"] as Int
+        //var quantity = itemToEdit["inventory"] as Int
         var description = itemToEdit["goodsDescription"] as String
         
         itemName.text = title
         itemDescription.text = description
         itemPrice.text = "\(price)"
-        itemQuantity.text = "\(quantity)"
+        //itemQuantity.text = "\(quantity)"
 
     }
 }

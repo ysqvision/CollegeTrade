@@ -73,7 +73,7 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
         //let formattedPrice: NSString = rowData["price"] as NSString
         let formattedPrice: Double = rowData["price"] as Double
         cell.detailTextLabel?.text = "价格: \(formattedPrice)"
-        cell.imageView?.image = UIImage(named: "randomcat1.png")
+        cell.imageView?.image = UIImage(named: "Placeholder.png")
       
         //var imagePaths = rowData["goodsImage"] as String
         if let imagePaths = rowData["goodsImage"] as? String {

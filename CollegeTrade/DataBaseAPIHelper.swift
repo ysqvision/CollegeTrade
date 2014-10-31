@@ -370,7 +370,7 @@ class DataBaseAPIHelper {
         var session = NSURLSession.sharedSession()
         request.HTTPMethod = "POST"
       
-        var requestBody = "goodsId=\(itemId)&goodsDescription=\(description)&price=\(price)&goodsInventory=\(quantity)"
+        var requestBody = "id=\(itemId)&goodsDescription=\(description)&price=\(price)&goodsInventory=\(quantity)"
         let data = requestBody.dataUsingEncoding(NSUTF8StringEncoding)
         request.HTTPBody = data
         // request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)

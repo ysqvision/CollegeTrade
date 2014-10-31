@@ -61,8 +61,8 @@ class ChatWithFriendViewController: UIViewController, IChatManagerDelegate {
             
             var emTextMessageBody = EMTextMessageBody(chatObject: emText)
             var msg = EMMessage(receiver: friendName, bodies: [emTextMessageBody])
-            
-            var exten = ["username": "123"]
+            var userName = LOGGED_IN_USER_INFORMATION!["userName"] as String
+            var exten = ["username": userName]
             msg.ext = exten
             EaseMob.sharedInstance().chatManager.sendMessage(msg, progress: nil, error: nil)
             
