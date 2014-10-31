@@ -14,7 +14,7 @@ class SwipePageViewController : UIPageViewController, UIPageViewControllerDataSo
     
     var pageViewController : UIPageViewController?
     var pageTitles : Array<String> = ["1","2","3","4"]
-    var pageImages : Array<String> = ["randomcat1.png", "randomcat1.png", "randomcat1.png", "randomcat1.png"]
+    var pageImages : Array<String> = ["kurumi.png", "randomcat1.png", "randomcat1.png", "randomcat1.png"]
     var currentIndex : Int = 0
     
     override func viewDidLoad()
