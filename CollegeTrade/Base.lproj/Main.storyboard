@@ -207,7 +207,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="844.5" y="106"/>
+            <point key="canvasLocation" x="1084.5" y="-157"/>
         </scene>
         <!--User Home Page View Controller-->
         <scene sceneID="rhV-FA-E3m">
@@ -1115,11 +1115,12 @@
                         <outlet property="friendListTable" destination="s1R-L6-Yzn" id="9iG-w8-Nmg"/>
                         <segue destination="iDb-qp-7L6" kind="show" identifier="ChatWithFriendSegue" id="0Qz-yY-uvY"/>
                         <segue destination="Q3h-Yr-WJu" kind="show" identifier="ShowFriendRequestSegue" id="dAb-ir-RT1"/>
+                        <segue destination="vXZ-lx-hvc" kind="presentation" identifier="ShowLoginScreen" id="Wbf-dz-BZj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BiB-ZS-TMc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4996.5" y="2735"/>
+            <point key="canvasLocation" x="4800" y="2740"/>
         </scene>
         <!--Chat With Friend View Controller-->
         <scene sceneID="cQP-zp-7OF">
@@ -1595,7 +1596,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Gh-b6-jEh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7008" y="3206"/>
+            <point key="canvasLocation" x="7095" y="3458"/>
         </scene>
         <!--User Detailed Information View Controller-->
         <scene sceneID="LkT-zv-xnX">
@@ -3203,10 +3204,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8QW-V6-kwt"/>
-        <segue reference="884-yj-daG"/>
+        <segue reference="Wbf-dz-BZj"/>
         <segue reference="zd9-Lw-DF0"/>
+        <segue reference="8QW-V6-kwt"/>
         <segue reference="z2h-y9-oHF"/>
-        <segue reference="USg-eL-ooG"/>
+        <segue reference="qSN-ht-lIf"/>
     </inferredMetricsTieBreakers>
 </document>

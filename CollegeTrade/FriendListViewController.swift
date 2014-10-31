@@ -23,6 +23,11 @@ class FriendListViewController: UIViewController, UITableViewDataSource, UITable
     
     override func viewWillAppear(animated: Bool) {
        super.viewWillAppear(animated)
+        if USER_IS_LOGGED_IN == false {
+            
+            self.performSegueWithIdentifier("ShowLoginScreen", sender: self)
+        }
+
         searchFriendListAPI.delegate = self
         searchFriendListAPI.getFriendList()
         friendListTable.reloadData()

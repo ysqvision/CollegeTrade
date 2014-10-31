@@ -137,68 +137,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CollegeTrade/UpYunHelper.swift"
-            timestampString = "436183972.45631"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "postPicture(_:fileName:uploadSuccess:)"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CollegeTrade.UpYunHelper.(postPicture (CollegeTrade.UpYunHelper.Type) -&gt; (ObjectiveC.UIImage, fileName : Swift.String, uploadSuccess : (success : Swift.Bool, url : Swift.String) -&gt; ()) -&gt; ()).(closure #2)"
-                  moduleName = "CollegeTrade"
-                  urlString = "file:///Users/Victor/Documents/ios_dev/CollegeTrade/CollegeTrade/UpYunHelper.swift"
-                  timestampString = "436172781.526674"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "1380">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CollegeTrade.UpYunHelper.(postPicture (CollegeTrade.UpYunHelper.Type) -&gt; (ObjectiveC.UIImage, fileName : Swift.String, uploadSuccess : (success : Swift.Bool, url : Swift.String) -&gt; ()) -&gt; ()).(closure #2)"
-                  moduleName = "CollegeTrade"
-                  urlString = "file:///Users/Victor/Documents/ios_dev/CollegeTrade/CollegeTrade/UpYunHelper.swift"
-                  timestampString = "436172781.52684"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "1392">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CollegeTrade/UpYunHelper.swift"
-            timestampString = "436183972.45631"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "postPicture(_:fileName:uploadSuccess:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "CollegeTrade/NewItemForSellViewController.swift"
             timestampString = "436420688.307889"
             startingColumnNumber = "9223372036854775807"
@@ -316,11 +254,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CollegeTrade/FriendListViewController.swift"
-            timestampString = "436307064.176291"
+            timestampString = "436485681.69201"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -332,11 +270,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CollegeTrade/FriendListViewController.swift"
-            timestampString = "436307064.176291"
+            timestampString = "436485681.69201"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "tableView(_:cellForRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
