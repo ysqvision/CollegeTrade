@@ -55,7 +55,8 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     //    let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "ItemForSellCell")
         let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("ItemForSellCell") as UITableViewCell
-        let rowData: NSDictionary = self.itemsForSell[indexPath.row] as NSDictionary
+        let rowDataArray: NSArray = self.itemsForSell[indexPath.row] as NSArray
+        let rowData: NSDictionary = rowDataArray[0] as NSDictionary
         
         cell.textLabel?.text = rowData["goodsName"] as NSString
         println(rowData["goodsName"])
@@ -128,7 +129,8 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
         if (segue.identifier == "ShowItemDetailViewSegue") {
             var itemDetailViewController: ItemDetailViewController = segue.destinationViewController as ItemDetailViewController
             var itemIndex = itemsTable!.indexPathForSelectedRow()!.row;
-            var selectedItem = self.itemsForSell[itemIndex] as NSDictionary
+            var selectedItemSet = self.itemsForSell[itemIndex] as NSArray
+            var selectedItem = selectedItemSet[0] as NSDictionary
             var title = selectedItem["goodsName"] as NSString
             var price = selectedItem["price"] as Double
             var description = selectedItem["goodsDescription"] as String

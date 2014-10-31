@@ -148,6 +148,8 @@ class NewItemForSellViewController: UIViewController, selectedPictureDelegate, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        
                // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -163,10 +165,16 @@ class NewItemForSellViewController: UIViewController, selectedPictureDelegate, U
     
     func selectedPicture(value: UIImage) {
         dismissViewControllerAnimated(true, completion: nil)
-        var currentTime :Int = Int(NSDate().timeIntervalSince1970 * 1000)
-        imageSet.append(value)
-        imagePathSet.append("http://spiriiit-sharejx.b0.upaiyun.com/test/\(currentTime).jpg")
-        imagePathSetForUpyun.append("\(currentTime).jpg")
+        var count = imageSet.count
+        if count < 5 {
+            var currentTime :Int = Int(NSDate().timeIntervalSince1970 * 1000)
+            imageSet.append(value)
+            imagePathSet.append("http://spiriiit-sharejx.b0.upaiyun.com/test/\(currentTime).jpg")
+            imagePathSetForUpyun.append("\(currentTime).jpg")
+        }
+        
+        
+        
         self.imageTable.reloadData()
         
     }

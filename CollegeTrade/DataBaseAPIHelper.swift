@@ -47,9 +47,9 @@ class DataBaseAPIHelper {
                     // Okay, the parsedJSON is here, let's get the value for 'success' out of it
                     var code = parseJSON["Status"] as? Int
                     if code == 101 {
-                        println("Setting status to be true")
-                        LOGGED_IN_USER_INFORMATION = json
-                        loginSuccess(success: true)
+                        //println("Setting status to be true")
+                        //LOGGED_IN_USER_INFORMATION = json
+                        //loginSuccess(success: true)
                         return
                     }
                     else {
@@ -152,6 +152,7 @@ class DataBaseAPIHelper {
                         println("Setting status to be true")
                         var body = parseJSON["data"] as? NSArray
                         LOGGED_IN_USER_INFORMATION = body![1] as NSDictionary
+                        LOGGED_IN_USER_POINT = LOGGED_IN_USER_INFORMATION!["point"] as? Int
                         loginSuccess(success: true)
                         return
                     }
@@ -300,5 +301,15 @@ class DataBaseAPIHelper {
 
         
         
+    }
+    
+    class func updateUserInformation(userId: String, keyValue: [String: String], updateSuccess: (success: Bool) -> ()) {
+        
+    }
+    
+    class func updateItemInformation(itemId: String, keyValue: [String: String], updateSuccess: (success: Bool) -> ()) {
+    }
+    
+    class func updateStoreInformation(storeId: String, keyValue: [String: String], updateSuccess: (success: Bool) -> ()) {
     }
 }

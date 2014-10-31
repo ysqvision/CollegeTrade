@@ -58,6 +58,25 @@ class OrderDetailViewController: UIViewController, UIAlertViewDelegate {
         } else {
             if isBuyOrder {
                 // update order
+                OrderAPIHelper.cancelOrder("0", orderId: 1){ (success: Bool) -> () in
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        if success {
+                            var myAlert = UIAlertView(title: "成功",
+                                message: "取消订单成功， 信用积分将不会返还。",
+                                delegate: nil, cancelButtonTitle: "确认")
+                            myAlert.show()
+                            self.navigationController?.popViewControllerAnimated(true)
+                            
+                        } else {
+                            
+                            var myAlert = UIAlertView(title: "错误",
+                                message: "添加订单失败！ 请稍后再试。",
+                                delegate: nil, cancelButtonTitle: "取消")
+                            myAlert.show()
+                        }
+                    })
+                }
+
             } else {
                 // update order
             }

@@ -49,7 +49,7 @@ class UserStoreHomePageViewController: UIViewController, UITableViewDataSource, 
             isMyStore = true
         }
         searchItemAPI.delegate = self
-        searchItemAPI.getUserItems("\(userIdForThisStore)")
+        searchItemAPI.getUserItems(userIdForThisStore!)
         
     }
 
@@ -127,6 +127,6 @@ class UserStoreHomePageViewController: UIViewController, UITableViewDataSource, 
     }
     
     func didPostNewItem() {
-        searchItemAPI.getUserItems("\(userIdForThisStore)")
+        searchItemAPI.getUserItems(userIdForThisStore!)
     }
 }

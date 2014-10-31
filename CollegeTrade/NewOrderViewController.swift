@@ -53,9 +53,17 @@ class NewOrderViewController: UIViewController, UIAlertViewDelegate {
             )
              myAlert.show()
             
-        } else {
+        } else if LOGGED_IN_USER_POINT! < 5 {
+            var myAlert = UIAlertView(title: "交易失败",
+                message: "您的信用额度已不够完成此次交易。",
+                delegate: nil,
+                cancelButtonTitle: "取消"
+            )
+            myAlert.show()
+        }
+        else {
             var myAlert = UIAlertView(title: "确认购买",
-                message: "您确定要购买吗。",
+                message: "您确定要购买吗， 将会暂时扣除信用额度5分，交易成功后返还。",
                 delegate: self,
                 cancelButtonTitle: "取消",
                 otherButtonTitles: "确认"
@@ -83,6 +91,7 @@ class NewOrderViewController: UIViewController, UIAlertViewDelegate {
                             message: "添加订单成功",
                             delegate: nil, cancelButtonTitle: "确认")
                         myAlert.show()
+                        LOGGED_IN_USER_POINT = LOGGED_IN_USER_POINT! - 5
                         self.navigationController?.popViewControllerAnimated(true)
                         
                     } else {

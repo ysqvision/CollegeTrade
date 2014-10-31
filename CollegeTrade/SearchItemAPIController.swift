@@ -130,7 +130,7 @@ class SearchItemAPIController {
         task.resume()
     }
     
-    func getUserItems(userId: String) {
+    func getUserItems(userId: Int) {
         var request = NSMutableURLRequest(URL: NSURL(string: "http://14.29.65.186:9090/SpiriiitTradeServer/user-getGoodsListByUserId"))
         var session = NSURLSession.sharedSession()
         request.HTTPMethod = "POST"
