@@ -69,42 +69,42 @@ class NewItemForSellViewController: UIViewController, selectedPictureDelegate, U
                 delegate: nil, cancelButtonTitle: "返回")
             myAlert.show()
         } else {
-        
-        DataBaseAPIHelper.postItem(name, description: description, images: imagePathSet, price: price, quantity: quantity) { (success: Bool) -> () in
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                if success {
-                    var myAlert = UIAlertView(title: "上传成功",
-                        message: "新物品发表成功！",
-                        delegate: self, cancelButtonTitle: "确认")
-                    myAlert.show()
-                    self.dismissViewControllerAnimated(true, completion: nil)
-                    
-                    // upload images
-                    for index in 0...self.imageSet.count - 1 {
-                        UpYunHelper.postPicture(self.imageSet[index], fileName: self.imagePathSetForUpyun[index]) { (success: Bool, url: String) -> () in
-                            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                                if (success) {
+            
+            DataBaseAPIHelper.postItem(name, description: description, images: imagePathSet, price: price, quantity: quantity) { (success: Bool) -> () in
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    if success {
+                        var myAlert = UIAlertView(title: "上传成功",
+                            message: "新物品发表成功！",
+                            delegate: self, cancelButtonTitle: "确认")
+                        myAlert.show()
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                        
+                        // upload images
+                        for index in 0...self.imageSet.count - 1 {
+                            UpYunHelper.postPicture(self.imageSet[index], fileName: self.imagePathSetForUpyun[index]) { (success: Bool, url: String) -> () in
+                                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                                    if (success) {
+                                        
+                                    } else {
+                                        var myAlert = UIAlertView(title: "上传图片",
+                                            message: "图片\(index)失败， 请稍后再试",
+                                            delegate: nil, cancelButtonTitle: "取消")
+                                        myAlert.show()
+                                    }
                                     
-                                } else {
-                                    var myAlert = UIAlertView(title: "上传图片",
-                                        message: "图片\(index)失败， 请稍后再试",
-                                        delegate: nil, cancelButtonTitle: "取消")
-                                    myAlert.show()
-                                }
-                                
-                            })
+                                })
+                            }
                         }
                     }
-                }
-                else {
-                    
-                    var myAlert = UIAlertView(title: "发表失败",
-                        message: "无法发表物品， 请稍后再试",
-                        delegate: nil, cancelButtonTitle: "取消")
-                    myAlert.show()
-                }
-            })
-        }
+                    else {
+                        
+                        var myAlert = UIAlertView(title: "发表失败",
+                            message: "无法发表物品， 请稍后再试",
+                            delegate: nil, cancelButtonTitle: "取消")
+                        myAlert.show()
+                    }
+                })
+            }
         }
     }
 

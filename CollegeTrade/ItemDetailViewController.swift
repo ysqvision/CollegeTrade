@@ -13,6 +13,8 @@ class ItemDetailViewController: UIViewController {
     
     //@IBOutlet weak var moreButton: UIButton!
     var item: NSDictionary!
+    
+    var additionItemInformation: NSDictionary!
     var imageUrl: [String]!
     var firstImage: UIImage!
     

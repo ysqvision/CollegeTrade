@@ -19,7 +19,64 @@ class EditItemViewController: UIViewController {
     var itemToEdit: NSDictionary!
    
     @IBAction func updateItemInformation(sender: AnyObject) {
-        
+        var price = itemPrice.text as NSString
+        if (itemName.text == "" || itemDescription == "" || itemPrice.text == "" || itemQuantity.text == "") {
+            var myAlert = UIAlertView(title: "信息不能为空",
+                message: "请填写必要信息。",
+                delegate: nil, cancelButtonTitle: "返回")
+            myAlert.show()
+        } else if (price.doubleValue <= 0.0) {
+            var myAlert = UIAlertView(title: "价格错误",
+                message: "价格必须要大于0。",
+                delegate: nil, cancelButtonTitle: "返回")
+            myAlert.show()
+        }
+        else if (itemQuantity.text.toInt() <= 0) {
+            var myAlert = UIAlertView(title: "库存错误",
+                message: "库存必须要大于0。",
+                delegate: nil, cancelButtonTitle: "返回")
+            myAlert.show()
+        } else {
+            var keyObject = [String: String]()
+            keyObject
+            
+            DataBaseAPIHelper.postItem(name, description: description, images: imagePathSet, price: price, quantity: uantity) { (success: Bool) -> () in
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    if success {
+                        var myAlert = UIAlertView(title: "上传成功",
+                            message: "新物品发表成功！",
+                            delegate: self, cancelButtonTitle: "确认")
+                        myAlert.show()
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                        
+                        // upload images
+                        for index in 0...self.imageSet.count - 1 {
+                            UpYunHelper.postPicture(self.imageSet[index], fileName: self.imagePathSetForUpyun[index]) { (success: Bool, url: String) -> () in
+                                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                                    if (success) {
+                                        
+                                    } else {
+                                        var myAlert = UIAlertView(title: "上传图片",
+                                            message: "图片\(index)失败， 请稍后再试",
+                                            delegate: nil, cancelButtonTitle: "取消")
+                                        myAlert.show()
+                                    }
+                                    
+                                })
+                            }
+                        }
+                    }
+                    else {
+                        
+                        var myAlert = UIAlertView(title: "发表失败",
+                            message: "无法发表物品， 请稍后再试",
+                            delegate: nil, cancelButtonTitle: "取消")
+                        myAlert.show()
+                    }
+                })
+            }
+        }
+
     }
     
     override func viewDidLoad() {

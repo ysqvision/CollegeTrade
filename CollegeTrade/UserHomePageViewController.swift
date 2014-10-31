@@ -140,6 +140,8 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
             var imageUrl = imageUrlString.componentsSeparatedByString(",")
            // var item = ItemForSell(title: title, price: price, description: description, imageUrl: imageUrl)
             itemDetailViewController.item = selectedItem
+            var additionalInformation = selectedItemSet[1] as NSDictionary
+            itemDetailViewController.item = additionalInformation
        
         }
         
