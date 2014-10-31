@@ -71,6 +71,7 @@
 		70DF05BE1A0310940068B128 /* 我的收藏按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = 70DF05B41A0310940068B128 /* 我的收藏按钮.png */; };
 		70DF05BF1A0310940068B128 /* 我的收藏按钮2.png in Resources */ = {isa = PBXBuildFile; fileRef = 70DF05B51A0310940068B128 /* 我的收藏按钮2.png */; };
 		70DF05C11A0310940068B128 /* 主页按钮灰色.png in Resources */ = {isa = PBXBuildFile; fileRef = 70DF05B71A0310940068B128 /* 主页按钮灰色.png */; };
+		70F3E40A1A031FCC0051C276 /* kurumi.png in Resources */ = {isa = PBXBuildFile; fileRef = 70F3E4091A031FCC0051C276 /* kurumi.png */; };
 		FF14D5532EC153A88182F49D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6404A3F56B88EBB2765C06C6 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -234,6 +235,7 @@
 		70DF05B41A0310940068B128 /* 我的收藏按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的收藏按钮.png"; sourceTree = "<group>"; };
 		70DF05B51A0310940068B128 /* 我的收藏按钮2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的收藏按钮2.png"; sourceTree = "<group>"; };
 		70DF05B71A0310940068B128 /* 主页按钮灰色.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "主页按钮灰色.png"; sourceTree = "<group>"; };
+		70F3E4091A031FCC0051C276 /* kurumi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kurumi.png; sourceTree = "<group>"; };
 		93859835CC3B67695617653F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -370,6 +372,7 @@
 		5742032419C8CF2000A84191 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				70F3E4091A031FCC0051C276 /* kurumi.png */,
 				70DF05AE1A0310940068B128 /* 附近商店橙色.png */,
 				70DF05AF1A0310940068B128 /* 附近商店灰色.png */,
 				70DF05B01A0310940068B128 /* 格式按钮灰色.png */,
@@ -712,6 +715,7 @@
 				5742033119C8CF2100A84191 /* LaunchScreen.xib in Resources */,
 				70DF05BC1A0310940068B128 /* 聊天室按扭橙色.png in Resources */,
 				57F288B71A00306C0026949D /* EaseMob.bundle in Resources */,
+				70F3E40A1A031FCC0051C276 /* kurumi.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
