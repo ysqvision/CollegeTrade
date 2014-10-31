@@ -183,7 +183,7 @@ class DataBaseAPIHelper {
         var userId = LOGGED_IN_USER_INFORMATION!["userId"] as Int
        
         
-        var requestBody = "goodsID=\(goodsID)&address=\(address)&phone=\(phone)&goodsPrice=\(goodsPrice)&UserID=\(userId)&UserSession=0"
+        var requestBody = "goodsID=\(goodsID)&address=\(address)&Phone=\(phone)&goodsPrice=\(goodsPrice)&UserID=\(userId)&UserSession=0"
         let data = requestBody.dataUsingEncoding(NSUTF8StringEncoding)
         request.HTTPBody = data
         // request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)

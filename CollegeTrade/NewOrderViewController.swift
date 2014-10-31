@@ -19,33 +19,40 @@ class NewOrderViewController: UIViewController, UIAlertViewDelegate {
     
     var goodsPrice: Double!
     
-    @IBAction func confirmToBuy(sender: AnyObject) {
+    @IBAction func confirmOrder(sender: AnyObject) {
+        println("here")
+        println(buyerName.text)
         if buyerName.text == "" {
+            println("dkfjssd")
             var myAlert = UIAlertView(title: "错误",
                 message: "收件人姓名不能为空。",
                 delegate: nil,
                 cancelButtonTitle: "取消"
             )
+             myAlert.show()
         } else if telephoneNumber == "" {
             var myAlert = UIAlertView(title: "错误",
                 message: "请提供电话号码。",
                 delegate: nil,
                 cancelButtonTitle: "取消"
             )
-
+             myAlert.show()
+            
         } else if deliveryAddress.text == "" {
             var myAlert = UIAlertView(title: "错误",
                 message: "收件人地址不能为空。",
                 delegate: nil,
                 cancelButtonTitle: "取消"
             )
+            myAlert.show()
         } else if quantity.text.toInt() <= 0 {
-                      var myAlert = UIAlertView(title: "错误",
+            var myAlert = UIAlertView(title: "错误",
                 message: "购买数量要大于0.",
                 delegate: nil,
                 cancelButtonTitle: "取消"
             )
-
+             myAlert.show()
+            
         } else {
             var myAlert = UIAlertView(title: "确认购买",
                 message: "您确定要购买吗。",
@@ -53,15 +60,19 @@ class NewOrderViewController: UIViewController, UIAlertViewDelegate {
                 cancelButtonTitle: "取消",
                 otherButtonTitles: "确认"
             )
-        
+            myAlert.show()
+            
         }
+
     }
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         
     }
     
     func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+        println("here")
         if buttonIndex == alertView.cancelButtonIndex {
             
         } else {
