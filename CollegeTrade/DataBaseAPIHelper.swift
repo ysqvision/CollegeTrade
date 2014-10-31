@@ -173,6 +173,67 @@ class DataBaseAPIHelper {
 
     }
     
+    class func buyItem(goodsID: String, address: String, phone: String, goodsPrice: String, buySuccess: (success: Bool) ->()) {
+        var request = NSMutableURLRequest(URL: NSURL(string: "http://14.29.65.186:9090/SpiriiitTradeServer/user-buyGoods"))
+        var session = NSURLSession.sharedSession()
+        request.HTTPMethod = "POST"
+        var timestamp = NSDate().timeIntervalSince1970 * 1000
+        var type = 0
+        
+        var userId = LOGGED_IN_USER_INFORMATION!["userId"] as Int
+       
+        
+        var requestBody = "goodsID=\(goodsID)&address=\(address)&phone=\(phone)&goodsPrice=\(goodsPrice)&UserID=\(userId)&UserSession=0"
+        let data = requestBody.dataUsingEncoding(NSUTF8StringEncoding)
+        request.HTTPBody = data
+        // request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)
+        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        print(NSString(data:request.HTTPBody!, encoding: NSUTF8StringEncoding))
+        
+        var task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
+            println("Response: \(response)")
+            println(error)
+            var strData = NSString(data: data, encoding: NSUTF8StringEncoding)
+            println("Body: \(strData)")
+            var err: NSError?
+            var json = NSJSONSerialization.JSONObjectWithData(data, options: .MutableLeaves, error: &err) as? NSDictionary
+            
+            // Did the JSONObjectWithData constructor return an error? If so, log the error to the console
+            if(err != nil) {
+                println(err!.localizedDescription)
+                let jsonStr = NSString(data: data, encoding: NSUTF8StringEncoding)
+                println("Error could not parse JSON: '\(jsonStr)'")
+                buySuccess(success: false)
+                return
+            }
+            else {
+                // The JSONObjectWithData constructor didn't return an error. But, we should still
+                // check and make sure that json has a value using optional binding.
+                if let parseJSON = json {
+                    // Okay, the parsedJSON is here, let's get the value for 'success' out of it
+                    var code = parseJSON["Status"] as? Int
+                    if code == 101 {
+                        buySuccess(success: true)
+                        return
+                    }
+                    else {
+                        buySuccess(success: false)
+                        return
+                    }
+                }
+                else {
+                    // Woa, okay the json object was nil, something went worng. Maybe the server isn't running?
+                    let jsonStr = NSString(data: data, encoding: NSUTF8StringEncoding)
+                    println("Error could not parse JSON: \(jsonStr)")
+                    buySuccess(success: false)
+                    return
+                }
+            }
+        })
+        task.resume()
+
+    }
     
     class func postItem(name: String, description: String, images: [String], price: String, quantity: String, postSuccess: (success: Bool) -> ()) {
         // Check if username and password pass
@@ -187,7 +248,7 @@ class DataBaseAPIHelper {
         var joinedPaths = ",".join(images)
         var imageData: String = "\(joinedPaths)"
         
-        var requestBody = "goodsName=\(name)&goodsDescription=\(description)&goodsImage=\(imageData)&newestTimestamp=\(timestamp)&type=\(type)&userId=\(userId)&schoolId=0&specialPrice=0"
+        var requestBody = "goodsName=\(name)&goodsDescription=\(description)&goodsImage=\(imageData)&newestTimestamp=\(timestamp)&price=\(price)&type=\(type)&userId=\(userId)&schoolId=0&specialPrice=0&categoryGoodsId=0&goodsInventory=\(quantity)"
         let data = requestBody.dataUsingEncoding(NSUTF8StringEncoding)
         request.HTTPBody = data
         // request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)
@@ -218,7 +279,6 @@ class DataBaseAPIHelper {
                     // Okay, the parsedJSON is here, let's get the value for 'success' out of it
                     var code = parseJSON["Status"] as? Int
                     if code == 101 {
-                        println("Setting status to be true")
                         postSuccess(success: true)
                         return
                     }

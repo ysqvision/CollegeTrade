@@ -12,7 +12,7 @@ import UIKit
 class ItemDetailViewController: UIViewController {
     
     //@IBOutlet weak var moreButton: UIButton!
-    var item: ItemForSell!
+    var item: NSDictionary!
     var imageUrl: [String]!
     var firstImage: UIImage!
     
@@ -23,17 +23,31 @@ class ItemDetailViewController: UIViewController {
     @IBOutlet var imagesScrollView: UIScrollView!
     @IBOutlet weak var itemName: UILabel!
     
+    @IBOutlet var itemQuantity: UILabel!
     
     @IBOutlet weak var itemPrice: UILabel!
     
     
+    @IBOutlet var itemDescription: UITextView!
+    @IBOutlet var sellerNickName: UILabel!
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
+        
+        var title = item["goodsName"] as NSString
+        var price = item["price"] as Double
+       // var quantity = item["goodsInventory"] as Int
+        //var sellerName = item["username"] as String
+        var description = item["goodsDescription"] as String
+        var imageUrlString = item["goodsImage"] as String
+        var imageUrl = imageUrlString.componentsSeparatedByString(imageUrlString)
+       // var item = ItemForSell(title: title, price: price, description: description, imageUrl: imageUrl)
+
         imagesScrollView.scrollEnabled = true
         imagesScrollView.userInteractionEnabled = true
         imagesScrollView.showsVerticalScrollIndicator = true
         
-        for i in 0...item.imageUrl.count - 1 {
+        for i in 0...imageUrl.count - 1 {
             var position = CGFloat(i * 100.0)
             let imageView = UIImageView(frame: (CGRectMake(0, position, 100, 100)))
             imageView.image = UIImage(named:"randomcat1.png")
@@ -41,8 +55,8 @@ class ItemDetailViewController: UIViewController {
             imagesScrollView.addSubview(imageView)
         }
         
-        for i in 0...item.imageUrl.count - 1 {
-            var url = item.imageUrl[i]
+        for i in 0...imageUrl.count - 1 {
+            var url = imageUrl[i]
             if (imageSet[url] != nil) {
                 imageViewSet[i].image = imageSet[url]
             } else {
@@ -72,8 +86,12 @@ class ItemDetailViewController: UIViewController {
         }
         
         
-        itemName.text = "名称： \(self.item.title)"
-        itemPrice.text = "价格： \(self.item.price)"
+        itemName.text = "\(title)"
+        itemPrice.text = "\(price)"
+       // itemQuantity.text = "\(quantity)"
+      //  sellerNickName.text = sellerName
+        itemDescription.text = description
+        
     }
         override func viewDidLoad() {
         super.viewDidLoad()
@@ -136,6 +154,14 @@ class ItemDetailViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowNewOrderViewSegue" {
+            var newOrderViewController: NewOrderViewController = segue.destinationViewController as NewOrderViewController
+            newOrderViewController.goodsId = item["goodsId"] as Int
+            newOrderViewController.goodsPrice = item["price"] as Double
+        }
     }
     
     

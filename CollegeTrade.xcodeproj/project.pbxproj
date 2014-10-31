@@ -327,6 +327,7 @@
 				5731621919FEC0CB00F17821 /* Constants.swift */,
 				57908E0819F741D900179925 /* DataBaseAPIHelper.swift */,
 				57F288561A00306C0026949D /* EaseMobSDK */,
+				577E4BBD1A030190004B1111 /* EditItemViewController.swift */,
 				57ACA0761A006C5400A88172 /* FriendListAPIController.swift */,
 				57F28B051A00507F0026949D /* FriendListViewController.swift */,
 				57D837881A017AB50078760C /* FriendRequestViewController.swift */,
@@ -362,7 +363,6 @@
 				704E76571A0082CC0057EE39 /* UserSettingTableViewController.swift */,
 				709D7D6519ECC2BD0037A03C /* UserSettingViewController.swift */,
 				5779465E19FF4D8000B2512F /* UserStoreHomePageViewController.swift */,
-				577E4BBD1A030190004B1111 /* EditItemViewController.swift */,
 			);
 			path = CollegeTrade;
 			sourceTree = "<group>";

@@ -96,22 +96,24 @@ class UserStoreHomePageViewController: UIViewController, UITableViewDataSource, 
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier != "NewItemForSellSegue" && segue.identifier != "ShowLoginScreenFromUserStore") {
+        if (segue.identifier != "ShowNewItemForSellViewSegue" && segue.identifier != "ShowLoginScreenFromUserStore") {
+            println(segue.identifier)
             var itemDetailViewController: ItemDetailViewController = segue.destinationViewController as ItemDetailViewController
             var itemIndex = itemsTable!.indexPathForSelectedRow()!.row;
             var selectedItem = self.itemsForSell[itemIndex] as NSDictionary
-            var title = selectedItem["goodsName"] as NSString
-            var price = selectedItem["price"] as Double
-            var description = selectedItem["goodsDescription"] as String
-            var imageUrlString = selectedItem["goodsImage"] as String
-            var imageUrl = imageUrlString.componentsSeparatedByString(imageUrlString)
-            var item = ItemForSell(title: title, price: price, description: description, imageUrl: imageUrl)
-            itemDetailViewController.item = item
+                        itemDetailViewController.item = selectedItem
         
         }
-        if segue.identifier == "NewItemForSellSegue" {
+        if segue.identifier == "ShowNewItemForSellViewSegue" {
             var newItemForSellViewController: NewItemForSellViewController = segue.destinationViewController as NewItemForSellViewController
             newItemForSellViewController.delegate = self
+        } else if segue.identifier == "ShowEditItemViewSegue" {
+            
+            var itemEditViewController: EditItemViewController = segue.destinationViewController as EditItemViewController
+            var itemIndex = itemsTable!.indexPathForSelectedRow()!.row;
+            var selectedItem = self.itemsForSell[itemIndex] as NSDictionary
+            itemEditViewController.itemToEdit = selectedItem
+            
         }
     }
 

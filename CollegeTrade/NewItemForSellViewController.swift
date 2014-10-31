@@ -13,7 +13,7 @@ protocol postNewItemProtocol {
     func didPostNewItem()
 }
 
-class NewItemForSellViewController: UIViewController, selectedPictureDelegate, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
+class NewItemForSellViewController: UIViewController, selectedPictureDelegate, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate {
     
     var delegate: postNewItemProtocol!
     
@@ -73,7 +73,10 @@ class NewItemForSellViewController: UIViewController, selectedPictureDelegate, U
         DataBaseAPIHelper.postItem(name, description: description, images: imagePathSet, price: price, quantity: quantity) { (success: Bool) -> () in
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 if success {
-                    
+                    var myAlert = UIAlertView(title: "上传成功",
+                        message: "新物品发表成功！",
+                        delegate: self, cancelButtonTitle: "确认")
+                    myAlert.show()
                     self.dismissViewControllerAnimated(true, completion: nil)
                     
                     // upload images
@@ -180,6 +183,10 @@ class NewItemForSellViewController: UIViewController, selectedPictureDelegate, U
         cell.imageView?.image = imageSet[indexPath.row]
         return cell
 
+    }
+    
+    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+       self.navigationController?.popViewControllerAnimated(true)
     }
 
 }

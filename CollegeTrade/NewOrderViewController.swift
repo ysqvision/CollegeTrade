@@ -15,6 +15,10 @@ class NewOrderViewController: UIViewController, UIAlertViewDelegate {
     @IBOutlet var telephoneNumber: UITextField!
     @IBOutlet var buyerName: UITextField!
     
+    var goodsId: Int!
+    
+    var goodsPrice: Double!
+    
     @IBAction func confirmToBuy(sender: AnyObject) {
         if buyerName.text == "" {
             var myAlert = UIAlertView(title: "错误",
@@ -61,7 +65,7 @@ class NewOrderViewController: UIViewController, UIAlertViewDelegate {
         if buttonIndex == alertView.cancelButtonIndex {
             
         } else {
-            OrderAPIHelper.addOrder("userid", userSession: "session", goodId: "goodId", address: deliveryAddress.text, phone: telephoneNumber.text, name: buyerName.text, quantity: quantity.text.toInt()!){ (success: Bool) -> () in
+            DataBaseAPIHelper.buyItem("\(goodsId)", address: deliveryAddress.text, phone: telephoneNumber.text, goodsPrice: "\(goodsPrice)"){ (success: Bool) -> () in
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     if success {
                         var myAlert = UIAlertView(title: "成功",
