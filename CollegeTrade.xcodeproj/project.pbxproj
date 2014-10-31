@@ -56,6 +56,9 @@
 		57F28B061A00507F0026949D /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F28B051A00507F0026949D /* FriendListViewController.swift */; };
 		57FA4B6A19E35DAC00BBC5FD /* ItemForSell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FA4B6919E35DAC00BBC5FD /* ItemForSell.swift */; };
 		704E76581A0082CC0057EE39 /* UserSettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704E76571A0082CC0057EE39 /* UserSettingTableViewController.swift */; };
+		709622431A0325C100961466 /* clannad.png in Resources */ = {isa = PBXBuildFile; fileRef = 709622401A0325C100961466 /* clannad.png */; };
+		709622441A0325C100961466 /* fatezero.png in Resources */ = {isa = PBXBuildFile; fileRef = 709622411A0325C100961466 /* fatezero.png */; };
+		709622451A0325C100961466 /* madoka.png in Resources */ = {isa = PBXBuildFile; fileRef = 709622421A0325C100961466 /* madoka.png */; };
 		709D7D6619ECC2BD0037A03C /* UserSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709D7D6519ECC2BD0037A03C /* UserSettingViewController.swift */; };
 		70D7785819E36C6400437988 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D7785719E36C6400437988 /* UserProfileViewController.swift */; };
 		70D819B619F7487C0092CBAF /* SwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D819B519F7487C0092CBAF /* SwitchCell.swift */; };
@@ -220,6 +223,9 @@
 		57FA4B6919E35DAC00BBC5FD /* ItemForSell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemForSell.swift; sourceTree = "<group>"; };
 		6404A3F56B88EBB2765C06C6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		704E76571A0082CC0057EE39 /* UserSettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettingTableViewController.swift; sourceTree = "<group>"; };
+		709622401A0325C100961466 /* clannad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clannad.png; sourceTree = "<group>"; };
+		709622411A0325C100961466 /* fatezero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fatezero.png; sourceTree = "<group>"; };
+		709622421A0325C100961466 /* madoka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = madoka.png; sourceTree = "<group>"; };
 		709D7D6519ECC2BD0037A03C /* UserSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettingViewController.swift; sourceTree = "<group>"; };
 		70D7785719E36C6400437988 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		70D819B519F7487C0092CBAF /* SwitchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchCell.swift; sourceTree = "<group>"; };
@@ -374,6 +380,9 @@
 			children = (
 				70F3E4091A031FCC0051C276 /* kurumi.png */,
 				70DF05AE1A0310940068B128 /* 附近商店橙色.png */,
+				709622401A0325C100961466 /* clannad.png */,
+				709622411A0325C100961466 /* fatezero.png */,
+				709622421A0325C100961466 /* madoka.png */,
 				70DF05AF1A0310940068B128 /* 附近商店灰色.png */,
 				70DF05B01A0310940068B128 /* 格式按钮灰色.png */,
 				70DF05B11A0310940068B128 /* 个人界面按钮橙色.png */,
@@ -711,11 +720,14 @@
 				70D819BC19F752770092CBAF /* randomcat1.png in Resources */,
 				70DF05BE1A0310940068B128 /* 我的收藏按钮.png in Resources */,
 				70DF05B91A0310940068B128 /* 附近商店灰色.png in Resources */,
+				709622451A0325C100961466 /* madoka.png in Resources */,
 				70DF05BD1A0310940068B128 /* 聊天室按钮灰色.png in Resources */,
 				5742033119C8CF2100A84191 /* LaunchScreen.xib in Resources */,
 				70DF05BC1A0310940068B128 /* 聊天室按扭橙色.png in Resources */,
 				57F288B71A00306C0026949D /* EaseMob.bundle in Resources */,
+				709622441A0325C100961466 /* fatezero.png in Resources */,
 				70F3E40A1A031FCC0051C276 /* kurumi.png in Resources */,
+				709622431A0325C100961466 /* clannad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
