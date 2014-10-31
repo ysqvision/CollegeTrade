@@ -10,6 +10,73 @@ import Foundation
 
 class DataBaseAPIHelper {
     
+    class func getUserInformation(userId: Int!, getUserInformationSuccess: (success: Bool, data: NSDictionary?) -> ()) {
+     
+        
+        // Check if username and password pass
+        var request = NSMutableURLRequest(URL: NSURL(string: "http://14.29.65.186:9090/SpiriiitTradeServer/user-getUserListByUserID"))
+        var session = NSURLSession.sharedSession()
+        request.HTTPMethod = "POST"
+        
+        var requestBody = "userID=\(userId)"
+        let data = requestBody.dataUsingEncoding(NSUTF8StringEncoding)
+        request.HTTPBody = data
+        // request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)
+        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        print(NSString(data:request.HTTPBody!, encoding: NSUTF8StringEncoding))
+        
+        var task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
+            println("Response: \(response)")
+            println(error)
+            var strData = NSString(data: data, encoding: NSUTF8StringEncoding)
+            println("Body: \(strData)")
+            var err: NSError?
+            var json = NSJSONSerialization.JSONObjectWithData(data, options: .MutableLeaves, error: &err) as? NSDictionary
+            
+            // Did the JSONObjectWithData constructor return an error? If so, log the error to the console
+            if(err != nil) {
+                println(err!.localizedDescription)
+                let jsonStr = NSString(data: data, encoding: NSUTF8StringEncoding)
+                println("Error could not parse JSON: '\(jsonStr)'")
+                getUserInformationSuccess(success: false, data: nil)
+                return
+            }
+            else {
+                // The JSONObjectWithData constructor didn't return an error. But, we should still
+                // check and make sure that json has a value using optional binding.
+                if let parseJSON = json {
+                    // Okay, the parsedJSON is here, let's get the value for 'success' out of it
+                    var code = parseJSON["Status"] as? Int
+        
+                    if code == 101 {
+                        var body = parseJSON["data"] as? NSArray
+                        
+                        var data = body![0] as? NSDictionary
+                     
+                        getUserInformationSuccess(success: true, data:data)
+                        return
+                    }
+                    else {
+                        getUserInformationSuccess(success: false, data: nil)
+                        return
+                    }
+                }
+                else {
+                    // Woa, okay the json object was nil, something went worng. Maybe the server isn't running?
+                    let jsonStr = NSString(data: data, encoding: NSUTF8StringEncoding)
+                    println("Error could not parse JSON: \(jsonStr)")
+                    getUserInformationSuccess(success: false, data: nil)
+                    return
+                }
+            }
+        })
+        task.resume()
+        
+    }
+    
+    
+    
     class func userSignUp (username: String, password: String, loginSuccess: (success: Bool) -> ()){
         println("here")
         var request = NSMutableURLRequest(URL: NSURL(string: "http://14.29.65.186:9090/SpiriiitTradeServer/user-register"))
@@ -72,46 +139,7 @@ class DataBaseAPIHelper {
     }
 
     class func checkLoginCredential(username: String, password: String, loginSuccess: (success: Bool) -> ()) {
-        /*
-        var parameter: [String: String] = ["username": username, "password": password]
-        let manager = AFHTTPRequestOperationManager()
-        manager.POST("http://14.29.65.186:9090/SpiriiitTradeServer/user-login", parameters: parameter,
-            success: { operation, response in
-                
-                println(response)
-                
-                let responseString: String = "\(response)"
-                var responseData: NSData = responseString.dataUsingEncoding(NSUTF8StringEncoding)!
-                
-                var err: NSError?
-                var jsonResponse = NSJSONSerialization.JSONObjectWithData(responseData, options: .MutableLeaves, error: &err) as? NSDictionary
-                if (err != nil) {
-                    loginSuccess(success: false)
-                    return
-                }
-                
-                if let parsedJSON = jsonResponse {
-                    var code = parsedJSON["Status"] as? Int
-                    if code == 101 {
-                        //var url = parsedJSON["url"] as NSString
-                        loginSuccess(success: true)
-                        return
-                    }
-                    else {
-                        loginSuccess(success: false)
-                        return
-                    }
-                }
-                
-            },
-            failure: {operation, error in
-                println(error)
-                loginSuccess(success: false)
-            }
-        )
-*/
-        
-        // Check if username and password pass
+               // Check if username and password pass
         var request = NSMutableURLRequest(URL: NSURL(string: "http://14.29.65.186:9090/SpiriiitTradeServer/user-login"))
         var session = NSURLSession.sharedSession()
         request.HTTPMethod = "POST"
@@ -153,6 +181,10 @@ class DataBaseAPIHelper {
                         var body = parseJSON["data"] as? NSArray
                         USER_IS_LOGGED_IN = true
                         LOGGED_IN_USER_INFORMATION = body![1] as? NSDictionary
+                        LOGGED_IN_USER_POINT = LOGGED_IN_USER_INFORMATION!["point"] as? Int
+                        LOGGED_IN_USER_PHONE = LOGGED_IN_USER_INFORMATION!["phoneNumber"] as? Int
+                        LOGGED_IN_USER_ADDRESS = LOGGED_IN_USER_INFORMATION!["userAddress"] as? String
+                        LOGGED_IN_USER_NICKNAME = LOGGED_IN_USER_INFORMATION!["nickName"] as? String
                         if LOGGED_IN_USER_IMAGE == nil {
                             var imgURL: NSURL = NSURL(string: LOGGED_IN_USER_INFORMATION!["userImage"] as NSString)
                             
@@ -394,7 +426,10 @@ class DataBaseAPIHelper {
         var session = NSURLSession.sharedSession()
         request.HTTPMethod = "POST"
         var requestData = "&".join(data)
+        println("requestData: \(requestData)")
         var requestBody = "id=\(userId)&\(requestData)"
+        println("requestBody: \(requestBody)")
+        println("requestBody: \(requestBody)")
         let data = requestBody.dataUsingEncoding(NSUTF8StringEncoding)
         request.HTTPBody = data
         // request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)

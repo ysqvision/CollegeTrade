@@ -18,7 +18,7 @@ class EditItemViewController: UIViewController {
     
     var itemToEdit: NSDictionary!
     
-    var goodsID: Int!
+    //var goodsID: Int!
    
     @IBAction func updateItemInformation(sender: AnyObject) {
         var price = itemPrice.text as NSString
@@ -41,6 +41,7 @@ class EditItemViewController: UIViewController {
         } else {
             var keyObject = [String: String]()
      
+            var goodsID = itemToEdit["goodsId"] as Int
             DataBaseAPIHelper.updateItem(goodsID, name: itemName.text, description: itemDescription.text, quantity: itemQuantity.text, price: itemPrice.text ) { (success: Bool) -> () in
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     if success {

@@ -24,9 +24,9 @@ class SearchItemAPIController {
         var request = NSMutableURLRequest(URL: NSURL(string: "http://14.29.65.186:9090/SpiriiitTradeServer/user-getGoodsListByName"))
         var session = NSURLSession.sharedSession()
         request.HTTPMethod = "POST"
-        
+        let timestamp = Int(NSDate().timeIntervalSince1970 * 1000)
         //var params = ["username":"b", "password":"2"] as Dictionary<String, String>
-        var requestBody = "GoodsName=\(name)&Flag=0"
+        var requestBody = "GoodsName=\(name)&Flag=0&time=\(timestamp)"
         let data = requestBody.dataUsingEncoding(NSUTF8StringEncoding)
         request.HTTPBody = data
         // request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)

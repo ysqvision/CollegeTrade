@@ -55,8 +55,8 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     //    let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "ItemForSellCell")
         let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("ItemForSellCell") as UITableViewCell
-        let rowDataArray: NSArray = self.itemsForSell[indexPath.row] as NSArray
-        let rowData: NSDictionary = rowDataArray[0] as NSDictionary
+        //let rowDataArray: NSArray = self.itemsForSell[indexPath.row] as NSArray
+        let rowData: NSDictionary = self.itemsForSell[indexPath.row] as NSDictionary
         
         cell.textLabel?.text = rowData["goodsName"] as NSString
         println(rowData["goodsName"])
@@ -76,10 +76,11 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
         cell.imageView?.image = UIImage(named: "randomcat1.png")
       
         //var imagePaths = rowData["goodsImage"] as String
-        if let imagePaths = rowData["goodsImage"] as? [String] {
-        //let imagePathsSet = imagePaths.componentsSeparatedByString(",")
-            if imagePaths.count != 0 {
-                var firstImage = imagePaths[0]
+        if let imagePaths = rowData["goodsImage"] as? String {
+            var imagePathSet = imagePaths.componentsSeparatedByString(",")
+
+            if imagePathSet.count != 0 {
+                var firstImage = imagePathSet[0]
                 var image = imageCache[firstImage]
                 if( image == nil ) {
                     // If the image does not exist, we need to download it
@@ -129,19 +130,19 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
         if (segue.identifier == "ShowItemDetailViewSegue") {
             var itemDetailViewController: ItemDetailViewController = segue.destinationViewController as ItemDetailViewController
             var itemIndex = itemsTable!.indexPathForSelectedRow()!.row;
-            var selectedItemSet = self.itemsForSell[itemIndex] as NSArray
-            var selectedItem = selectedItemSet[0] as NSDictionary
-            var title = selectedItem["goodsName"] as NSString
-            var price = selectedItem["price"] as Double
-            var description = selectedItem["goodsDescription"] as String
-            println(selectedItem["goodsImage"])
-            var imageUrlString = selectedItem["goodsImage"] as String
-            println(imageUrlString)
-            var imageUrl = imageUrlString.componentsSeparatedByString(",")
+            //var selectedItemSet = self.itemsForSell[itemIndex] as NSArray
+            var selectedItem = self.itemsForSell[itemIndex]  as NSDictionary
+            //var title = selectedItem["goodsName"] as NSString
+            //var price = selectedItem["price"] as Double
+            //var description = selectedItem["goodsDescription"] as String
+            //println(selectedItem["goodsImage"])
+            //var imageUrlString = selectedItem["goodsImage"] as String
+            ///println(imageUrlString)
+            //var imageUrl = imageUrlString.componentsSeparatedByString(",")
            // var item = ItemForSell(title: title, price: price, description: description, imageUrl: imageUrl)
             itemDetailViewController.item = selectedItem
-            var additionalInformation = selectedItemSet[1] as NSDictionary
-            itemDetailViewController.item = additionalInformation
+          //  var additionalInformation = selectedItemSet[1] as NSDictionary
+         //   itemDetailViewController.item = additionalInformation
        
         }
         
@@ -152,6 +153,7 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
             self.itemsForSell = resultsArr
             println(self.itemsForSell)
             self.itemsTable!.reloadData()
+            self.activityIndicator.stopAnimating()
         })
     }
     

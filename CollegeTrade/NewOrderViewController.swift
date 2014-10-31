@@ -52,15 +52,20 @@ class NewOrderViewController: UIViewController, UIAlertViewDelegate {
                 cancelButtonTitle: "取消"
             )
              myAlert.show()
+          
             
-        } else if LOGGED_IN_USER_POINT! < 5 {
+            
+        }
+        /*else if LOGGED_IN_USER_POINT! < 5 {
             var myAlert = UIAlertView(title: "交易失败",
                 message: "您的信用额度已不够完成此次交易。",
                 delegate: nil,
                 cancelButtonTitle: "取消"
             )
             myAlert.show()
+
         }
+*/
         else {
             var myAlert = UIAlertView(title: "确认购买",
                 message: "您确定要购买吗， 将会暂时扣除信用额度5分，交易成功后返还。",

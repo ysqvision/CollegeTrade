@@ -11,6 +11,9 @@ import Foundation
 var USER_IS_LOGGED_IN: Bool = false
 var LOGGED_IN_USER_INFORMATION: NSDictionary? = nil
 var LOGGED_IN_USER_POINT: Int?
+var LOGGED_IN_USER_NICKNAME: String?
+var LOGGED_IN_USER_ADDRESS: String?
+var LOGGED_IN_USER_PHONE: Int?
 
 var LOGGED_IN_USER_IMAGE: UIImage?
 var LOGGED_IN_USER_STORE_IMAGE: UIImage?

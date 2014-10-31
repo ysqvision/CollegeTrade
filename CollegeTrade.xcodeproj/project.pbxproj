@@ -11,6 +11,7 @@
 		5731621C19FEC10500F17821 /* UpYunHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5731621B19FEC10500F17821 /* UpYunHelper.swift */; };
 		5731621E19FEC2D800F17821 /* SwiftMD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5731621D19FEC2D800F17821 /* SwiftMD5.swift */; };
 		573B95911A035F5900352625 /* UserDetailedInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573B95901A035F5900352625 /* UserDetailedInformationViewController.swift */; };
+		573B95931A04026000352625 /* EditUserDetailInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573B95921A04026000352625 /* EditUserDetailInformationViewController.swift */; };
 		5742032719C8CF2000A84191 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742032619C8CF2000A84191 /* AppDelegate.swift */; };
 		5742032919C8CF2000A84191 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742032819C8CF2000A84191 /* LoginViewController.swift */; };
 		5742032C19C8CF2000A84191 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5742032A19C8CF2000A84191 /* Main.storyboard */; };
@@ -96,6 +97,7 @@
 		5731621D19FEC2D800F17821 /* SwiftMD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftMD5.swift; sourceTree = "<group>"; };
 		5731622019FEC4AB00F17821 /* CollegeTrade-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CollegeTrade-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		573B95901A035F5900352625 /* UserDetailedInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailedInformationViewController.swift; sourceTree = "<group>"; };
+		573B95921A04026000352625 /* EditUserDetailInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditUserDetailInformationViewController.swift; sourceTree = "<group>"; };
 		5742032119C8CF2000A84191 /* CollegeTrade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollegeTrade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5742032519C8CF2000A84191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5742032619C8CF2000A84191 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -372,6 +374,7 @@
 				70D7785719E36C6400437988 /* UserProfileViewController.swift */,
 				704E76571A0082CC0057EE39 /* UserSettingTableViewController.swift */,
 				573B95901A035F5900352625 /* UserDetailedInformationViewController.swift */,
+				573B95921A04026000352625 /* EditUserDetailInformationViewController.swift */,
 				709D7D6519ECC2BD0037A03C /* UserSettingViewController.swift */,
 				5779465E19FF4D8000B2512F /* UserStoreHomePageViewController.swift */,
 			);
@@ -803,6 +806,7 @@
 				70DF05AB1A0200870068B128 /* SwipePageViewController.swift in Sources */,
 				57ACA0771A006C5400A88172 /* FriendListAPIController.swift in Sources */,
 				5731621E19FEC2D800F17821 /* SwiftMD5.swift in Sources */,
+				573B95931A04026000352625 /* EditUserDetailInformationViewController.swift in Sources */,
 				57E52D7E19EE14AF00D33DE3 /* TakePhotoViewController.swift in Sources */,
 				577E4BBC1A01F2B4004B1111 /* StoreHomePageViewController.swift in Sources */,
 				57F288551A0020500026949D /* PagedImageScrollView.m in Sources */,

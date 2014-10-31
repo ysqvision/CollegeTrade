@@ -14,7 +14,7 @@ class ItemDetailViewController: UIViewController {
     //@IBOutlet weak var moreButton: UIButton!
     var item: NSDictionary!
     
-    var additionItemInformation: NSDictionary!
+    //var additionItemInformation: NSDictionary!
     var imageUrl: [String]!
     var firstImage: UIImage!
     
@@ -38,11 +38,14 @@ class ItemDetailViewController: UIViewController {
         
         var title = item["goodsName"] as NSString
         var price = item["price"] as Double
-       // var quantity = item["goodsInventory"] as Int
+        var quantity = item["goodsInventory"] as Int
         //var sellerName = item["username"] as String
         var description = item["goodsDescription"] as String
         var imageUrlString = item["goodsImage"] as String
-        var imageUrl = imageUrlString.componentsSeparatedByString(imageUrlString)
+        
+        var imageUrl = imageUrlString.componentsSeparatedByString(",")
+     
+        println("imageUrl: \(imageUrl)")
        // var item = ItemForSell(title: title, price: price, description: description, imageUrl: imageUrl)
 
         imagesScrollView.scrollEnabled = true
@@ -63,7 +66,7 @@ class ItemDetailViewController: UIViewController {
                 imageViewSet[i].image = imageSet[url]
             } else {
                 var imgURL: NSURL = NSURL(string: url)
-                
+                println("url: \(imgURL)")
                 // Download an NSData representation of the image at the URL
                 let request: NSURLRequest = NSURLRequest(URL: imgURL)
                 NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {(response: NSURLResponse!,data: NSData!,error: NSError!) -> Void in
@@ -90,7 +93,7 @@ class ItemDetailViewController: UIViewController {
         
         itemName.text = "\(title)"
         itemPrice.text = "\(price)"
-       // itemQuantity.text = "\(quantity)"
+       itemQuantity.text = "\(quantity)"
       //  sellerNickName.text = sellerName
         itemDescription.text = description
         

@@ -9,9 +9,36 @@
 import Foundation
 
 
-class UserDetailedInformationViewController: UITableViewController, selectedPictureDelegate {
+class UserDetailedInformationViewController: UITableViewController, selectedPictureDelegate, EditUserDetailInformationProtocol {
     @IBOutlet var userImage: UIImageView!
     var isUserImage = false
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if (indexPath.row == 1 || indexPath.row == 4 || indexPath.row == 5) {
+            performSegueWithIdentifier("ShowEditUserDetailInformationViewSegue", sender: self)
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ShowEditUserDetailInformationViewSegue" {
+            var editViewController: EditUserDetailInformationViewController = segue.destinationViewController as EditUserDetailInformationViewController
+            var index = self.tableView.indexPathForSelectedRow()!.row;
+            var cell = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: index, inSection: 0)) as UITableViewCell?
+            editViewController.originalValue = cell?.detailTextLabel!.text
+            if index == 1 {
+                editViewController.field = "nickName"
+            } else if index == 4 {
+                 editViewController.field = "phoneNumber"
+            } else if index == 5 {
+                editViewController.field = "userAddress"
+            }
+            
+            
+        }
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,10 +50,10 @@ class UserDetailedInformationViewController: UITableViewController, selectedPict
       //  var storeNameCell = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 4, inSection: 0)) as UITableViewCell?
 
         var userName = LOGGED_IN_USER_INFORMATION!["userName"] as NSString
-        println(LOGGED_IN_USER_INFORMATION)
+  
         userNameCell!.detailTextLabel?.text = userName
-        nickNameCell!.detailTextLabel?.text = LOGGED_IN_USER_INFORMATION!["nickName"] as NSString
-        pointCell!.detailTextLabel?.text = "\(LOGGED_IN_USER_POINT)"
+        nickNameCell!.detailTextLabel?.text = LOGGED_IN_USER_NICKNAME
+        pointCell!.detailTextLabel?.text = "\(LOGGED_IN_USER_POINT!)"
         
         var userImageCell = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 2, inSection: 0)) as UITableViewCell?
         var xLocation = userImageCell?.bounds.width
@@ -59,6 +86,12 @@ class UserDetailedInformationViewController: UITableViewController, selectedPict
         }
         storeImageCell?.addSubview(userImageButton)
         */
+        
+        
+        var phoneNumberCell = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 4, inSection: 0)) as UITableViewCell?
+        phoneNumberCell!.detailTextLabel?.text = "\(LOGGED_IN_USER_PHONE!)"
+        var addressCell = self.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 5, inSection: 0)) as UITableViewCell?
+        addressCell!.detailTextLabel?.text = LOGGED_IN_USER_ADDRESS
         
     }
     
@@ -128,6 +161,10 @@ class UserDetailedInformationViewController: UITableViewController, selectedPict
         }
         self.tableView.reloadData()
         
+    }
+    
+    func didModifyInformation(field: String!, value: String!) {
+        self.tableView.reloadData()
     }
     
 }
