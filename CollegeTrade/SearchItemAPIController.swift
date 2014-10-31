@@ -139,6 +139,7 @@ class SearchItemAPIController {
         let date = NSDate()
         let timestamp = Int(date.timeIntervalSince1970 * 1000)
         var requestBody = "UserId=\(userId)&Time=\(timestamp)&Flag=0&Count=1000"
+        println("requestBody: \(requestBody)")
         let data = requestBody.dataUsingEncoding(NSUTF8StringEncoding)
         request.HTTPBody = data
         // request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)

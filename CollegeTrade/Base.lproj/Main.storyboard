@@ -1251,12 +1251,18 @@
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="204" y="94" width="160" height="30"/>
+                                </variation>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="950" verticalCompressionResistancePriority="950" text="输入用户名：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcs-dl-8ws">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="36" y="97" width="160" height="24"/>
+                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPo-kE-Vih">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1266,6 +1272,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="88" y="174" width="200" height="36"/>
+                                </variation>
                                 <connections>
                                     <action selector="addFriend:" destination="W27-Eu-A5B" eventType="touchUpInside" id="ff4-QZ-YOp"/>
                                 </connections>
@@ -1495,12 +1504,15 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="OOD-1p-9Ua" kind="show" id="Zja-L7-Vei"/>
+                                            <segue destination="hR2-eL-RHv" kind="show" identifier="ShowOrderListSegue" id="z2h-y9-oHF"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle=" " id="9hj-vO-B9d">
+                                <cells/>
+                            </tableViewSection>
+                            <tableViewSection headerTitle=" " id="k7V-te-QIk">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="urn-tR-Vxy" style="IBUITableViewCellStyleDefault" id="jgB-ad-Tzl">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -1594,10 +1606,10 @@
             </objects>
             <point key="canvasLocation" x="7008" y="3206"/>
         </scene>
-        <!--Table View Controller-->
+        <!--User Detailed Information View Controller-->
         <scene sceneID="LkT-zv-xnX">
             <objects>
-                <tableViewController id="P03-53-r9y" sceneMemberID="viewController">
+                <tableViewController id="P03-53-r9y" customClass="UserDetailedInformationViewController" customModule="CollegeTrade" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="api-W0-kMP">
                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1844,6 +1856,9 @@
                             <outlet property="delegate" destination="P03-53-r9y" id="d5b-ZA-qmP"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="userImage" destination="kgH-xn-GUJ" id="Hus-HM-r2h"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ej-Qm-UqN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3173,10 +3188,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="884-yj-daG"/>
-        <segue reference="VH3-tI-kBI"/>
+        <segue reference="zd9-Lw-DF0"/>
+        <segue reference="z2h-y9-oHF"/>
         <segue reference="8QW-V6-kwt"/>
         <segue reference="USg-eL-ooG"/>
-        <segue reference="zGh-vy-Oep"/>
+        <segue reference="884-yj-daG"/>
     </inferredMetricsTieBreakers>
 </document>

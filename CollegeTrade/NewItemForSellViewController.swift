@@ -173,8 +173,6 @@ class NewItemForSellViewController: UIViewController, selectedPictureDelegate, U
             imagePathSetForUpyun.append("\(currentTime).jpg")
         }
         
-        
-        
         self.imageTable.reloadData()
         
     }

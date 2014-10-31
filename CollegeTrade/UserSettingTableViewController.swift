@@ -22,6 +22,9 @@ class UserSettingTableViewController: UITableViewController {
             KeychainService.removeToken("SPIRIIITCOLLEGETRADEPASSWORD", token: storedPass!)
             USER_IS_LOGGED_IN = false
             LOGGED_IN_USER_INFORMATION = nil
+            LOGGED_IN_USER_POINT = nil
+            LOGGED_IN_USER_IMAGE = nil
+            LOGGED_IN_USER_STORE_IMAGE = nil
             let storyBoard = UIStoryboard(name: "Main", bundle:nil)
             
             /*
@@ -32,7 +35,9 @@ class UserSettingTableViewController: UITableViewController {
         }
     }
     
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        println("here")
         if segue.identifier == "ShowUserStoreSegue" {
                println("herer1")
             var storeViewController: UserStoreHomePageViewController = segue.destinationViewController as UserStoreHomePageViewController
@@ -41,5 +46,6 @@ class UserSettingTableViewController: UITableViewController {
             storeViewController.storeId = 1
         }
     }
+    
     
 }

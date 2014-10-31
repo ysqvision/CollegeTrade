@@ -151,7 +151,41 @@ class DataBaseAPIHelper {
                     if code == 101 {
                         println("Setting status to be true")
                         var body = parseJSON["data"] as? NSArray
+                        USER_IS_LOGGED_IN = true
                         LOGGED_IN_USER_INFORMATION = body![1] as? NSDictionary
+                        if LOGGED_IN_USER_IMAGE == nil {
+                            var imgURL: NSURL = NSURL(string: LOGGED_IN_USER_INFORMATION!["userImage"] as NSString)
+                            
+                            // Download an NSData representation of the image at the URL
+                            let request: NSURLRequest = NSURLRequest(URL: imgURL)
+                            NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {(response: NSURLResponse!,data: NSData!,error: NSError!) -> Void in
+                                if error == nil {
+                                    println("setting image")
+                                    LOGGED_IN_USER_IMAGE = UIImage(data: data)
+                          
+                                }
+                                else {
+                                    println("Error: \(error.localizedDescription)")
+                                }
+                            })
+                        }
+                        /*
+                        if LOGGED_IN_USER_STORE_IMAGE == nil {
+                            var imgURL: NSURL = NSURL(string: LOGGED_IN_USER_INFORMATION!["userImage"])
+                            
+                            // Download an NSData representation of the image at the URL
+                            let request: NSURLRequest = NSURLRequest(URL: imgURL)
+                            NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {(response: NSURLResponse!,data: NSData!,error: NSError!) -> Void in
+                                if error == nil {
+                                    LOGGED_IN_USER_IMAGE = UIImage(data: data)
+                                    
+                                }
+                                else {
+                                    println("Error: \(error.localizedDescription)")
+                                }
+                            })
+                        }
+*/
                         loginSuccess(success: true)
                         return
                     }
@@ -355,5 +389,60 @@ class DataBaseAPIHelper {
         task.resume()
     }
 
+    class func editUser(userId: Int, data: [String], updateSuccess: (success: Bool) -> ()) {
+        var request = NSMutableURLRequest(URL: NSURL(string: "http://14.29.65.186:9090/SpiriiitTradeServer/user-editUser"))
+        var session = NSURLSession.sharedSession()
+        request.HTTPMethod = "POST"
+        var requestData = "&".join(data)
+        var requestBody = "id=\(userId)&\(requestData)"
+        let data = requestBody.dataUsingEncoding(NSUTF8StringEncoding)
+        request.HTTPBody = data
+        // request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)
+        request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        print(NSString(data:request.HTTPBody!, encoding: NSUTF8StringEncoding))
+        
+        var task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
+            println("Response: \(response)")
+            println(error)
+            var strData = NSString(data: data, encoding: NSUTF8StringEncoding)
+            println("Body: \(strData)")
+            var err: NSError?
+            var json = NSJSONSerialization.JSONObjectWithData(data, options: .MutableLeaves, error: &err) as? NSDictionary
+            
+            // Did the JSONObjectWithData constructor return an error? If so, log the error to the console
+            if(err != nil) {
+                println(err!.localizedDescription)
+                let jsonStr = NSString(data: data, encoding: NSUTF8StringEncoding)
+                println("Error could not parse JSON: '\(jsonStr)'")
+                updateSuccess(success: false)
+                return
+            }
+            else {
+                // The JSONObjectWithData constructor didn't return an error. But, we should still
+                // check and make sure that json has a value using optional binding.
+                if let parseJSON = json {
+                    // Okay, the parsedJSON is here, let's get the value for 'success' out of it
+                    var code = parseJSON["Status"] as? Int
+                    if code == 101 {
+                        updateSuccess(success: true)
+                        return
+                    }
+                    else {
+                        updateSuccess(success: false)
+                        return
+                    }
+                }
+                else {
+                    // Woa, okay the json object was nil, something went worng. Maybe the server isn't running?
+                    let jsonStr = NSString(data: data, encoding: NSUTF8StringEncoding)
+                    println("Error could not parse JSON: \(jsonStr)")
+                    updateSuccess(success: false)
+                    return
+                }
+            }
+        })
+        task.resume()
+    }
 
 }
