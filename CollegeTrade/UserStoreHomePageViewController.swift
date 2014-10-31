@@ -117,7 +117,9 @@ class UserStoreHomePageViewController: UIViewController, UITableViewDataSource, 
             var itemIndex = itemsTable!.indexPathForSelectedRow()!.row;
             var selectedItemSet = self.itemsForSell[itemIndex] as NSArray
             var selectedItem = selectedItemSet[0] as NSDictionary
+            var additionalInformation = selectedItemSet[1] as NSDictionary
             itemEditViewController.itemToEdit = selectedItem
+            itemEditViewController.goodsID = additionalInformation["goodsId"] as Int
             
         }
     }

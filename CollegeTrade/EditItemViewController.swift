@@ -17,6 +17,8 @@ class EditItemViewController: UIViewController {
     @IBOutlet var itemQuantity: UITextField!
     
     var itemToEdit: NSDictionary!
+    
+    var goodsID: Int!
    
     @IBAction func updateItemInformation(sender: AnyObject) {
         var price = itemPrice.text as NSString
@@ -38,47 +40,28 @@ class EditItemViewController: UIViewController {
             myAlert.show()
         } else {
             var keyObject = [String: String]()
-            keyObject
-            
-            DataBaseAPIHelper.postItem(name, description: description, images: imagePathSet, price: price, quantity: uantity) { (success: Bool) -> () in
+     
+            DataBaseAPIHelper.updateItem(goodsID, name: itemName.text, description: itemDescription.text, quantity: itemQuantity.text, price: itemPrice.text ) { (success: Bool) -> () in
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
                     if success {
-                        var myAlert = UIAlertView(title: "上传成功",
-                            message: "新物品发表成功！",
+                        var myAlert = UIAlertView(title: "更新成功",
+                            message: "物品新信息发表成功！",
                             delegate: self, cancelButtonTitle: "确认")
                         myAlert.show()
                         self.dismissViewControllerAnimated(true, completion: nil)
-                        
-                        // upload images
-                        for index in 0...self.imageSet.count - 1 {
-                            UpYunHelper.postPicture(self.imageSet[index], fileName: self.imagePathSetForUpyun[index]) { (success: Bool, url: String) -> () in
-                                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                                    if (success) {
-                                        
-                                    } else {
-                                        var myAlert = UIAlertView(title: "上传图片",
-                                            message: "图片\(index)失败， 请稍后再试",
-                                            delegate: nil, cancelButtonTitle: "取消")
-                                        myAlert.show()
-                                    }
-                                    
-                                })
-                            }
-                        }
                     }
                     else {
                         
-                        var myAlert = UIAlertView(title: "发表失败",
-                            message: "无法发表物品， 请稍后再试",
+                        var myAlert = UIAlertView(title: "更新失败",
+                            message: "无法更新物品， 请稍后再试",
                             delegate: nil, cancelButtonTitle: "取消")
                         myAlert.show()
                     }
                 })
             }
+            
         }
-
     }
-    
     override func viewDidLoad() {
         
         super.viewDidLoad()
