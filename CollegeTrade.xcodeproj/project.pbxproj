@@ -62,6 +62,15 @@
 		70D819BC19F752770092CBAF /* randomcat1.png in Resources */ = {isa = PBXBuildFile; fileRef = 70D819BB19F752770092CBAF /* randomcat1.png */; };
 		70DF05AB1A0200870068B128 /* SwipePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DF05AA1A0200870068B128 /* SwipePageViewController.swift */; };
 		70DF05AD1A0206020068B128 /* SwipePageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DF05AC1A0206020068B128 /* SwipePageContentViewController.swift */; };
+		70DF05B81A0310940068B128 /* 附近商店橙色.png in Resources */ = {isa = PBXBuildFile; fileRef = 70DF05AE1A0310940068B128 /* 附近商店橙色.png */; };
+		70DF05B91A0310940068B128 /* 附近商店灰色.png in Resources */ = {isa = PBXBuildFile; fileRef = 70DF05AF1A0310940068B128 /* 附近商店灰色.png */; };
+		70DF05BA1A0310940068B128 /* 格式按钮灰色.png in Resources */ = {isa = PBXBuildFile; fileRef = 70DF05B01A0310940068B128 /* 格式按钮灰色.png */; };
+		70DF05BB1A0310940068B128 /* 个人界面按钮橙色.png in Resources */ = {isa = PBXBuildFile; fileRef = 70DF05B11A0310940068B128 /* 个人界面按钮橙色.png */; };
+		70DF05BC1A0310940068B128 /* 聊天室按扭橙色.png in Resources */ = {isa = PBXBuildFile; fileRef = 70DF05B21A0310940068B128 /* 聊天室按扭橙色.png */; };
+		70DF05BD1A0310940068B128 /* 聊天室按钮灰色.png in Resources */ = {isa = PBXBuildFile; fileRef = 70DF05B31A0310940068B128 /* 聊天室按钮灰色.png */; };
+		70DF05BE1A0310940068B128 /* 我的收藏按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = 70DF05B41A0310940068B128 /* 我的收藏按钮.png */; };
+		70DF05BF1A0310940068B128 /* 我的收藏按钮2.png in Resources */ = {isa = PBXBuildFile; fileRef = 70DF05B51A0310940068B128 /* 我的收藏按钮2.png */; };
+		70DF05C11A0310940068B128 /* 主页按钮灰色.png in Resources */ = {isa = PBXBuildFile; fileRef = 70DF05B71A0310940068B128 /* 主页按钮灰色.png */; };
 		FF14D5532EC153A88182F49D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6404A3F56B88EBB2765C06C6 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -216,6 +225,15 @@
 		70D819BB19F752770092CBAF /* randomcat1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = randomcat1.png; sourceTree = "<group>"; };
 		70DF05AA1A0200870068B128 /* SwipePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipePageViewController.swift; sourceTree = "<group>"; };
 		70DF05AC1A0206020068B128 /* SwipePageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipePageContentViewController.swift; sourceTree = "<group>"; };
+		70DF05AE1A0310940068B128 /* 附近商店橙色.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "附近商店橙色.png"; sourceTree = "<group>"; };
+		70DF05AF1A0310940068B128 /* 附近商店灰色.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "附近商店灰色.png"; sourceTree = "<group>"; };
+		70DF05B01A0310940068B128 /* 格式按钮灰色.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "格式按钮灰色.png"; sourceTree = "<group>"; };
+		70DF05B11A0310940068B128 /* 个人界面按钮橙色.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "个人界面按钮橙色.png"; sourceTree = "<group>"; };
+		70DF05B21A0310940068B128 /* 聊天室按扭橙色.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "聊天室按扭橙色.png"; sourceTree = "<group>"; };
+		70DF05B31A0310940068B128 /* 聊天室按钮灰色.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "聊天室按钮灰色.png"; sourceTree = "<group>"; };
+		70DF05B41A0310940068B128 /* 我的收藏按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的收藏按钮.png"; sourceTree = "<group>"; };
+		70DF05B51A0310940068B128 /* 我的收藏按钮2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的收藏按钮2.png"; sourceTree = "<group>"; };
+		70DF05B71A0310940068B128 /* 主页按钮灰色.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "主页按钮灰色.png"; sourceTree = "<group>"; };
 		93859835CC3B67695617653F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -352,6 +370,15 @@
 		5742032419C8CF2000A84191 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				70DF05AE1A0310940068B128 /* 附近商店橙色.png */,
+				70DF05AF1A0310940068B128 /* 附近商店灰色.png */,
+				70DF05B01A0310940068B128 /* 格式按钮灰色.png */,
+				70DF05B11A0310940068B128 /* 个人界面按钮橙色.png */,
+				70DF05B21A0310940068B128 /* 聊天室按扭橙色.png */,
+				70DF05B31A0310940068B128 /* 聊天室按钮灰色.png */,
+				70DF05B41A0310940068B128 /* 我的收藏按钮.png */,
+				70DF05B51A0310940068B128 /* 我的收藏按钮2.png */,
+				70DF05B71A0310940068B128 /* 主页按钮灰色.png */,
 				70D819BB19F752770092CBAF /* randomcat1.png */,
 				5742032519C8CF2000A84191 /* Info.plist */,
 			);
@@ -671,10 +698,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70DF05BF1A0310940068B128 /* 我的收藏按钮2.png in Resources */,
+				70DF05B81A0310940068B128 /* 附近商店橙色.png in Resources */,
+				70DF05BA1A0310940068B128 /* 格式按钮灰色.png in Resources */,
+				70DF05C11A0310940068B128 /* 主页按钮灰色.png in Resources */,
+				70DF05BB1A0310940068B128 /* 个人界面按钮橙色.png in Resources */,
 				574614FF19E37138008323E0 /* Images.xcassets in Resources */,
 				5742032C19C8CF2000A84191 /* Main.storyboard in Resources */,
 				70D819BC19F752770092CBAF /* randomcat1.png in Resources */,
+				70DF05BE1A0310940068B128 /* 我的收藏按钮.png in Resources */,
+				70DF05B91A0310940068B128 /* 附近商店灰色.png in Resources */,
+				70DF05BD1A0310940068B128 /* 聊天室按钮灰色.png in Resources */,
 				5742033119C8CF2100A84191 /* LaunchScreen.xib in Resources */,
+				70DF05BC1A0310940068B128 /* 聊天室按扭橙色.png in Resources */,
 				57F288B71A00306C0026949D /* EaseMob.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
