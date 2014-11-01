@@ -134,7 +134,7 @@ class NewItemForSellViewController: UIViewController, selectedPictureDelegate, U
         if count < 5 {
             var currentTime :Int = Int(NSDate().timeIntervalSince1970 * 1000)
             imageSet.append(value)
-            imagePathSet.append("\(UPYUN_PUBLIC_DOMAIN)\(UPYUN_BUCKET)\(currentTime).jpg")
+            imagePathSet.append("http://\(UPYUN_IMAGE_SPACE)\(UPYUN_IMAGE_SERVER)/\(UPYUN_BUCKET)/\(currentTime).jpg")
             imagePathSetForUpyun.append("\(currentTime).jpg")
         }
         

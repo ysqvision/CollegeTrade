@@ -18,7 +18,7 @@ class UpYunHelper {
         var options = [String: String]()
         options["bucket"] = "spiriiit-sharejx"
         options["expiration"] = "\(expiration)"
-        options["save-key"] = "\(UPYUN_BUCKET)\(fileName)"
+        options["save-key"] = "\(UPYUN_BUCKET)/\(fileName)"
         options["allow-file-type"] = "jpeg,gif,png"
         var optionsString = String()
         

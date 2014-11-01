@@ -42,7 +42,6 @@
 		57E52D7C19EC7BEB00D33DE3 /* KeyChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E52D7B19EC7BEB00D33DE3 /* KeyChainService.swift */; };
 		57E52D7E19EE14AF00D33DE3 /* TakePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E52D7D19EE14AF00D33DE3 /* TakePhotoViewController.swift */; };
 		57E52D8019EEEC5500D33DE3 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E52D7F19EEEC5500D33DE3 /* Protocol.swift */; };
-		57F288551A0020500026949D /* PagedImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F288541A0020500026949D /* PagedImageScrollView.m */; };
 		57F288B61A00306C0026949D /* libEaseMobClientSDKLite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F288B31A00306C0026949D /* libEaseMobClientSDKLite.a */; };
 		57F288B71A00306C0026949D /* EaseMob.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 57F288B51A00306C0026949D /* EaseMob.bundle */; };
 		57F288B91A00314F0026949D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F288B81A00314F0026949D /* CoreGraphics.framework */; };
@@ -132,8 +131,6 @@
 		57E52D7B19EC7BEB00D33DE3 /* KeyChainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyChainService.swift; sourceTree = "<group>"; };
 		57E52D7D19EE14AF00D33DE3 /* TakePhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakePhotoViewController.swift; sourceTree = "<group>"; };
 		57E52D7F19EEEC5500D33DE3 /* Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
-		57F288531A0020500026949D /* PagedImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagedImageScrollView.h; sourceTree = "<group>"; };
-		57F288541A0020500026949D /* PagedImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagedImageScrollView.m; sourceTree = "<group>"; };
 		57F2885B1A00306C0026949D /* IChatManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IChatManagerDelegate.h; sourceTree = "<group>"; };
 		57F2885D1A00306C0026949D /* EMChatManagerBuddyDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatManagerBuddyDelegate.h; sourceTree = "<group>"; };
 		57F2885E1A00306C0026949D /* EMChatManagerChatDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatManagerChatDelegate.h; sourceTree = "<group>"; };
@@ -353,8 +350,6 @@
 				57D837841A0156A50078760C /* OrderAPIHelper.swift */,
 				57D837861A015C880078760C /* OrderDetailViewController.swift */,
 				57D837821A0152AF0078760C /* OrderViewController.swift */,
-				57F288531A0020500026949D /* PagedImageScrollView.h */,
-				57F288541A0020500026949D /* PagedImageScrollView.m */,
 				57E52D7F19EEEC5500D33DE3 /* Protocol.swift */,
 				57908E0619F5F4B900179925 /* SearchItemAPIController.swift */,
 				5784C28419C9112B00DDA365 /* SignUpViewController.swift */,
@@ -809,7 +804,6 @@
 				573B95931A04026000352625 /* EditUserDetailInformationViewController.swift in Sources */,
 				57E52D7E19EE14AF00D33DE3 /* TakePhotoViewController.swift in Sources */,
 				577E4BBC1A01F2B4004B1111 /* StoreHomePageViewController.swift in Sources */,
-				57F288551A0020500026949D /* PagedImageScrollView.m in Sources */,
 				57D837891A017AB50078760C /* FriendRequestViewController.swift in Sources */,
 				57ACA0791A006F2000A88172 /* ChatWithFriendViewController.swift in Sources */,
 				704E76581A0082CC0057EE39 /* UserSettingTableViewController.swift in Sources */,

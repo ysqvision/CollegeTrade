@@ -5,5 +5,4 @@
 
 #import <CommonCrypto/CommonCrypto.h>
 #import "AFNetworking.h"
-#import "PagedImageScrollView.h"
 #import "EaseMob.h"

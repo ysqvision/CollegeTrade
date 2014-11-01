@@ -30,17 +30,18 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
     
     @IBOutlet weak var transition: UIButton!
     @IBOutlet weak var itemsTable: UITableView?
+    
+    
+ 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.activityIndicator.hidden = false
         activityIndicator.startAnimating();
         searchItemAPI.delegate = self
         
         searchItemAPI.getAllItems()
         
-        
-       // activityIndicator.stopAnimating();
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func didReceiveMemoryWarning() {
@@ -53,24 +54,13 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    //    let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "ItemForSellCell")
         let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("ItemForSellCell") as UITableViewCell
-        //let rowDataArray: NSArray = self.itemsForSell[indexPath.row] as NSArray
         let rowData: NSDictionary = self.itemsForSell[indexPath.row] as NSDictionary
         
         cell.textLabel?.text = rowData["goodsName"] as NSString
         println(rowData["goodsName"])
         
-        // Grab the artworkUrl60 key to get an image URL for the app's thumbnail
-       // let urlString: NSString = rowData["goodsName"] as NSString
-        //let imgURL: NSURL = NSURL(string: urlString)
-        
-        // Download an NSData representation of the image at the URL
-        //let imgData: NSData = NSData(contentsOfURL: imgURL)
-        //cell.imageView?.image = UIImage(data: imgData)
-        
-        // Get the formatted price string for display in the subtitle
-        //let formattedPrice: NSString = rowData["price"] as NSString
+    
         let formattedPrice: Double = rowData["price"] as Double
         cell.detailTextLabel?.text = "价格: \(formattedPrice)"
         cell.imageView?.image = UIImage(named: "Placeholder.png")
@@ -130,20 +120,9 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
         if (segue.identifier == "ShowItemDetailViewSegue") {
             var itemDetailViewController: ItemDetailViewController = segue.destinationViewController as ItemDetailViewController
             var itemIndex = itemsTable!.indexPathForSelectedRow()!.row;
-            //var selectedItemSet = self.itemsForSell[itemIndex] as NSArray
             var selectedItem = self.itemsForSell[itemIndex]  as NSDictionary
-            //var title = selectedItem["goodsName"] as NSString
-            //var price = selectedItem["price"] as Double
-            //var description = selectedItem["goodsDescription"] as String
-            //println(selectedItem["goodsImage"])
-            //var imageUrlString = selectedItem["goodsImage"] as String
-            ///println(imageUrlString)
-            //var imageUrl = imageUrlString.componentsSeparatedByString(",")
-           // var item = ItemForSell(title: title, price: price, description: description, imageUrl: imageUrl)
-            itemDetailViewController.item = selectedItem
-          //  var additionalInformation = selectedItemSet[1] as NSDictionary
-         //   itemDetailViewController.item = additionalInformation
        
+            itemDetailViewController.item = selectedItem
         }
         
     }
@@ -154,6 +133,7 @@ class UserHomePageViewController: UIViewController, UITableViewDataSource, UITab
             println(self.itemsForSell)
             self.itemsTable!.reloadData()
             self.activityIndicator.stopAnimating()
+            self.activityIndicator.hidden = true
         })
     }
     

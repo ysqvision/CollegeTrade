@@ -119,7 +119,7 @@ class UserDetailedInformationViewController: UITableViewController, selectedPict
         } else {
             LOGGED_IN_USER_STORE_IMAGE = value
         }
-        var imagePath = "http://spiriiit-sharejx.b0.upaiyun.com/test/\(currentTime).jpg"
+        var imagePath = "http://\(UPYUN_IMAGE_SPACE)\(UPYUN_IMAGE_SERVER)/\(UPYUN_BUCKET)/\(currentTime).jpg"
         
         var data = ["userImage=\(imagePath)"]
         

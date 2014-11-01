@@ -98,63 +98,11 @@ class ItemDetailViewController: UIViewController {
         itemDescription.text = description
         
     }
-        override func viewDidLoad() {
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
-            /*
-            imagesScrollView.scrollEnabled = true
-            imagesScrollView.userInteractionEnabled = true
-            imagesScrollView.showsVerticalScrollIndicator = true
-            
-            for i in 0...item.imageUrl.count - 1 {
-                var position = CGFloat(i * 100.0)
-                let imageView = UIImageView(frame: (CGRectMake(0, position, 100, 100)))
-                imageView.image = UIImage(named:"randomcat1.png")
-                imageViewSet.append(imageView)
-                imagesScrollView.addSubview(imageView)
-            }
-            
-            for i in 0...item.imageUrl.count - 1 {
-                var url = item.imageUrl[i]
-                if (imageSet[url] != nil) {
-                    imageViewSet[i].image = imageSet[url]
-                } else {
-                    var imgURL: NSURL = NSURL(string: url)
-                    
-                    // Download an NSData representation of the image at the URL
-                    let request: NSURLRequest = NSURLRequest(URL: imgURL)
-                    NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {(response: NSURLResponse!,data: NSData!,error: NSError!) -> Void in
-                        if error == nil {
-                            var image = UIImage(data: data)
-                            
-                            // Store the image in to our cache
-                            self.imageSet[url] = image
-                            dispatch_async(dispatch_get_main_queue(), {
-                               self.imageViewSet[i].image = image
-                                //var view = UIImageView(0,0,100,100)
-                                //view.image = image
-                                //self.imagesScrollView.addSubview(view)
-                            })
-                        }
-                        else {
-                            println("Error: \(error.localizedDescription)")
-                        }
-                    })
-                }
-
-            }
-            
-            
-            itemName.text = "名称： \(self.item.title)"
-            itemPrice.text = "价格： \(self.item.price)"
-
-    */
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
-    
-   
-
-
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
