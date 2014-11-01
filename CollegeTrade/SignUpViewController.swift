@@ -33,16 +33,24 @@ class SignUpViewController: UIViewController {
             repeatPasswordTextField.text = "";
         }
         else {
-            DataBaseAPIHelper.userSignUp(username, password: password) { (success: Bool) -> () in
+            DataBaseAPIHelper.userSignUp(username, password: password) { (status: Int) -> () in
                 dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    if success {
+                    if status == 1 {
                         var myAlert = UIAlertView(title: "注册成功！",
                             message: "恭喜您注册成功！",
                             delegate: nil, cancelButtonTitle: "取消")
                         myAlert.show()
                         self.dismissViewControllerAnimated(true, completion: nil)
                         
-                    } else {
+                    } else if status == 2 {
+                        var myAlert = UIAlertView(title: "注册失败！",
+                            message: "用户名已存在！",
+                            delegate: nil, cancelButtonTitle: "取消")
+                        myAlert.show()
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                        
+                    }
+                    else {
                         
                         var myAlert = UIAlertView(title: "注册失败！",
                             message: "注册失败！",

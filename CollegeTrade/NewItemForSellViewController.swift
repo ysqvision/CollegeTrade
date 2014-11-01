@@ -110,41 +110,6 @@ class NewItemForSellViewController: UIViewController, selectedPictureDelegate, U
 
 
 
-        /*
-        var currentTime = NSDate().timeIntervalSince1970 * 1000
-        var imagePath = ["\(UPYUN_PUBLICK_DOMAIN)\(currentTime).jpg"]
-        UpYunHelper.postPicture(self.itemImage.image!, fileName: "\(currentTime).jpg") { (success: Bool, url: String) -> () in
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                if (success) {
-                    var name = self.itemName.text
-                    var description = self.itemDescription.text
-                    
-                    DataBaseAPIHelper.postItem(name, description: description, images: imagePath) { (success: Bool) -> () in
-                        dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                            if success {
-                                
-                                self.dismissViewControllerAnimated(true, completion: nil)
-                                
-                            } else {
-                                
-                                var myAlert = UIAlertView(title: "发表失败",
-                                    message: "无法发表物品， 请稍后再试",
-                                    delegate: nil, cancelButtonTitle: "取消")
-                                myAlert.show()
-                            }
-                        })
-                    }
-                } else {
-                    var myAlert = UIAlertView(title: "发表失败",
-                        message: "上传图片失败， 请稍后再试",
-                        delegate: nil, cancelButtonTitle: "取消")
-                    myAlert.show()
-                }
-                
-            })
-        }
-*/
- 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -169,7 +134,7 @@ class NewItemForSellViewController: UIViewController, selectedPictureDelegate, U
         if count < 5 {
             var currentTime :Int = Int(NSDate().timeIntervalSince1970 * 1000)
             imageSet.append(value)
-            imagePathSet.append("http://spiriiit-sharejx.b0.upaiyun.com/test/\(currentTime).jpg")
+            imagePathSet.append("\(UPYUN_PUBLIC_DOMAIN)\(UPYUN_BUCKET)\(currentTime).jpg")
             imagePathSetForUpyun.append("\(currentTime).jpg")
         }
         

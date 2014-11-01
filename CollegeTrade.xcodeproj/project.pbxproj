@@ -20,7 +20,6 @@
 		5742033119C8CF2100A84191 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5742032F19C8CF2100A84191 /* LaunchScreen.xib */; };
 		5742033D19C8CF2100A84191 /* CollegeTradeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5742033C19C8CF2100A84191 /* CollegeTradeTests.swift */; };
 		574614FF19E37138008323E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 574614FE19E37138008323E0 /* Images.xcassets */; };
-		5746150119E375D7008323E0 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5746150019E375D7008323E0 /* Store.swift */; };
 		5746150319E37884008323E0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5746150219E37884008323E0 /* User.swift */; };
 		5746150519E37DD8008323E0 /* StoresNearByViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5746150419E37DD8008323E0 /* StoresNearByViewController.swift */; };
 		5779465F19FF4D8000B2512F /* UserStoreHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5779465E19FF4D8000B2512F /* UserStoreHomePageViewController.swift */; };
@@ -58,7 +57,6 @@
 		57F288CB1A0032140026949D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F288CA1A0032140026949D /* MobileCoreServices.framework */; };
 		57F288CD1A00321B0026949D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F288CC1A00321B0026949D /* UIKit.framework */; };
 		57F28B061A00507F0026949D /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F28B051A00507F0026949D /* FriendListViewController.swift */; };
-		57FA4B6A19E35DAC00BBC5FD /* ItemForSell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FA4B6919E35DAC00BBC5FD /* ItemForSell.swift */; };
 		704E76581A0082CC0057EE39 /* UserSettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704E76571A0082CC0057EE39 /* UserSettingTableViewController.swift */; };
 		709622431A0325C100961466 /* clannad.png in Resources */ = {isa = PBXBuildFile; fileRef = 709622401A0325C100961466 /* clannad.png */; };
 		709622441A0325C100961466 /* fatezero.png in Resources */ = {isa = PBXBuildFile; fileRef = 709622411A0325C100961466 /* fatezero.png */; };
@@ -112,7 +110,6 @@
 		5742033B19C8CF2100A84191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5742033C19C8CF2100A84191 /* CollegeTradeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeTradeTests.swift; sourceTree = "<group>"; };
 		574614FE19E37138008323E0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		5746150019E375D7008323E0 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		5746150219E37884008323E0 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5746150419E37DD8008323E0 /* StoresNearByViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoresNearByViewController.swift; sourceTree = "<group>"; };
 		5779465E19FF4D8000B2512F /* UserStoreHomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStoreHomePageViewController.swift; sourceTree = "<group>"; };
@@ -228,7 +225,6 @@
 		57F288CA1A0032140026949D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		57F288CC1A00321B0026949D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		57F28B051A00507F0026949D /* FriendListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
-		57FA4B6919E35DAC00BBC5FD /* ItemForSell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemForSell.swift; sourceTree = "<group>"; };
 		6404A3F56B88EBB2765C06C6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		704E76571A0082CC0057EE39 /* UserSettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettingTableViewController.swift; sourceTree = "<group>"; };
 		709622401A0325C100961466 /* clannad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clannad.png; sourceTree = "<group>"; };
@@ -348,7 +344,6 @@
 				57F28B051A00507F0026949D /* FriendListViewController.swift */,
 				57D837881A017AB50078760C /* FriendRequestViewController.swift */,
 				5784C28819C9245100DDA365 /* ItemDetailViewController.swift */,
-				57FA4B6919E35DAC00BBC5FD /* ItemForSell.swift */,
 				57E52D7B19EC7BEB00D33DE3 /* KeyChainService.swift */,
 				5742032F19C8CF2100A84191 /* LaunchScreen.xib */,
 				5742032819C8CF2000A84191 /* LoginViewController.swift */,
@@ -363,7 +358,6 @@
 				57E52D7F19EEEC5500D33DE3 /* Protocol.swift */,
 				57908E0619F5F4B900179925 /* SearchItemAPIController.swift */,
 				5784C28419C9112B00DDA365 /* SignUpViewController.swift */,
-				5746150019E375D7008323E0 /* Store.swift */,
 				577E4BBB1A01F2B4004B1111 /* StoreHomePageViewController.swift */,
 				5746150419E37DD8008323E0 /* StoresNearByViewController.swift */,
 				5742032419C8CF2000A84191 /* Supporting Files */,
@@ -795,7 +789,6 @@
 				5746150519E37DD8008323E0 /* StoresNearByViewController.swift in Sources */,
 				57908E0919F741D900179925 /* DataBaseAPIHelper.swift in Sources */,
 				57D837811A00A1710078760C /* AddFriendToChatViewController.swift in Sources */,
-				57FA4B6A19E35DAC00BBC5FD /* ItemForSell.swift in Sources */,
 				573B95911A035F5900352625 /* UserDetailedInformationViewController.swift in Sources */,
 				5784C28919C9245100DDA365 /* ItemDetailViewController.swift in Sources */,
 				57908E0719F5F4B900179925 /* SearchItemAPIController.swift in Sources */,
@@ -804,7 +797,6 @@
 				577E4BBE1A030190004B1111 /* EditItemViewController.swift in Sources */,
 				57D837831A0152AF0078760C /* OrderViewController.swift in Sources */,
 				70D7785819E36C6400437988 /* UserProfileViewController.swift in Sources */,
-				5746150119E375D7008323E0 /* Store.swift in Sources */,
 				5784C28519C9112B00DDA365 /* SignUpViewController.swift in Sources */,
 				5746150319E37884008323E0 /* User.swift in Sources */,
 				57F28B061A00507F0026949D /* FriendListViewController.swift in Sources */,

@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CollegeTrade/NewItemForSellViewController.swift"
-            timestampString = "436420688.307889"
+            timestampString = "436544162.418466"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -492,11 +492,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CollegeTrade/StoreHomePageViewController.swift"
-            timestampString = "436482495.605568"
+            timestampString = "436545454.457875"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "showStore(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -508,11 +508,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CollegeTrade/StoreHomePageViewController.swift"
-            timestampString = "436482495.605568"
+            timestampString = "436545454.457875"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>

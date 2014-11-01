@@ -16,14 +16,32 @@ class StoreHomePageViewController: UIViewController {
     
     
     var selectedStoreIndex = -1
-    @IBAction func clicked(sender: AnyObject) {
-        println("clicked")
+   
+    
+    
+    func initAppParameter() {
+        DataBaseAPIHelper.getNews { (success: Bool, data: NSDictionary?) -> () in
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                if success {
+                    println(data)
+                    UPYUN_IMAGE_SERVER = data!["imageServer"] as String
+                    UPYUN_IMAGE_SPACE = data!["ImageSpace"] as String
+                    UPYUN_BUCKET = data!["imageBucket"] as String
+                    APP_VERSION = data!["version"] as Double
+                }
+            })
+        }
+
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
      
         
+        // 初始参数
+        initAppParameter()
+        // check if user has saved login credential
         if USER_IS_LOGGED_IN == false {
             println("is false")
             var storedUsername = KeychainService.loadToken("SPIRIIITCOLLEGETRADEUSERNAME")

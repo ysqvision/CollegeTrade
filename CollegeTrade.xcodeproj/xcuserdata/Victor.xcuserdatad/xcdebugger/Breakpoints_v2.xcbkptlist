@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CollegeTrade/DataBaseAPIHelper.swift"
-            timestampString = "436474865.896567"
+            timestampString = "436545454.457875"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
+            startingLineNumber = "220"
+            endingLineNumber = "220"
             landmarkName = "checkLoginCredential(_:password:loginSuccess:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CollegeTrade/DataBaseAPIHelper.swift"
-            timestampString = "436474865.896567"
+            timestampString = "436545454.457875"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
+            startingLineNumber = "222"
+            endingLineNumber = "222"
             landmarkName = "checkLoginCredential(_:password:loginSuccess:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CollegeTrade/DataBaseAPIHelper.swift"
-            timestampString = "436474865.896567"
+            timestampString = "436545454.457875"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
+            startingLineNumber = "223"
+            endingLineNumber = "223"
             landmarkName = "checkLoginCredential(_:password:loginSuccess:)"
             landmarkType = "5">
          </BreakpointContent>
