@@ -386,7 +386,7 @@
                         <viewControllerLayoutGuide type="bottom" id="F1Y-yx-JTn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OpK-3A-NQV">
-                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31v-tw-iPO">
@@ -2852,7 +2852,7 @@
                         <viewControllerLayoutGuide type="bottom" id="hzR-Qq-Tbc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xlL-81-Hbw">
-                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收件人全名：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJt-Bx-ugC">

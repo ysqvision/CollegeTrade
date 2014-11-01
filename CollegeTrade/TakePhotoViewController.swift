@@ -8,9 +8,15 @@
 import UIKit
 import MobileCoreServices
 
+
+protocol selectedPictureDelegate {
+    func selectedPicture(value: UIImage)
+}
+
 class TakePhotoViewController : UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     var delegate: selectedPictureDelegate?
+    
     var _newPhoto = false
     @IBAction func pickPhoto(sender: AnyObject) {
         let picker = UIImagePickerController()

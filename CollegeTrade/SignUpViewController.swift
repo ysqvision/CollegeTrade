@@ -47,7 +47,6 @@ class SignUpViewController: UIViewController {
                             message: "用户名已存在！",
                             delegate: nil, cancelButtonTitle: "取消")
                         myAlert.show()
-                        self.dismissViewControllerAnimated(true, completion: nil)
                         
                     }
                     else {
@@ -56,7 +55,6 @@ class SignUpViewController: UIViewController {
                             message: "注册失败！",
                             delegate: nil, cancelButtonTitle: "重新注册")
                         myAlert.show()
-                        self.dismissViewControllerAnimated(true, completion: nil)
                     }
                 })
             }
